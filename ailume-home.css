@@ -1426,6 +1426,387 @@ textarea.drawer-field {
   font-size: 15px;
 }
 
+.process-taito .site-footer {
+  color: var(--taito-muted);
+  background: var(--taito-surface);
+  border-top: 1px solid var(--taito-line);
+  font-size: 15px;
+}
+
+.process-main {
+  background: var(--taito-surface);
+}
+
+.process-hero {
+  padding: 93px 0 70px;
+}
+
+.process-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 530px) 1fr;
+  gap: 78px;
+  align-items: start;
+}
+
+.process-hero-copy {
+  padding-top: 28px;
+}
+
+.process-hero h1,
+.process-taito .taito-section h2,
+.process-taito .taito-agent-section h2,
+.process-taito .taito-final h2,
+.process-accountability h2 {
+  max-width: none;
+  margin: 0;
+  color: var(--taito-ink);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.process-hero h1 {
+  font-size: clamp(54px, 5vw, 70px);
+  line-height: 1.06;
+}
+
+.process-hero-copy > p {
+  margin: 26px 0 22px;
+  color: var(--taito-muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.process-hero-copy > strong {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--taito-ink);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.process-hero-panel {
+  min-height: 560px;
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--taito-dark);
+  box-shadow: 0 36px 80px rgba(15, 14, 13, .18);
+}
+
+.process-board {
+  min-height: 532px;
+  padding: 18px;
+  border: 1px solid rgba(250, 250, 249, .13);
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(250, 250, 249, .12), transparent 28%),
+    #1d1b18;
+}
+
+.process-board-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  color: rgba(250, 250, 249, .62);
+  font-size: 14px;
+}
+
+.process-board-top strong {
+  color: #b7ff7a;
+  font-weight: 500;
+}
+
+.process-decision-card {
+  min-height: 320px;
+  padding: 28px;
+  border-radius: 12px;
+  background: var(--taito-surface);
+}
+
+.process-decision-card > p {
+  margin: 0 0 12px;
+  color: var(--taito-muted);
+  font-size: 14px;
+}
+
+.process-decision-card h3 {
+  margin: 0 0 28px;
+  color: var(--taito-ink);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.process-status-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 13px 14px;
+  color: var(--taito-muted);
+  background: var(--taito-surface-2);
+  border: 1px solid var(--taito-line);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.process-status-row span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--taito-ink);
+}
+
+.process-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.process-mini-grid article {
+  min-height: 132px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #292620;
+}
+
+.process-mini-grid span,
+.process-mini-grid p {
+  color: rgba(250, 250, 249, .56);
+  font-size: 13px;
+}
+
+.process-mini-grid strong {
+  display: block;
+  margin: 30px 0 4px;
+  color: var(--taito-surface);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.process-slow-grid,
+.process-tool-grid,
+.process-outcome-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 44px;
+}
+
+.process-slow-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.process-slow-grid article,
+.process-tool-grid article,
+.process-outcome-list span {
+  min-height: 190px;
+  padding: 20px;
+  color: var(--taito-ink);
+  background: var(--taito-surface-2);
+  border: 1px solid var(--taito-line);
+  border-radius: 14px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.process-method-head {
+  max-width: 850px;
+}
+
+.process-method-head h2,
+.process-accountability h2 {
+  color: var(--taito-surface);
+  font-size: clamp(42px, 4.6vw, 64px);
+  line-height: 1.06;
+}
+
+.process-method-head p {
+  margin: 24px 0 0;
+  color: rgba(250, 250, 249, .72);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.process-method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 46px;
+}
+
+.process-method-grid article {
+  min-height: 520px;
+  padding: 22px;
+  border: 1px solid rgba(250, 250, 249, .13);
+  border-radius: 14px;
+  background: #23211d;
+}
+
+.process-method-grid span {
+  color: rgba(250, 250, 249, .58);
+  font-size: 14px;
+}
+
+.process-method-grid h3 {
+  margin: 74px 0 16px;
+  color: var(--taito-surface);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.process-method-grid p,
+.process-method-grid li {
+  color: rgba(250, 250, 249, .68);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.process-method-grid ul {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+}
+
+.process-method-grid li {
+  padding-top: 12px;
+  border-top: 1px solid rgba(250, 250, 249, .1);
+  list-style: none;
+}
+
+.process-method-grid strong {
+  color: var(--taito-surface);
+  font-weight: 500;
+}
+
+.process-tool-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.process-tool-grid article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.process-tool-grid span {
+  color: var(--taito-ink);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.process-tool-grid p {
+  margin: 58px 0 0;
+  color: var(--taito-muted);
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.process-note {
+  margin-top: 12px;
+  padding: 18px 20px;
+  color: var(--taito-muted);
+  background: var(--taito-surface-2);
+  border: 1px solid var(--taito-line);
+  border-radius: 14px;
+  font-size: 15.5px;
+}
+
+.process-accountability {
+  padding: 92px 0;
+  background: var(--taito-dark);
+}
+
+.process-accountability-head {
+  max-width: 740px;
+}
+
+.process-accountability .taito-label {
+  color: rgba(250, 250, 249, .72);
+}
+
+.process-accountability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 44px;
+}
+
+.process-accountability-grid article {
+  padding: 28px;
+  border: 1px solid rgba(250, 250, 249, .13);
+  border-radius: 14px;
+  background: #23211d;
+}
+
+.process-accountability-grid h3 {
+  margin: 0 0 28px;
+  color: var(--taito-surface);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.process-accountability-grid ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.process-accountability-grid li {
+  padding: 14px;
+  color: rgba(250, 250, 249, .72);
+  background: rgba(250, 250, 249, .06);
+  border-radius: 9px;
+  font-size: 16px;
+  list-style: none;
+}
+
+.process-done-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 470px) 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.process-done-grid h2 {
+  font-size: clamp(42px, 4.6vw, 64px);
+  line-height: 1.06;
+}
+
+.process-done-grid p {
+  margin-top: 26px;
+  color: var(--taito-muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.process-checklist {
+  display: grid;
+  gap: 10px;
+}
+
+.process-checklist span {
+  padding: 16px 18px;
+  color: var(--taito-muted);
+  background: var(--taito-surface-2);
+  border: 1px solid var(--taito-line);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.process-outcome-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.process-outcome-list span {
+  min-height: 130px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     display: flex;
@@ -1638,5 +2019,69 @@ textarea.drawer-field {
 
   .taito-role-grid h3 {
     margin-top: 54px;
+  }
+
+  .process-hero {
+    padding: 58px 0 48px;
+  }
+
+  .process-hero-grid,
+  .process-done-grid,
+  .process-accountability-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .process-hero h1 {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: 1.05;
+  }
+
+  .process-hero-panel {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .process-board {
+    min-height: auto;
+  }
+
+  .process-decision-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .process-decision-card h3 {
+    font-size: 28px;
+  }
+
+  .process-slow-grid,
+  .process-method-grid,
+  .process-tool-grid,
+  .process-outcome-list {
+    grid-template-columns: 1fr;
+  }
+
+  .process-slow-grid article,
+  .process-tool-grid article,
+  .process-outcome-list span {
+    min-height: auto;
+  }
+
+  .process-method-grid article {
+    min-height: auto;
+  }
+
+  .process-method-grid h3 {
+    margin-top: 46px;
+  }
+
+  .process-tool-grid p {
+    margin-top: 32px;
+  }
+
+  .process-accountability,
+  .process-taito .taito-agent-section {
+    padding: 58px 0;
   }
 }
