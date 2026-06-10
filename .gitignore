@@ -2,3 +2,5 @@ ailume-site-preview.zip
 cantor8-design-system.css
 cantor8-design-system.md
 .DS_Store
+.deploy_key
+.deploy_key.pub
