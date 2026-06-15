@@ -385,6 +385,63 @@ a {
   object-fit: cover;
 }
 
+.logos-section {
+  width: calc(100% - 80px);
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 0 54px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logos-caption {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.logos-caption::before,
+.logos-caption::after {
+  content: "";
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.logos-row {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.client-logo {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.38;
+  transition: opacity 320ms var(--ease-soft);
+}
+
+.client-logo:hover,
+.client-logo:focus-visible {
+  opacity: 0.72;
+}
+
+.client-logo img {
+  width: 105px;
+  height: 38px;
+  display: block;
+}
+
 @keyframes header-enter {
   from {
     opacity: 0;
@@ -559,6 +616,27 @@ a {
     aspect-ratio: 672 / 620;
     flex-basis: auto;
   }
+
+  .logos-section {
+    width: calc(100% - 40px);
+    padding-bottom: 36px;
+  }
+
+  .logos-caption {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .logos-row {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+  }
+
+  .client-logo {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 560px) {
@@ -594,7 +672,20 @@ a {
   }
 
   .hero-cta {
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
+    padding-right: 52px;
+    padding-left: 52px;
+  }
+
+  .hero-cta .cta-icon {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+
+  .logos-row {
+    grid-template-columns: 1fr;
   }
 }
 
