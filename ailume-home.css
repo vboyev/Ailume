@@ -1526,7 +1526,7 @@ textarea.drawer-field {
 }
 
 .final-container {
-  width: min(100% - 64px, 1194px);
+  width: min(100% - 80px, 1320px);
   margin: 0 auto;
 }
 
@@ -1537,7 +1537,7 @@ textarea.drawer-field {
 .final-hero-grid {
   display: grid;
   grid-template-columns: 485px 1fr;
-  gap: 94px;
+  gap: 170px;
   align-items: center;
 }
 
@@ -1813,9 +1813,9 @@ textarea.drawer-field {
 }
 
 .final-logo-strip {
-  max-width: 1194px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 28px 0 64px;
+  padding: 28px 0 50px;
   border-top: 1px solid var(--final-line);
   border-bottom: 1px solid var(--final-line);
 }
@@ -1836,14 +1836,14 @@ textarea.drawer-field {
 
 .final-logo-strip span {
   color: #7d858f;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
   opacity: .72;
 }
 
 .final-section {
-  padding: 84px 0;
+  padding: 118px 0;
   border-bottom: 1px solid var(--final-line);
 }
 
@@ -1865,10 +1865,74 @@ textarea.drawer-field {
 }
 
 .final-section-head > p,
-.final-how-grid > div > p {
+.final-how-grid > div > p,
+.final-section-head div > p:not(.final-label) {
   color: var(--final-muted);
   font-size: 15px;
   line-height: 1.55;
+}
+
+.final-centered-section .final-section-head {
+  display: block;
+  max-width: 560px;
+  text-align: center;
+}
+
+.final-centered-section .final-label {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.final-centered-section h2 {
+  max-width: 560px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.final-centered-section .final-section-head div > p:not(.final-label) {
+  max-width: 510px;
+  margin: 17px auto 0;
+}
+
+.final-why {
+  padding-top: 88px;
+}
+
+.final-deliver .final-section-head {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.final-deliver h2 {
+  max-width: 690px;
+  font-size: 29px;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+.final-outcomes-section .final-section-head {
+  max-width: 575px;
+}
+
+.final-outcomes-section h2 {
+  max-width: 420px;
+}
+
+.final-cases {
+  text-align: center;
+}
+
+.final-cases .final-label {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.final-cases h2 {
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
 }
 
 .final-card-grid,
@@ -1882,7 +1946,7 @@ textarea.drawer-field {
 
 .final-card-media {
   position: relative;
-  height: 230px;
+  height: 260px;
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 5px;
@@ -1976,7 +2040,7 @@ textarea.drawer-field {
   grid-template-columns: 46px 1fr 1.2fr auto;
   gap: 18px;
   align-items: center;
-  min-height: 88px;
+  min-height: 112px;
   padding: 0 22px;
   background: var(--final-soft);
 }
@@ -2016,7 +2080,7 @@ textarea.drawer-field {
 
 .final-outcome-grid article,
 .final-metric-grid article {
-  min-height: 160px;
+  min-height: 178px;
   padding: 22px;
   border: 1px solid var(--final-line);
   border-radius: 5px;
@@ -2066,8 +2130,8 @@ textarea.drawer-field {
 }
 
 .final-performance-card {
-  min-height: 470px;
-  padding: 74px 112px;
+  min-height: 540px;
+  padding: 88px 112px;
   border-radius: 5px;
   background:
     radial-gradient(circle at 22% 85%, rgba(199, 247, 220, .8), transparent 30%),
@@ -2146,7 +2210,7 @@ textarea.drawer-field {
 .project-media {
   display: flex;
   align-items: center;
-  min-height: 210px;
+  min-height: 250px;
   margin-bottom: 16px;
   overflow: hidden;
   border-radius: 4px;
@@ -2201,7 +2265,7 @@ textarea.drawer-field {
 }
 
 .final-metric-grid article {
-  min-height: 188px;
+  min-height: 220px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -2255,7 +2319,7 @@ textarea.drawer-field {
   display: flex;
   justify-content: space-between;
   gap: 22px;
-  padding: 20px 0;
+  padding: 25px 0;
   cursor: pointer;
   color: var(--final-ink);
   font-size: 14px;
@@ -2286,12 +2350,17 @@ textarea.drawer-field {
 }
 
 .final-blue-cta {
-  padding: 116px 0 130px;
+  padding: 148px 0 166px;
   color: #ffffff;
   text-align: center;
   background:
     radial-gradient(circle at 16% 100%, rgba(132, 218, 255, .95), transparent 34%),
     linear-gradient(135deg, #5db0e8 0%, #08327a 100%);
+}
+
+.final-black-cta {
+  padding: 116px 0 130px;
+  background: #030303;
 }
 
 .final-blue-cta .final-container {
@@ -2315,7 +2384,7 @@ textarea.drawer-field {
 .home-final .site-footer {
   margin-top: -73px;
   color: rgba(255, 255, 255, .7);
-  background: transparent;
+  background: #030303;
   border-top: 1px solid rgba(255, 255, 255, .16);
   font-size: 11px;
 }
