@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="hero-intro-ready">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,25 +68,25 @@
     </header>
 
     <main>
-      <section class="hero-section" data-node-id="93:95">
+      <section class="hero-section hero-intro" data-node-id="93:95">
         <div class="hero-copy">
           <div class="hero-content">
             <div class="hero-title-block">
-              <div class="section-tag">
+              <div class="section-tag hero-intro-item">
                 <span class="tag-cube" aria-hidden="true"></span>
                 <span>AI-augmented product design agency</span>
               </div>
 
-              <h1>Product design,<br />accelerated by AI</h1>
+              <h1 class="hero-intro-item">Product design,<br />accelerated by AI</h1>
             </div>
 
-            <p class="hero-description">
+            <p class="hero-description hero-intro-item">
               We help scaling B2B teams explore more, validate faster, and ship
               production-ready UX/UI — with experienced designers and AI-augmented workflows.
             </p>
           </div>
 
-          <div class="hero-actions">
+          <div class="hero-actions hero-intro-item">
             <a class="hero-cta" href="#">
               <span class="button-text line-reveal">
                 <span class="line-inner" data-text="Start a project">Start a project</span>
@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual hero-intro-item" aria-hidden="true">
           <img src="assets/hero-image.png" alt="" />
         </div>
       </section>
@@ -465,6 +465,10 @@
       </a>
     </footer>
     <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
       const faqItems = document.querySelectorAll(".faq-list details");
 
       function closeFaq(details) {
@@ -538,6 +542,91 @@
           openFaq(details);
         });
       });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealSelectors = [
+        ".logos-caption",
+        ".why-heading",
+        ".deliver-heading",
+        ".outcomes-section .section-heading",
+        ".process-copy",
+        ".process-visual",
+        ".cases-section .section-heading",
+        ".proof-section > .section-tag",
+        ".proof-section > h2",
+        ".faq-section > div:first-child"
+      ];
+      const revealGroups = [
+        ".logos-row .client-logo",
+        ".why-card",
+        ".deliver-row",
+        ".outcome-card",
+        ".case-card",
+        ".metrics-grid article",
+        ".faq-list details",
+        ".final-cta > *",
+        ".site-footer > *"
+      ];
+
+      function prepareReveal() {
+        revealSelectors.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((element) => {
+            element.dataset.reveal = element.matches(".process-visual") ? "media" : "up";
+          });
+        });
+
+        revealGroups.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((element, index) => {
+            element.dataset.reveal = element.matches(".why-card, .outcome-card, .case-card, .metrics-grid article, .process-visual")
+              ? "media"
+              : "up";
+            element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 90}ms`);
+          });
+        });
+      }
+
+      prepareReveal();
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        function revealPassedElements() {
+          document.querySelectorAll("[data-reveal]:not(.is-visible)").forEach((element) => {
+            const bounds = element.getBoundingClientRect();
+
+            if (bounds.top < window.innerHeight * 0.88) {
+              element.classList.add("is-visible");
+            }
+          });
+        }
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -12% 0px",
+            threshold: 0.12
+          }
+        );
+
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          revealObserver.observe(element);
+        });
+
+        revealPassedElements();
+        window.addEventListener("scroll", revealPassedElements, { passive: true });
+        window.addEventListener("resize", revealPassedElements);
+      }
     </script>
   </body>
 </html>
