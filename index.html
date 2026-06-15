@@ -1,318 +1,70 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI-Augmented Product Design Agency | AILUME</title>
-    <meta name="description" content="AILUME helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows.">
-    <link rel="stylesheet" href="./ailume-home.css?v=final-home-1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ailume</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="home-taito home-final">
-    <header class="site-header" data-header>
-      <a class="brand" href="./index.html" aria-label="AILUME home">
-        <span class="brand-mark">AI</span>
-        <span class="brand-word">Ailume</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a class="nav-link active" href="./index.html">Home</a>
-        <a class="nav-link" href="./services.html">Services</a>
-        <a class="nav-link" href="./work.html">Work</a>
-        <a class="nav-link" href="./process.html">Process</a>
-        <a class="nav-link" href="./about.html">About</a>
-      </nav>
-      <a class="header-cta line-link" href="#contact-panel" data-contact-open>
-        <span class="line-mask"><span class="line-inner" data-text="Start a project">Start a project</span></span>
-      </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
-        Menu
-      </button>
+  <body>
+    <header class="site-header" data-node-id="93:96">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo line-reveal" href="#" aria-label="Ailume home">
+          <span class="line-inner" data-text="Ailume">Ailume</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Home">Home</span>
+            </span>
+          </a>
+          <a class="nav-link" href="#">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Process">Process</span>
+            </span>
+          </a>
+          <a class="nav-link" href="#">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Cases">Cases</span>
+            </span>
+          </a>
+          <a class="nav-link" href="#">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="About">About</span>
+            </span>
+          </a>
+        </nav>
+
+        <a class="header-cta" href="#">
+          <span class="button-text line-reveal">
+            <span class="line-inner" data-text="Start a project">Start a project</span>
+          </span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+
+        <label class="menu-button" for="menu-toggle" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="#">Home</a>
+        <a class="mobile-link" href="#">Process</a>
+        <a class="mobile-link" href="#">Cases</a>
+        <a class="mobile-link" href="#">About</a>
+        <a class="mobile-cta" href="#">
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
     </header>
-
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-      <a class="mobile-link active" href="./index.html">Home</a>
-      <a class="mobile-link" href="./services.html">Services</a>
-      <a class="mobile-link" href="./work.html">Work</a>
-      <a class="mobile-link" href="./process.html">Process</a>
-      <a class="mobile-link" href="./about.html">About</a>
-      <a class="mobile-link" href="#contact-panel" data-contact-open>Start a project</a>
-    </div>
-
-    <button class="contact-side-trigger" type="button" data-contact-open>
-      <span>Contact us</span>
-    </button>
-
-    <div class="contact-drawer" id="contact-panel" aria-hidden="true" data-contact-drawer>
-      <button class="contact-backdrop" type="button" aria-label="Close contact panel" data-contact-close></button>
-      <aside class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contact-panel-title">
-        <button class="contact-close" type="button" aria-label="Close contact panel" data-contact-close>×</button>
-        <div class="contact-panel-scroll">
-          <h2 id="contact-panel-title">Let's break the ice</h2>
-          <form class="drawer-form" action="#" method="post" data-drawer-form>
-            <div class="drawer-field-grid">
-              <label>
-                <span>Email</span>
-                <input class="drawer-field" type="email" name="email" placeholder="E-mail" required>
-              </label>
-              <label>
-                <span>Full name</span>
-                <input class="drawer-field" type="text" name="name" placeholder="Full name" required>
-              </label>
-            </div>
-            <label>
-              <span>Message</span>
-              <textarea class="drawer-field" name="message" rows="5" placeholder="What's your goal, budget and timeline?" required></textarea>
-            </label>
-            <fieldset class="help-fieldset">
-              <legend>How can we help you?</legend>
-              <label><input type="checkbox" name="help" value="Design Sprint"><span>Design Sprint</span></label>
-              <label><input type="checkbox" name="help" value="Embedded Team"><span>Embedded Team</span></label>
-              <label><input type="checkbox" name="help" value="Design System"><span>Design System</span></label>
-              <label><input type="checkbox" name="help" value="UX/UI Audit"><span>UX/UI Audit</span></label>
-              <label><input type="checkbox" name="help" value="Prototype"><span>Prototype</span></label>
-            </fieldset>
-            <div class="drawer-submit-row">
-              <button class="drawer-submit line-link" type="submit">
-                <span class="line-mask"><span class="line-inner" data-text="Send request">Send request</span></span>
-              </button>
-            </div>
-            <div class="drawer-microcopy">
-              <p>By clicking send you accept our <a href="#">privacy policy</a></p>
-              <p>Prefer email? <a href="mailto:hello@ailume.co">hello@ailume.co</a></p>
-            </div>
-          </form>
-          <div class="drawer-success" hidden data-drawer-success>
-            <p class="eyebrow blue">Hooray</p>
-            <h3>We've got the details.</h3>
-            <p>We reply within one business day with a real answer, not a calendar link.</p>
-            <button class="drawer-submit" type="button" data-contact-close>Back to site</button>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-    <main class="final-main">
-      <section class="final-hero">
-        <div class="final-container final-hero-grid">
-          <div class="final-hero-copy">
-            <p class="final-label">AI-augmented product design agency</p>
-            <h1>Product design, accelerated by AI</h1>
-            <p>We help scaling B2B teams explore more, validate faster, and ship production-ready UX/UI with experienced designers and AI-augmented workflows.</p>
-            <div class="final-actions">
-              <a class="final-btn final-btn-dark" href="#contact-panel" data-contact-open>Start a project <span>↗</span></a>
-              <a class="final-btn final-btn-light" href="./process.html">See how we work</a>
-            </div>
-          </div>
-          <div class="final-hero-visual" aria-label="AILUME product dashboard preview">
-            <div class="visual-code-card">
-              <strong>Strategy</strong>
-              <span>Research notes</span>
-              <span>Journey gaps</span>
-              <span>Next bets</span>
-            </div>
-            <div class="visual-orange-card">Explore<br>frames</div>
-            <div class="visual-price-card">
-              <small>Annual savings</small>
-              <strong>$320</strong>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="visual-stat-card"><strong>15<small>%</small></strong><span>faster decisions</span></div>
-            <div class="visual-task-card">
-              <span class="done">Research map</span>
-              <span>Onboarding flow</span>
-              <span>Design system</span>
-            </div>
-            <div class="visual-portrait"></div>
-            <div class="visual-prompt"><span></span> Describe what you want to create... <button>Send</button></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-logo-strip" aria-label="Trusted by product teams">
-        <p>Built by teams accelerating their design capacity</p>
-        <div>
-            <span>OPPO</span>
-            <span>Wealthfront</span>
-            <span>FlowApp</span>
-            <span>sync</span>
-            <span>ASF</span>
-            <span>unbugAI</span>
-            <span>Trafio</span>
-        </div>
-      </section>
-
-      <section class="final-section final-centered-section final-why">
-        <div class="final-container final-section-head">
-          <div>
-            <p class="final-label">Why AILUME?</p>
-            <h2>Grow your roadmap, not your design overhead</h2>
-            <p>AILUME uses AI to remove drag from the design process, so experienced designers explore more, decide faster, and keep systems moving.</p>
-          </div>
-        </div>
-        <div class="final-container final-card-grid">
-          <article class="final-image-card">
-            <div class="final-card-media media-person"></div>
-            <h3>All your design work, one team</h3>
-            <p>Research, flows, prototypes, design systems, and handoff in one workflow.</p>
-          </article>
-          <article class="final-image-card">
-            <div class="final-card-media media-workflow"></div>
-            <h3>We work inside your workflow</h3>
-            <p>Visible thinking, clear feedback, and decisions that keep teams moving.</p>
-          </article>
-          <article class="final-image-card">
-            <div class="final-card-media media-growth"></div>
-            <h3>A design system that grows with you</h3>
-            <p>Decisions become reusable patterns, tokens, and docs for consistency.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="final-section final-deliver">
-        <div class="final-container final-section-head">
-          <div>
-            <p class="final-label">What we deliver</p>
-            <h2>AILUME uses AI to remove drag from the design process so experienced designers can explore more ideas, turn research into decisions faster, and keep systems moving with the product.</h2>
-          </div>
-        </div>
-        <div class="final-container final-service-rows">
-          <article><span>01</span><strong>Design Sprint</strong><p>From brief to clickable prototype. Explore, design, and validate a focused product direction fast.</p><a href="#contact-panel" data-contact-open>Book a sprint <b>↗</b></a></article>
-          <article><span>02</span><strong>Embedded Design Team</strong><p>A product design team, embedded in yours. Ongoing design capacity without the delay of hiring.</p><a href="#contact-panel" data-contact-open>Get a team <b>↗</b></a></article>
-          <article><span>03</span><strong>Design System &amp; Scale</strong><p>Components, tokens, patterns, and documentation that keep product delivery consistent.</p><a href="#contact-panel" data-contact-open>Scale my system <b>↗</b></a></article>
-        </div>
-      </section>
-
-      <section class="final-section final-centered-section final-outcomes-section">
-        <div class="final-container final-section-head">
-          <div>
-            <p class="final-label">Outcomes</p>
-            <h2>More design output. Fewer bottlenecks.</h2>
-            <p>AI does not replace the designer. It gives good designers more leverage and gives product teams more room to explore before build decisions get expensive.</p>
-          </div>
-        </div>
-        <div class="final-container final-outcome-grid">
-          <article><div><strong>More directions</strong><span>↗</span></div><p>Explore before committing to build.</p></article>
-          <article><div><strong>Faster validation</strong><span>↗</span></div><p>Move from brief to prototype earlier.</p></article>
-          <article><div><strong>Cleaner handoff</strong><span>↗</span></div><p>Prepare systems and states for engineering.</p></article>
-        </div>
-      </section>
-
-      <section class="final-section final-how">
-        <div class="final-container final-how-grid">
-          <div>
-            <p class="final-label">How we work</p>
-            <h2>Set it up once. Use the leverage every cycle.</h2>
-            <p>AI accelerates research, exploration, prototyping, and systems. Designers remain responsible for product direction, quality, and every final recommendation.</p>
-            <a class="final-btn final-btn-dark" href="./process.html">See our process <span>↗</span></a>
-          </div>
-          <div class="final-performance-card">
-            <div class="perf-panel">
-              <div class="perf-head"><strong>Performance</strong><span>Design team</span></div>
-              <div class="bar-row"><span style="height:36%"></span><span style="height:52%"></span><span class="active" style="height:78%"></span><span style="height:43%"></span></div>
-              <div class="avatar-row"><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="perf-panel">
-              <div class="perf-head"><strong>Activity</strong><span>Design sprint</span></div>
-              <div class="line-row"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-section final-cases">
-        <div class="final-container">
-          <p class="final-label">Cases</p>
-          <h2>Featured projects</h2>
-        </div>
-        <div class="final-container final-project-grid">
-          <article>
-            <div class="project-media trafio">Trafio</div>
-            <h3>Banking app UX/UI for traffic calm screens for stressful money decisions, shipped dev-ready.</h3>
-            <p><span>Fintech</span><span>Web app</span><span>UX/UI</span><span>Design system</span></p>
-          </article>
-          <article>
-            <div class="project-media flows">Flows App</div>
-            <h3>SaaS platform UX/UI for FlowApps: a full feature surface unified under one design system.</h3>
-            <p><span>B2B SaaS</span><span>SaaS platform</span><span>UI/UX</span><span>Design system</span></p>
-          </article>
-          <article>
-            <div class="project-media claservy"></div>
-            <h3>EdTech platform UX/UI for Claservy: retention-critical flows tested with learners before build.</h3>
-            <p><span>EdTech</span><span>Web platform</span><span>UX/UI</span><span>Interaction design</span></p>
-          </article>
-        </div>
-      </section>
-
-      <section class="final-section final-proof">
-        <div class="final-container">
-          <p class="final-label">Proof</p>
-          <h2>The math behind the work</h2>
-          <div class="final-metric-grid">
-            <article><p>Brief to first concepts</p><span></span><strong>8 days</strong></article>
-            <article><p>Design-system coverage</p><span></span><span></span><strong>90%</strong></article>
-            <article><p>Cost per iteration</p><span></span><span></span><span></span><strong>-30%</strong></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-section final-faq" id="faq">
-        <div class="final-container final-faq-grid">
-          <div>
-            <p class="final-label">FAQ</p>
-            <h2>What clients ask us most</h2>
-          </div>
-          <div class="final-faq-list">
-            <details open>
-              <summary>What is an AI-augmented product design agency?</summary>
-              <p>An AI-augmented product design agency uses AI inside the design workflow for research synthesis, exploration, prototyping, and design systems. Strategy, quality, and decisions stay designer-led.</p>
-            </details>
-            <details>
-              <summary>How does AI improve the design process?</summary>
-              <p>AI removes repetitive drag from product design: summarizing research, organizing decisions, generating first directions, and preparing documentation.</p>
-            </details>
-            <details>
-              <summary>Does AI replace your designers?</summary>
-              <p>No. AI supports the workflow. Designers own product judgment, visual quality, and every final recommendation.</p>
-            </details>
-            <details>
-              <summary>What's the difference between an AI-augmented and an AI-powered design agency?</summary>
-              <p>AI-augmented means designers stay responsible for the work while AI increases speed and range. We do not hand strategy to automation.</p>
-            </details>
-            <details>
-              <summary>Is AI-augmented design lower quality?</summary>
-              <p>No. Used well, AI gives senior designers more room to explore and test options before committing to a direction.</p>
-            </details>
-            <details>
-              <summary>Does it cost less than hiring in-house or a traditional agency?</summary>
-              <p>Usually, yes. You get focused senior design capacity without recruiting time, management overhead, or a large agency structure.</p>
-            </details>
-            <details>
-              <summary>Can you work with our existing product and design system?</summary>
-              <p>Yes. We can audit what exists, extend your system, and keep new work aligned with current product constraints.</p>
-            </details>
-            <details>
-              <summary>Who is AILUME best suited for?</summary>
-              <p>Scaling B2B teams whose roadmap is moving faster than their design capacity.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-blue-cta final-black-cta">
-        <div class="final-container">
-          <h2>See what accelerated product design looks like</h2>
-          <p>Tell us what you are building and where design is slowing you down.</p>
-          <a class="final-btn final-btn-light" href="#contact-panel" data-contact-open>See our process <span>↗</span></a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>2026 © Ailume. All rights reserved</span>
-      <span></span>
-      <a href="#contact-panel" data-contact-open>Start ↗</a>
-    </footer>
-
-    <script src="./ailume-home.js"></script>
   </body>
 </html>
