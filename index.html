@@ -3,8 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ailume</title>
-    <link rel="stylesheet" href="styles.css?v=project-drawer-17" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>AI-Augmented Product Design Agency | Ailume</title>
+    <meta
+      name="description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="AI-Augmented Product Design Agency | Ailume" />
+    <meta
+      property="og:description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta property="og:url" content="https://ailume.agency/" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume hero showcase" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="AI-Augmented Product Design Agency | Ailume" />
+    <meta
+      name="twitter:description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=project-drawer-18" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "description": "AI-augmented product design agency for scaling B2B teams.",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ailume.agency/#website",
+            "url": "https://ailume.agency/",
+            "name": "Ailume",
+            "publisher": {
+              "@id": "https://ailume.agency/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ailume.agency/#webpage",
+            "url": "https://ailume.agency/",
+            "name": "AI-Augmented Product Design Agency | Ailume",
+            "isPartOf": {
+              "@id": "https://ailume.agency/#website"
+            },
+            "about": {
+              "@id": "https://ailume.agency/#organization"
+            },
+            "description": "Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ailume.agency/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is an AI-augmented product design agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An AI-augmented product design agency uses AI inside the design workflow for research synthesis, exploration, prototyping, and design systems to ship faster and at lower cost. AI accelerates the process; experienced designers stay responsible for product judgment, quality, and every final decision."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does AI improve the design process?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It removes the slow parts. AI digests research and feedback, generates more directions to explore, builds clickable prototypes quickly, and helps document design systems. That frees experienced designers to spend their time on product thinking, judgment, and craft, so you get more output without dropping quality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does AI replace your designers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. AI supports the workflow; it never makes the call. Our designers own the problem, product and UX judgment, visual quality, and every final decision. AI explores; designers decide."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's the difference between an AI-augmented and an AI-powered design agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mostly framing; both mean AI is used in the work. We say AI-augmented on purpose: it keeps experienced designers at the center and AI as the multiplier, not the product. We are not an agency that builds AI products; we are a design team that uses AI to work faster."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is AI-augmented design lower quality?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The opposite, when senior designers steer it. AI lets us explore more directions and iterate more often, so the final work is more considered, not less. Quality control stays fully human: a senior designer reviews and approves every direction and every screen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it cost less than hiring in-house or a traditional agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually yes, for the output you get. A small senior team with AI leverage delivers the volume of a larger one, without the overhead of an internal team or the layers of a big agency. You add design capacity without permanently adding headcount."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you work with our existing product and design system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, it's a core use case. We add new features and screens, extend and maintain your design system, and deliver clean, dev-ready handoff, so a live product keeps moving and stays consistent as it grows."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is AILUME best suited for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Scaling B2B teams whose roadmap is moving faster than their design capacity, teams that need senior design at volume but don't want to build a large in-house team or wait on a slow agency retainer."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" data-node-id="93:96">
@@ -38,19 +216,31 @@
           </a>
         </nav>
 
-        <a class="header-cta" href="#project-form" data-project-open>
-          <span class="button-text line-reveal">
-            <span class="line-inner" data-text="Start a project">Start a project</span>
-          </span>
-          <span class="cta-icon" aria-hidden="true">
-            <img src="assets/arrow-up-right.svg" alt="" />
-          </span>
-        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
 
-        <label class="menu-button" for="menu-toggle" aria-hidden="true">
-          <span></span>
-          <span></span>
-        </label>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
       </div>
 
       <div class="mobile-menu" aria-label="Mobile navigation">
@@ -58,7 +248,7 @@
         <a class="mobile-link" href="process.html">Process</a>
         <a class="mobile-link" href="index.html#cases">Cases</a>
         <a class="mobile-link" href="about.html">About</a>
-        <a class="mobile-cta" href="#project-form" data-project-open>
+        <a class="mobile-cta" href="/contact" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
             <img src="assets/arrow-up-right.svg" alt="" />
@@ -72,12 +262,12 @@
         <div class="hero-copy">
           <div class="hero-content">
             <div class="hero-title-block">
-              <div class="section-tag hero-intro-item">
+              <h1 class="section-tag hero-intro-item hero-kicker">
                 <span class="tag-cube" aria-hidden="true"></span>
                 <span>AI-augmented product design agency</span>
-              </div>
+              </h1>
 
-              <h1 class="hero-intro-item">Product design,<br />accelerated by AI</h1>
+              <h2 class="hero-intro-item hero-display">Product design,<br />accelerated by AI</h2>
             </div>
 
             <p class="hero-description hero-intro-item">
@@ -87,7 +277,7 @@
           </div>
 
           <div class="hero-actions hero-intro-item">
-            <a class="hero-cta" href="#project-form" data-project-open>
+            <a class="hero-cta" href="/contact" data-project-open>
               <span class="button-text line-reveal">
                 <span class="line-inner" data-text="Start a project">Start a project</span>
               </span>
@@ -105,7 +295,14 @@
         </div>
 
         <div class="hero-visual hero-intro-item" aria-hidden="true">
-          <img src="assets/hero-image.png" alt="" />
+          <img
+            src="assets/hero-image.png"
+            alt=""
+            decoding="async"
+            fetchpriority="high"
+            width="672"
+            height="620"
+          />
         </div>
       </section>
 
@@ -115,48 +312,48 @@
         </div>
 
         <div class="logos-row">
-          <a class="client-logo" href="#" aria-label="Client logo 1">
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-1.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 2">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-2.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 3">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-3.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 4">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-4.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 5">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-5.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 6">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-6.svg" alt="" />
-          </a>
-          <a class="client-logo" href="#" aria-label="Client logo 7">
+          </span>
+          <span class="client-logo" aria-hidden="true">
             <img src="assets/logos/logo-7.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 1" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-1.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 2" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-2.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 3" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-3.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 4" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-4.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 5" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-5.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 6" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-6.svg" alt="" />
-          </a>
-          <a class="client-logo client-logo-duplicate" href="#" aria-label="Client logo 7" aria-hidden="true" tabindex="-1">
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
             <img src="assets/logos/logo-7.svg" alt="" />
-          </a>
+          </span>
         </div>
       </section>
 
@@ -178,7 +375,7 @@
         <div class="why-grid">
           <article class="why-card">
             <div class="why-media">
-              <img src="assets/whyus-1.png" alt="" />
+              <img src="assets/whyus-1.png" alt="" loading="lazy" decoding="async" />
             </div>
             <h3>All your design work, one team</h3>
             <p>Research, flows, prototypes, design systems, and handoff in one place.</p>
@@ -186,7 +383,7 @@
 
           <article class="why-card">
             <div class="why-media">
-              <img src="assets/whyus-2.png" alt="" />
+              <img src="assets/whyus-2.png" alt="" loading="lazy" decoding="async" />
             </div>
             <h3>We work inside your workflow</h3>
             <p>Visible thinking, clear feedback, and decisions that keep teams moving.</p>
@@ -194,7 +391,7 @@
 
           <article class="why-card">
             <div class="why-media">
-              <img src="assets/whyus-3.png" alt="" />
+              <img src="assets/whyus-3.png" alt="" loading="lazy" decoding="async" />
             </div>
             <h3>A design system that grows with you</h3>
             <p>Decisions become reusable patterns, tokens, and docs for consistency.</p>
@@ -221,43 +418,65 @@
             <span class="deliver-index">01</span>
             <h3>Design Sprint</h3>
             <p>From brief to clickable prototype. Explore, design, and validate a focused product direction fast.</p>
-            <a class="deliver-link" href="#">
+            <button class="deliver-link" type="button" data-project-open>
               <span class="line-reveal">
                 <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
               </span>
               <span class="mini-icon" aria-hidden="true">
                 <img src="assets/arrow-up-right.svg" alt="" />
               </span>
-            </a>
+            </button>
           </article>
 
           <article class="deliver-row">
             <span class="deliver-index">02</span>
             <h3>Embedded Design Team</h3>
             <p>A product design team, embedded in yours. Ongoing design capacity without the delay of hiring.</p>
-            <a class="deliver-link" href="#">
+            <button class="deliver-link" type="button" data-project-open>
               <span class="line-reveal">
                 <span class="line-inner" data-text="Get a team">Get a team</span>
               </span>
               <span class="mini-icon" aria-hidden="true">
                 <img src="assets/arrow-up-right.svg" alt="" />
               </span>
-            </a>
+            </button>
           </article>
 
           <article class="deliver-row">
             <span class="deliver-index">03</span>
             <h3>Design System &amp; Scale</h3>
             <p>Components, tokens, patterns, and documentation that keep product delivery consistent.</p>
-            <a class="deliver-link" href="#">
+            <button class="deliver-link" type="button" data-project-open>
               <span class="line-reveal">
                 <span class="line-inner" data-text="Scale my system">Scale my system</span>
               </span>
               <span class="mini-icon" aria-hidden="true">
                 <img src="assets/arrow-up-right.svg" alt="" />
               </span>
-            </a>
+            </button>
           </article>
+        </div>
+      </section>
+
+      <section class="process-section" aria-labelledby="process-title">
+        <div class="process-copy">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>How we work</span>
+          </div>
+          <h2 id="process-title">Set it up once. Use the leverage every cycle.</h2>
+          <p>AI accelerates research, exploration, prototyping, and systems. Designers remain responsible for product direction, quality, and every final recommendation.</p>
+          <a class="process-link" href="process.html">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="See our process">See our process</span>
+            </span>
+            <span class="mini-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+        <div class="process-visual" aria-hidden="true">
+          <img src="assets/howwework.png" alt="" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -302,28 +521,6 @@
         </div>
       </section>
 
-      <section class="process-section" aria-labelledby="process-title">
-        <div class="process-copy">
-          <div class="section-tag compact-tag">
-            <span class="tag-cube" aria-hidden="true"></span>
-            <span>How we work</span>
-          </div>
-          <h2 id="process-title">Set it up once. Use the leverage every cycle.</h2>
-          <p>AI accelerates research, exploration, prototyping, and systems. Designers remain responsible for product direction, quality, and every final recommendation.</p>
-          <a class="process-link" href="#">
-            <span class="line-reveal">
-              <span class="line-inner" data-text="See our process">See our process</span>
-            </span>
-            <span class="mini-icon" aria-hidden="true">
-              <img src="assets/arrow-up-right.svg" alt="" />
-            </span>
-          </a>
-        </div>
-        <div class="process-visual" aria-hidden="true">
-          <img src="assets/howwework.png" alt="" />
-        </div>
-      </section>
-
       <section class="cases-section" id="cases" aria-labelledby="cases-title">
         <div class="section-heading center-heading">
           <div class="section-tag compact-tag">
@@ -334,25 +531,39 @@
         </div>
 
         <div class="cases-grid">
-          <article class="case-card">
+          <article class="case-card case-card--small">
             <div class="case-media">
-              <img src="assets/case-cover-1.png" alt="" />
+              <img src="assets/case-cover-1.png?v=cases-2" alt="" loading="lazy" decoding="async" />
             </div>
-            <h3>Banking app UX/UI for Trafio: calm screens for stressful money decisions, shipped dev-ready.</h3>
+            <h3>Mobile banking app UX/UI for Trafio, validated with users before build</h3>
             <p><span>Fintech</span><span>Mobile app</span><span>UX/UI</span><span>Design system</span></p>
           </article>
-          <article class="case-card">
+
+          <article class="case-card case-card--large">
             <div class="case-media">
-              <img src="assets/case-cover-2.png" alt="" />
+              <img src="assets/case-cover-2.png?v=cases-2" alt="" loading="lazy" decoding="async" />
             </div>
-            <h3>SaaS platform UX/UI for FlowApps: a full feature surface unified under one design system.</h3>
-            <p><span>B2B SaaS</span><span>Web platform</span><span>UX/UI</span><span>Design system</span></p>
+            <div class="case-card-row">
+              <h3>SaaS platform UX/UI for FlowApps, unified under one design system.</h3>
+              <p><span>B2B SaaS</span><span>Web platform</span><span>UX/UI</span><span>Design system</span></p>
+            </div>
           </article>
-          <article class="case-card">
+
+          <article class="case-card case-card--large">
             <div class="case-media">
-              <img src="assets/case-cover-3.png" alt="" />
+              <img src="assets/case-cover-3.png?v=cases-2" alt="" loading="lazy" decoding="async" />
             </div>
-            <h3>EdTech platform UX/UI for Clawerly: retention-critical flows tested with learners before build.</h3>
+            <div class="case-card-row">
+              <h3>EdTech platform UX/UI for Clawerly: retention flows tested before build</h3>
+              <p><span>EdTech</span><span>AI</span><span>Mobile app</span><span>Design system</span></p>
+            </div>
+          </article>
+
+          <article class="case-card case-card--small">
+            <div class="case-media">
+              <img src="assets/case-cover-4.png?v=cases-2" alt="" loading="lazy" decoding="async" />
+            </div>
+            <h3>AI tutoring app UX/UI for ASI, on a design system built to scale</h3>
             <p><span>EdTech</span><span>Web platform</span><span>UX/UI</span><span>Retention design</span></p>
           </article>
         </div>
@@ -446,7 +657,7 @@
       <section class="final-cta" id="contact">
         <h2>Let's start your project.</h2>
         <p>Tell us what you're building and where design is slowing you down.<br />We'll scope it with you and get moving fast.</p>
-        <a class="hero-secondary cta-light" href="#project-form" data-project-open>
+        <a class="hero-secondary cta-light" href="/contact" data-project-open>
           <span class="line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -528,14 +739,17 @@
     <footer class="site-footer">
       <div class="footer-meta">
         <span>2026 © Ailume. All rights reserved</span>
-        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
       </div>
-      <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
-        <span>Part of</span>
-        <img src="assets/halolab.svg" alt="Halo Lab" />
-      </a>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
     </footer>
-    <script src="project-drawer.js?v=project-drawer-3"></script>
+    <script src="project-drawer.js?v=project-drawer-4" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
     <script>
       requestAnimationFrame(() => {
         document.documentElement.classList.add("hero-intro-run");
@@ -616,8 +830,79 @@
       });
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (finePointer && !reduceMotion) {
+        document.querySelectorAll(".case-media").forEach((media) => {
+          let frame = 0;
+          const position = {
+            currentX: 50,
+            currentY: 50,
+            targetX: 50,
+            targetY: 50
+          };
+
+          function setTarget(event) {
+            const rect = media.getBoundingClientRect();
+            position.targetX = ((event.clientX - rect.left) / rect.width) * 100;
+            position.targetY = ((event.clientY - rect.top) / rect.height) * 100;
+          }
+
+          function render() {
+            position.currentX += (position.targetX - position.currentX) * 0.18;
+            position.currentY += (position.targetY - position.currentY) * 0.18;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+
+            if (
+              Math.abs(position.targetX - position.currentX) > 0.02 ||
+              Math.abs(position.targetY - position.currentY) > 0.02
+            ) {
+              frame = requestAnimationFrame(render);
+              return;
+            }
+
+            frame = 0;
+          }
+
+          function start(event) {
+            setTarget(event);
+            position.currentX = position.targetX;
+            position.currentY = position.targetY;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+            media.classList.add("is-case-hover");
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function move(event) {
+            setTarget(event);
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function stop() {
+            media.classList.remove("is-case-hover");
+            position.targetX = 50;
+            position.targetY = 50;
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          media.addEventListener("pointerenter", start);
+          media.addEventListener("pointermove", move);
+          media.addEventListener("pointerleave", stop);
+        });
+      }
+
       const revealSelectors = [
-        ".logos-caption",
         ".why-heading",
         ".deliver-heading",
         ".outcomes-section .section-heading",
@@ -629,7 +914,6 @@
         ".faq-section > div:first-child"
       ];
       const revealGroups = [
-        ".logos-row .client-logo",
         ".why-card",
         ".deliver-row",
         ".outcome-card",
@@ -658,12 +942,48 @@
 
       prepareReveal();
 
+      const logosCaption = document.querySelector(".logos-caption");
+      const logoItems = Array.from(document.querySelectorAll(".logos-row .client-logo"));
+
+      function revealClientLogos() {
+        logosCaption?.classList.add("is-visible");
+        logoItems.forEach((element, index) => {
+          element.dataset.reveal = "up";
+          element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 90}ms`);
+          element.classList.add("is-visible");
+        });
+      }
+
       if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealClientLogos();
         document.querySelectorAll("[data-reveal]").forEach((element) => {
           element.classList.add("is-visible");
         });
       } else {
         document.documentElement.classList.add("reveal-ready");
+
+        if (logosCaption) {
+          logosCaption.dataset.reveal = "up";
+        }
+
+        const logosObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              revealClientLogos();
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -8% 0px",
+            threshold: 0.18
+          }
+        );
+
+        const logosSection = document.querySelector(".logos-section");
+        if (logosSection) {
+          logosObserver.observe(logosSection);
+        }
 
         function revealPassedElements() {
           document.querySelectorAll("[data-reveal]:not(.is-visible)").forEach((element) => {

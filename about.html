@@ -3,12 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About AILUME | AI-Augmented Product Design Unit by Halo Lab</title>
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>About Ailume | AI-Augmented Product Design Unit by Halo Lab</title>
     <meta
       name="description"
-      content="AILUME is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
     />
-    <link rel="stylesheet" href="styles.css?v=project-drawer-17" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="About Ailume | AI-Augmented Product Design Unit by Halo Lab" />
+    <meta
+      property="og:description"
+      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+    />
+    <meta property="og:url" content="https://ailume.agency/about.html" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume hero showcase" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="About Ailume | AI-Augmented Product Design Unit by Halo Lab" />
+    <meta
+      name="twitter:description"
+      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=project-drawer-18" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://ailume.agency/about.html#webpage",
+            "url": "https://ailume.agency/about.html",
+            "name": "About Ailume | AI-Augmented Product Design Unit by Halo Lab",
+            "description": "Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity.",
+            "about": {
+              "@id": "https://ailume.agency/#organization"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -34,19 +125,31 @@
           </a>
         </nav>
 
-        <a class="header-cta" href="#project-form" data-project-open>
-          <span class="button-text line-reveal">
-            <span class="line-inner" data-text="Start a project">Start a project</span>
-          </span>
-          <span class="cta-icon" aria-hidden="true">
-            <img src="assets/arrow-up-right.svg" alt="" />
-          </span>
-        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
 
-        <label class="menu-button" for="menu-toggle" aria-hidden="true">
-          <span></span>
-          <span></span>
-        </label>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
       </div>
 
       <div class="mobile-menu" aria-label="Mobile navigation">
@@ -54,7 +157,7 @@
         <a class="mobile-link" href="process.html">Process</a>
         <a class="mobile-link" href="index.html#cases">Cases</a>
         <a class="mobile-link is-active" href="about.html">About</a>
-        <a class="mobile-cta" href="#project-form" data-project-open>
+        <a class="mobile-cta" href="/contact" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
             <img src="assets/arrow-up-right.svg" alt="" />
@@ -294,7 +397,7 @@
         </div>
         <h2>Build with the people behind the work.</h2>
         <p>Tell us what your product team is trying to move — and what keeps getting in the way.</p>
-        <a class="final-cta-button" href="#project-form" data-project-open>
+        <a class="final-cta-button" href="/contact" data-project-open>
           <span class="line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -376,15 +479,18 @@
     <footer class="site-footer">
       <div class="footer-meta">
         <span>2026 © Ailume. All rights reserved</span>
-        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
       </div>
-      <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
-        <span>Part of</span>
-        <img src="assets/halolab.svg" alt="Halo Lab" />
-      </a>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
     </footer>
 
-    <script src="project-drawer.js?v=project-drawer-3"></script>
+    <script src="project-drawer.js?v=project-drawer-4" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
     <script>
       requestAnimationFrame(() => {
         document.documentElement.classList.add("hero-intro-run");
