@@ -4,41 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ailume</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=project-drawer-17" />
   </head>
   <body>
     <header class="site-header" data-node-id="93:96">
       <div class="header-inner">
         <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
 
-        <a class="logo line-reveal" href="#" aria-label="Ailume home">
+        <a class="logo line-reveal" href="index.html" aria-label="Ailume home">
           <span class="line-inner" data-text="Ailume">Ailume</span>
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="index.html">
             <span class="line-reveal">
               <span class="line-inner" data-text="Home">Home</span>
             </span>
           </a>
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="process.html">
             <span class="line-reveal">
               <span class="line-inner" data-text="Process">Process</span>
             </span>
           </a>
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="index.html#cases">
             <span class="line-reveal">
               <span class="line-inner" data-text="Cases">Cases</span>
             </span>
           </a>
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="about.html">
             <span class="line-reveal">
               <span class="line-inner" data-text="About">About</span>
             </span>
           </a>
         </nav>
 
-        <a class="header-cta" href="#">
+        <a class="header-cta" href="#project-form" data-project-open>
           <span class="button-text line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -54,11 +54,11 @@
       </div>
 
       <div class="mobile-menu" aria-label="Mobile navigation">
-        <a class="mobile-link" href="#">Home</a>
-        <a class="mobile-link" href="#">Process</a>
-        <a class="mobile-link" href="#">Cases</a>
-        <a class="mobile-link" href="#">About</a>
-        <a class="mobile-cta" href="#">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="index.html#cases">Cases</a>
+        <a class="mobile-link" href="about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
             <img src="assets/arrow-up-right.svg" alt="" />
@@ -87,7 +87,7 @@
           </div>
 
           <div class="hero-actions hero-intro-item">
-            <a class="hero-cta" href="#">
+            <a class="hero-cta" href="#project-form" data-project-open>
               <span class="button-text line-reveal">
                 <span class="line-inner" data-text="Start a project">Start a project</span>
               </span>
@@ -96,7 +96,7 @@
               </span>
             </a>
 
-            <a class="hero-secondary" href="#">
+            <a class="hero-secondary" href="process.html">
               <span class="line-reveal">
                 <span class="line-inner" data-text="See how we work">See how we work</span>
               </span>
@@ -324,7 +324,7 @@
         </div>
       </section>
 
-      <section class="cases-section" aria-labelledby="cases-title">
+      <section class="cases-section" id="cases" aria-labelledby="cases-title">
         <div class="section-heading center-heading">
           <div class="section-tag compact-tag">
             <span class="tag-cube" aria-hidden="true"></span>
@@ -443,10 +443,10 @@
         </div>
       </section>
 
-      <section class="final-cta">
+      <section class="final-cta" id="contact">
         <h2>Let's start your project.</h2>
         <p>Tell us what you're building and where design is slowing you down.<br />We'll scope it with you and get moving fast.</p>
-        <a class="hero-secondary cta-light" href="#">
+        <a class="hero-secondary cta-light" href="#project-form" data-project-open>
           <span class="line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -457,13 +457,85 @@
       </section>
     </main>
 
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="#" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
     <footer class="site-footer">
-      <span>2026 © Ailume. All rights reserved</span>
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+      </div>
       <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
         <span>Part of</span>
         <img src="assets/halolab.svg" alt="Halo Lab" />
       </a>
     </footer>
+    <script src="project-drawer.js?v=project-drawer-3"></script>
     <script>
       requestAnimationFrame(() => {
         document.documentElement.classList.add("hero-intro-run");

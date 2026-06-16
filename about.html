@@ -1,209 +1,420 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="hero-intro-ready">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About AILUME | AI-Augmented Product Design Agency</title>
-    <meta name="description" content="Meet AILUME - a focused product design studio from the team behind Halo Lab, built for scaling B2B teams that need more design capacity.">
-    <link rel="stylesheet" href="./ailume-home.css?v=site-pages-2">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About AILUME | AI-Augmented Product Design Unit by Halo Lab</title>
+    <meta
+      name="description"
+      content="AILUME is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+    />
+    <link rel="stylesheet" href="styles.css?v=project-drawer-17" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="./index.html" aria-label="AILUME home"><span class="brand-mark">AI</span><span class="brand-word">AILUME</span></a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a class="nav-link" href="./index.html">Home</a>
-        <a class="nav-link" href="./services.html">Services</a>
-        <a class="nav-link" href="./work.html">Work</a>
-        <a class="nav-link" href="./process.html">Process</a>
-        <a class="nav-link active" href="./about.html">About</a>
-      </nav>
-      <a class="header-cta" href="#contact-panel" data-contact-open>Start a project</a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>Menu</button>
+    <header class="site-header">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo line-reveal" href="index.html" aria-label="Ailume home">
+          <span class="line-inner" data-text="Ailume">Ailume</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+          </a>
+          <a class="nav-link" href="process.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Process">Process</span></span>
+          </a>
+          <a class="nav-link" href="index.html#cases">
+            <span class="line-reveal"><span class="line-inner" data-text="Cases">Cases</span></span>
+          </a>
+          <a class="nav-link is-active" href="about.html">
+            <span class="line-reveal"><span class="line-inner" data-text="About">About</span></span>
+          </a>
+        </nav>
+
+        <a class="header-cta" href="#project-form" data-project-open>
+          <span class="button-text line-reveal">
+            <span class="line-inner" data-text="Start a project">Start a project</span>
+          </span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+
+        <label class="menu-button" for="menu-toggle" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="index.html#cases">Cases</a>
+        <a class="mobile-link is-active" href="about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
     </header>
 
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-      <a class="mobile-link" href="./index.html">Home</a>
-      <a class="mobile-link" href="./services.html">Services</a>
-      <a class="mobile-link" href="./work.html">Work</a>
-      <a class="mobile-link" href="./process.html">Process</a>
-      <a class="mobile-link active" href="./about.html">About</a>
-      <a class="mobile-link" href="#contact-panel" data-contact-open>Start a project</a>
-    </div>
+    <main class="page-main">
+      <section class="page-hero hero-intro">
+        <div class="page-hero-grid">
+          <div>
+            <div class="section-tag hero-intro-item">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>About AILUME</span>
+            </div>
+            <h1 class="hero-intro-item">A small unit. A serious track record.</h1>
+            <p class="hero-intro-item">
+              AILUME is a focused product design unit inside Halo Lab — built from the people and
+              product experience behind hundreds of shipped projects, and structured around one job:
+              giving scaling B2B teams more design capacity.
+            </p>
+            <div class="page-actions hero-intro-item">
+              <a class="hero-cta" href="#team">
+                <span class="button-text line-reveal">
+                  <span class="line-inner" data-text="Meet the team">Meet the team</span>
+                </span>
+                <span class="cta-icon" aria-hidden="true">
+                  <img src="assets/arrow-up-right.svg" alt="" />
+                </span>
+              </a>
+            </div>
+          </div>
 
-    <div class="contact-drawer" id="contact-panel" aria-hidden="true" data-contact-drawer>
-      <button class="contact-backdrop" type="button" aria-label="Close contact panel" data-contact-close></button>
-      <aside class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contact-panel-title">
-        <button class="contact-close" type="button" aria-label="Close contact panel" data-contact-close>×</button>
-        <div class="contact-panel-scroll">
-          <h2 id="contact-panel-title">Let's break the ice</h2>
-          <form class="drawer-form" action="#" method="post" data-drawer-form>
-            <div class="drawer-field-grid">
-              <label><span>Email</span><input class="drawer-field" type="email" name="email" placeholder="E-mail" required></label>
-              <label><span>Full name</span><input class="drawer-field" type="text" name="name" placeholder="Full name" required></label>
+          <aside class="page-hero-card hero-intro-item" aria-label="About AILUME summary">
+            <span>Inside Halo Lab</span>
+            <strong>Focused product design capacity, backed by a delivery culture that has shipped since 2013.</strong>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-section with-border" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>The reason</span>
             </div>
-            <label><span>Message</span><textarea class="drawer-field" name="message" rows="5" placeholder="What's your goal, budget and timeline?" required></textarea></label>
-            <fieldset class="help-fieldset">
+            <h2>The tools changed. The agency model did not.</h2>
+          </div>
+          <div class="page-copy">
+            <p>
+              AI changed how quickly designers can research, explore, prototype, and build systems.
+              Most agencies either ignored that shift or turned AI into another vague service line.
+            </p>
+            <p>
+              AILUME is a dedicated unit rebuilt around AI-augmented workflows, not a slogan. The
+              goal is simple: more useful design output, faster decisions, and human judgment where
+              quality actually lives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <div class="page-quote">
+          <blockquote>
+            “We've been shipping digital products since 2013 — through every platform shift this
+            industry produced. AILUME is us taking AI seriously as a production shift.”
+          </blockquote>
+          <cite>Co-Founder, Halo Lab</cite>
+        </div>
+      </section>
+
+      <section class="page-section with-border" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Under the hood</span>
+            </div>
+            <h2>Same people. Sharper focus.</h2>
+          </div>
+          <div class="page-card-grid two">
+            <article class="page-card">
+              <span class="page-card-kicker">We inherit</span>
+              <h3>Real product delivery history.</h3>
+              <p>
+                Years of shipped product work, established design standards, engineering-aware
+                delivery, complex-industry experience, and a proven delivery culture.
+              </p>
+            </article>
+            <article class="page-card">
+              <span class="page-card-kicker">We run differently</span>
+              <h3>A narrower product-design model.</h3>
+              <p>
+                Product design only, a small senior team close to the work, productized engagements,
+                AI-augmented production, and velocity as an operating metric.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section with-border" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Track record</span>
+            </div>
+            <h2>A decade of product design. Then AI changed the math.</h2>
+          </div>
+          <div class="page-copy">
+            <p>
+              The numbers behind AILUME come from the team’s Halo Lab work since 2013. AILUME is a
+              focused product-design unit built on that foundation, with its own case studies as the
+              first engagements go live.
+            </p>
+          </div>
+        </div>
+        <div class="page-stat-grid" data-reveal>
+          <article class="page-stat-card"><span>Projects shipped</span><strong>500+</strong></article>
+          <article class="page-stat-card"><span>Client rating</span><strong>4.9</strong></article>
+          <article class="page-stat-card"><span>Industries covered</span><strong>20+</strong></article>
+          <article class="page-stat-card"><span>Delivered by</span><strong>Halo Lab</strong></article>
+        </div>
+      </section>
+
+      <section class="page-section with-border" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Principles</span>
+            </div>
+            <h2>The standards behind the work.</h2>
+          </div>
+          <ol class="page-list">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Judgment over output.</strong>
+                <p>Producing more options matters only when the team knows which ones deserve to survive.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>AI removes effort, not accountability.</strong>
+                <p>Designers stay responsible for every recommendation, decision, and deliverable.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Fewer layers, better work.</strong>
+                <p>The closer clients are to the people solving the problem, the less context gets lost.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Design must survive engineering.</strong>
+                <p>A strong concept is not enough. The work has to remain coherent as a real product.</p>
+              </div>
+            </li>
+            <li>
+              <span>05</span>
+              <div>
+                <strong>Speed buys room to think.</strong>
+                <p>Working faster creates more chances to test, challenge, and improve the direction.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page-section with-border" id="team" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>People</span>
+            </div>
+            <h2>Small enough to stay close. Experienced enough to lead.</h2>
+          </div>
+          <div class="page-card-grid four">
+            <article class="page-card">
+              <span class="page-card-kicker">Product design</span>
+              <h3>Senior product designer</h3>
+              <p>Owns UX direction, interface quality, and the recommendation behind each decision.</p>
+            </article>
+            <article class="page-card">
+              <span class="page-card-kicker">Systems</span>
+              <h3>Design systems lead</h3>
+              <p>Keeps components, states, patterns, and docs aligned with the product as it grows.</p>
+            </article>
+            <article class="page-card">
+              <span class="page-card-kicker">Prototype</span>
+              <h3>Product prototyper</h3>
+              <p>Turns promising directions into clickable experiences fast enough to validate early.</p>
+            </article>
+            <article class="page-card">
+              <span class="page-card-kicker">Delivery</span>
+              <h3>Design partner</h3>
+              <p>Connects goals, team rhythm, scope, and decisions so the work keeps moving.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section with-border" data-reveal>
+        <div class="page-split">
+          <div>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Point of view</span>
+            </div>
+            <h2>We are not neutral about the work.</h2>
+          </div>
+          <div class="page-copy">
+            <p>
+              Clients do not hire AILUME to operate Figma on request. We question weak assumptions,
+              identify missing decisions, simplify unnecessary complexity, and recommend the direction
+              we believe will work best.
+            </p>
+            <p>You own the company. We own the quality of our recommendation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contact" data-reveal>
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Start here</span>
+        </div>
+        <h2>Build with the people behind the work.</h2>
+        <p>Tell us what your product team is trying to move — and what keeps getting in the way.</p>
+        <a class="final-cta-button" href="#project-form" data-project-open>
+          <span class="line-reveal">
+            <span class="line-inner" data-text="Start a project">Start a project</span>
+          </span>
+          <span class="mini-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="#" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
               <legend>How can we help you?</legend>
-              <label><input type="checkbox" name="help" value="Design Sprint"><span>Design Sprint</span></label>
-              <label><input type="checkbox" name="help" value="Embedded Team"><span>Embedded Team</span></label>
-              <label><input type="checkbox" name="help" value="Design System"><span>Design System</span></label>
-              <label><input type="checkbox" name="help" value="UX/UI Audit"><span>UX/UI Audit</span></label>
-              <label><input type="checkbox" name="help" value="Prototype"><span>Prototype</span></label>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
             </fieldset>
-            <button class="drawer-submit" type="submit">Send request</button>
-            <div class="drawer-microcopy">
-              <p>By clicking send you accept our <a href="#">privacy policy</a></p>
-              <p>Prefer email? <a href="mailto:hello@ailume.co">hello@ailume.co</a></p>
-            </div>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
           </form>
-          <div class="drawer-success" hidden data-drawer-success>
-            <p class="eyebrow blue">Hooray</p>
-            <h3>We've got the details.</h3>
-            <p>We reply within one business day with a real answer, not a calendar link.</p>
-            <button class="drawer-submit" type="button" data-contact-close>Back to site</button>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
           </div>
         </div>
       </aside>
     </div>
 
-    <main>
-      <section class="hero page-hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">About AILUME</p>
-            <h1>A focused studio built from years of shipping real products.</h1>
-            <p class="hero-subhead">AILUME is an AI-augmented product design agency created by the team behind Halo Lab. It combines proven product experience with a smaller, more focused operating model built for scaling B2B teams.</p>
-            <div class="button-row">
-              <a class="button button-light" href="#team">Meet the team</a>
-              <a class="button button-ghost" href="./services.html">See services</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bottleneck">
-        <div class="section-grid">
-          <div class="section-heading">
-            <p class="eyebrow">The Reason</p>
-            <h2>The tools changed. The agency model did not.</h2>
-          </div>
-          <div class="section-copy">
-            <p>AI changed how quickly designers can research, explore, prototype, and build systems.</p>
-            <p>But most agencies responded in one of two ways: they ignored the shift, or turned AI into another vague service line.</p>
-            <p>We created AILUME to take the change seriously - not as a replacement for designers, and not as a slogan. As a reason to reconsider how a focused product design team should be structured, how much it should be able to deliver, and where human judgment matters most.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="category-definition">
-        <div class="definition-layout">
-          <p class="eyebrow">Built on Experience</p>
-          <h2>A new studio. Not a new team.</h2>
-          <p>AILUME comes from the people and product experience behind Halo Lab. Halo Lab remains a broad design and development company working across branding, websites, digital products, and engineering. AILUME has a narrower role: AI-augmented product design for scaling B2B teams.</p>
-        </div>
-      </section>
-
-      <section class="compact-section">
-        <div class="stack-grid">
-          <article class="stack-card">
-            <p class="card-kicker">What carries over</p>
-            <h3>Real delivery history.</h3>
-            <p>Years of digital product experience, established design standards, engineering understanding, complex-industry work, and a proven delivery culture.</p>
-          </article>
-          <article class="stack-card">
-            <p class="card-kicker">What is different</p>
-            <h3>A narrower product-design focus.</h3>
-            <p>A smaller team close to the work, productized ways to engage, an AI-augmented production model, and emphasis on design capacity and velocity.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="compact-section">
-        <div class="section-intro">
-          <p class="eyebrow">Our Principles</p>
-          <h2>The standards behind the work.</h2>
-        </div>
-        <ol class="simple-list">
-          <li><span>01</span><div><strong>Judgment matters more than output</strong><p>Producing more options is useful only when the team knows which ones deserve to survive.</p></div></li>
-          <li><span>02</span><div><strong>AI should remove effort, not accountability</strong><p>The team remains responsible for every recommendation, decision, and deliverable.</p></div></li>
-          <li><span>03</span><div><strong>Fewer layers create better work</strong><p>The closer clients are to the people solving the problem, the less context gets lost.</p></div></li>
-          <li><span>04</span><div><strong>Product design must survive engineering</strong><p>A strong concept is not enough. The work needs to remain coherent when it becomes a real product.</p></div></li>
-          <li><span>05</span><div><strong>Speed should create more room to think</strong><p>The benefit of working faster is having more opportunities to test, challenge, and improve the direction.</p></div></li>
-        </ol>
-      </section>
-
-      <section class="category-definition" id="team">
-        <div class="definition-layout">
-          <p class="eyebrow">The People</p>
-          <h2>Small enough to stay close. Experienced enough to lead.</h2>
-          <p>AILUME is structured around experienced product designers who can move between product thinking, UX, interface design, prototyping, systems, and delivery. The exact team changes with the engagement, but the principle does not: the people introduced at the beginning stay involved in the work.</p>
-        </div>
-      </section>
-
-      <section class="compact-section">
-        <div class="stack-grid">
-          <article class="stack-card"><p class="card-kicker">Team profile</p><h3>[Name]</h3><p>Role, relevant product experience, industries or product types, and LinkedIn.</p></article>
-          <article class="stack-card"><p class="card-kicker">Team profile</p><h3>[Name]</h3><p>Role, relevant product experience, industries or product types, and LinkedIn.</p></article>
-          <article class="stack-card"><p class="card-kicker">Team profile</p><h3>[Name]</h3><p>Role, relevant product experience, industries or product types, and LinkedIn.</p></article>
-          <article class="stack-card"><p class="card-kicker">Team profile</p><h3>[Name]</h3><p>Role, relevant product experience, industries or product types, and LinkedIn.</p></article>
-        </div>
-      </section>
-
-      <section class="bottleneck">
-        <div class="section-grid">
-          <div class="section-heading">
-            <p class="eyebrow">Our Point of View</p>
-            <h2>We are not neutral about the work.</h2>
-          </div>
-          <div class="section-copy">
-            <p>Clients do not hire AILUME to operate Figma on request.</p>
-            <p>We are expected to question weak assumptions, identify missing decisions, simplify unnecessary complexity, and recommend the direction we believe will work best.</p>
-            <p>That means we will sometimes disagree. We will explain why, show the alternatives, and connect the decision to the user, product, and business context.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="category-definition">
-        <div class="definition-layout">
-          <p class="eyebrow">The Ambition</p>
-          <h2>A better model for scaling product design.</h2>
-          <p>A focused team of experienced designers, supported by the right AI workflows, should be able to give scaling companies more design capacity without recreating the cost and complexity of a large agency.</p>
-        </div>
-      </section>
-
-      <section class="compact-section">
-        <div class="stack-grid">
-          <article class="stack-card"><p class="card-kicker">Measure openly</p><h3>Time from brief to decision.</h3><p>Track how quickly product questions become approved directions.</p></article>
-          <article class="stack-card"><p class="card-kicker">Measure openly</p><h3>Useful directions explored.</h3><p>Track the number and quality of viable options before commitment.</p></article>
-          <article class="stack-card"><p class="card-kicker">Measure openly</p><h3>Design-system coverage.</h3><p>Track whether decisions become reusable components, patterns, and documentation.</p></article>
-          <article class="stack-card"><p class="card-kicker">Measure openly</p><h3>Product and business outcomes.</h3><p>Track implementation quality, validation speed, and outcomes that matter to the roadmap.</p></article>
-        </div>
-      </section>
-
-      <section class="category-definition">
-        <div class="definition-layout">
-          <p class="eyebrow">The Foundation</p>
-          <h2>Backed by a real delivery history.</h2>
-          <p>[Verified Halo Lab / founding-team proof] 500+ completed projects, client outcome metrics, selected B2B product work, awards and independent reviews, named client testimonials, and industries served. AILUME is a focused studio from the team behind Halo Lab. Relevant experience and case studies are identified transparently.</p>
-        </div>
-      </section>
-
-      <section class="final-cta">
-        <div class="cta-content">
-          <p class="eyebrow">Start Here</p>
-          <h2>Build with the people behind the work.</h2>
-          <p>Tell us what your product team is trying to move - and what keeps getting in the way.</p>
-          <button class="button button-light" type="button" data-contact-open>Start a project</button>
-        </div>
-      </section>
-    </main>
-
     <footer class="site-footer">
-      <span>AILUME</span>
-      <span>Product design, accelerated by AI.</span>
-      <a href="#contact-panel" data-contact-open>Start a project</a>
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+      </div>
+      <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+        <span>Part of</span>
+        <img src="assets/halolab.svg" alt="Halo Lab" />
+      </a>
     </footer>
 
-    <script src="./ailume-home.js"></script>
+    <script src="project-drawer.js?v=project-drawer-3"></script>
+    <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealItems = document.querySelectorAll("[data-reveal]");
+
+      revealItems.forEach((element, index) => {
+        element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 80}ms`);
+      });
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((element) => element.classList.add("is-visible"));
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+        );
+
+        revealItems.forEach((element) => revealObserver.observe(element));
+      }
+    </script>
   </body>
 </html>
