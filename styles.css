@@ -2070,29 +2070,74 @@ textarea.project-input {
 }
 
 .project-success {
-  display: grid;
-  align-content: center;
-  min-height: 420px;
-  gap: 18px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 0;
 }
 
 .project-success[hidden] {
   display: none;
 }
 
+.project-success-visual {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  background: var(--brand-primary);
+  color: #fff;
+  box-shadow: 0 18px 42px rgba(0, 80, 189, 0.18);
+}
+
+.project-success-visual span {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+}
+
+.project-success-visual span::before {
+  position: absolute;
+  left: 11px;
+  top: 9px;
+  width: 16px;
+  height: 9px;
+  border-left: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  border-radius: 1px;
+  transform: rotate(-45deg);
+  content: "";
+}
+
+.project-success-copy {
+  display: grid;
+  gap: 18px;
+}
+
 .project-success h3 {
+  max-width: 520px;
   margin: 0;
-  font-size: var(--font-h3);
-  line-height: var(--lh-h3);
+  font-size: var(--font-h2);
+  line-height: var(--lh-h2);
   font-weight: 500;
   letter-spacing: var(--ls-heading);
 }
 
 .project-success p {
+  max-width: 430px;
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
-  font-size: var(--font-body-m);
-  line-height: var(--lh-body-m);
+  font-size: var(--font-body-l);
+  line-height: var(--lh-body-l);
+}
+
+.project-success-close {
+  margin-top: 0;
 }
 
 html.reveal-ready [data-reveal] {
@@ -4619,6 +4664,39 @@ html[data-theme="dark"] .blog-inline-cta p {
 
   .project-submit {
     width: 100%;
+  }
+
+  .project-success {
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .project-success-visual {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .project-success-visual span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .project-success-visual span::before {
+    left: 9px;
+    top: 8px;
+    width: 14px;
+    height: 8px;
+  }
+
+  .project-success h3 {
+    font-size: 36px;
+    line-height: 1.05;
+  }
+
+  .project-success p {
+    font-size: var(--font-body-m);
+    line-height: var(--lh-body-m);
   }
 
   .site-footer {

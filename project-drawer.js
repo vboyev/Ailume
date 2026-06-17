@@ -2,15 +2,41 @@ const projectDrawer = document.querySelector("[data-project-drawer]");
 
 if (projectDrawer) {
   const openButtons = document.querySelectorAll("[data-project-open]");
-  const closeButtons = projectDrawer.querySelectorAll("[data-project-close]");
   const panel = projectDrawer.querySelector(".project-drawer-panel");
   const form = projectDrawer.querySelector("[data-project-form]");
   const success = projectDrawer.querySelector("[data-project-success]");
   const firstField = projectDrawer.querySelector("[data-project-form] input, [data-project-form] textarea");
   const submitButton = form?.querySelector("[type='submit']");
+  const successArrowSrc = submitButton?.querySelector(".cta-icon img")?.getAttribute("src") || "assets/arrow-up-right.svg";
   const drawerTransitionDuration = 720;
   let closeTimer;
   let openTimer;
+
+  function normalizeSuccessState() {
+    if (!success) return;
+
+    success.innerHTML = `
+      <div class="project-success-visual" aria-hidden="true">
+        <span></span>
+      </div>
+      <div class="project-success-copy">
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Request sent</span>
+        </div>
+        <h3>Thanks, we got your request.</h3>
+        <p>We'll review your message and reply with the next useful step.</p>
+      </div>
+      <button class="project-submit project-success-close" type="button" data-project-close>
+        <span class="button-text line-reveal">
+          <span class="line-inner" data-text="Back to site">Back to site</span>
+        </span>
+        <span class="cta-icon" aria-hidden="true">
+          <img src="${success.dataset.arrowSrc || successArrowSrc}" alt="" />
+        </span>
+      </button>
+    `;
+  }
 
   function getFormError() {
     if (!form) return null;
@@ -100,9 +126,7 @@ if (projectDrawer) {
     });
   });
 
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", () => setDrawerState(false));
-  });
+  normalizeSuccessState();
 
   projectDrawer.addEventListener("click", (event) => {
     if (event.target === projectDrawer) {
@@ -111,6 +135,11 @@ if (projectDrawer) {
   });
 
   panel?.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest("[data-project-close]")) {
+      setDrawerState(false);
+    }
+
     event.stopPropagation();
   });
 
