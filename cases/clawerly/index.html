@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+        try { storedTheme = window.localStorage.getItem(key); } catch (error) {}
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>EdTech platform UX/UI for Clawerly | Ailume Case Study</title>
+    <meta name="description" content="How Ailume designed and validated retention-critical EdTech flows for Clawerly before build." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/cases/clawerly/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="EdTech platform UX/UI for Clawerly | Ailume Case Study" />
+    <meta property="og:description" content="Retention-critical learning flows, tested before build and structured for product scale." />
+    <meta property="og:url" content="https://ailume.agency/cases/clawerly/" />
+    <meta property="og:image" content="https://ailume.agency/assets/case-cover-3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css?v=case-template-2" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo line-reveal" href="/" aria-label="Ailume home"><span class="line-inner" data-text="Ailume">Ailume</span></a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" /><path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" /></svg></button>
+          <a class="header-cta" href="/contact" data-project-open><span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-study-main">
+      <section class="case-hero" data-case-reveal>
+        <div class="case-hero-grid">
+          <div><div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study</span></div><h1>EdTech platform UX/UI for Clawerly: retention flows tested before build</h1></div>
+          <aside class="case-hero-aside"><p>Clawerly needed learning flows that could keep learners engaged, help teachers understand progress, and support product iteration before the engineering push.</p><div class="case-tags"><span>EdTech</span><span>AI</span><span>Mobile app</span><span>Design system</span></div></aside>
+        </div>
+      </section>
+
+      <figure class="case-cover" data-case-reveal><img src="/assets/case-cover-3.png?v=case-template-2" alt="Clawerly EdTech platform interface case cover" width="1744" height="1280" /></figure>
+
+      <section class="case-info" data-case-reveal>
+        <div class="case-info-item"><span>Client</span><strong>Clawerly</strong></div>
+        <div class="case-info-item"><span>Industry</span><strong>EdTech</strong></div>
+        <div class="case-info-item"><span>Scope</span><strong>UX/UI, testing, design system</strong></div>
+        <div class="case-info-item"><span>Focus</span><strong>Retention flows</strong></div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">About the project</div>
+        <div class="case-story-content"><h2>A learning product direction tested before the build cycle.</h2><p>We designed core learner and teacher experiences around motivation, progress visibility, and bite-sized learning actions that could be tested with users before full production.</p><p>The interface balances friendly education patterns with a product system strong enough to scale across lessons, tests, notes, and coaching flows.</p></div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Challenge</div>
+        <div class="case-story-content"><h2>Retention is won in small moments, not one big feature.</h2><p>The team needed to understand which interactions would keep learners returning, where progress should be surfaced, and how AI assistance could feel useful without taking over the learning experience.</p></div>
+      </section>
+
+      <div class="case-image-grid" data-case-reveal>
+        <figure class="case-image"><img src="/assets/case-cover-3.png?v=case-template-2" alt="Clawerly laptop education dashboard" /></figure>
+        <figure class="case-image"><img src="/assets/case-cover-4.png?v=case-template-2" alt="Mobile learning statistics screens" /></figure>
+      </div>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Our process</div>
+        <div class="case-story-content"><h2>Prototype first, then narrow the product bets.</h2><p>We shaped learning journeys, generated and evaluated alternate UI directions, prototyped the strongest retention patterns, and prepared a design system foundation for future screens.</p></div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Results</div>
+        <div class="case-story-content"><h2>Validated flows and a clearer product path.</h2><p>Clawerly received a testable experience for learner retention, teacher visibility, and AI-supported practice, with UI rules ready to carry into new product areas.</p></div>
+      </section>
+
+      <div class="case-result-grid" data-case-reveal>
+        <article class="case-result-card"><span>Prototype cycles</span><strong>3</strong></article>
+        <article class="case-result-card"><span>Retention journeys</span><strong>7</strong></article>
+        <article class="case-result-card"><span>Reusable states</span><strong>30+</strong></article>
+      </div>
+
+      <section class="case-next" data-case-reveal>
+        <div><small>Next case</small><h2>AI tutoring app UX/UI for ASI, on a design system built to scale</h2></div>
+        <a class="case-next-link" href="/cases/asi/"><span>View next case</span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head"><div><h2 id="project-drawer-title">Let’s connect</h2><p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p></div><button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button></div>
+        <div class="project-drawer-body"><form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form><div class="project-field-grid"><label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label><label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label></div><label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label><fieldset class="project-fieldset"><legend>How can we help you?</legend><div class="project-chip-row"><label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label><label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label><label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label><label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label><label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label></div></fieldset><button class="project-submit" type="submit"><span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></button><p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p></form><div class="project-success" hidden data-project-success><h3>Thanks. We'll get back with a useful next step.</h3><p>We reply with a scope direction, not a vague calendar loop.</p><button class="project-submit" type="button" data-project-close>Back to site</button></div></div>
+      </aside>
+    </div>
+
+    <footer class="site-footer"><div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div><div class="footer-side"><a class="footer-link" href="/privacy-policy.html">Privacy policy</a><a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a></div></footer>
+    <script src="/project-drawer.js?v=project-drawer-6" defer></script><script src="/theme-toggle.js?v=1" defer></script><script src="/case-pages.js?v=1" defer></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>Mobile banking app UX/UI for Trafio | Ailume Case Study</title>
+    <meta name="description" content="How Ailume shaped a validated mobile banking UX/UI direction for Trafio, moving stressful money decisions into calm, dev-ready product flows." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/cases/trafio/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="Mobile banking app UX/UI for Trafio | Ailume Case Study" />
+    <meta property="og:description" content="Validated banking UX/UI, design system foundations, and calm money-management flows for Trafio." />
+    <meta property="og:url" content="https://ailume.agency/cases/trafio/" />
+    <meta property="og:image" content="https://ailume.agency/assets/case-cover-1.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css?v=case-template-2" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo line-reveal" href="/" aria-label="Ailume home">
+          <span class="line-inner" data-text="Ailume">Ailume</span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" /><path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" /></svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-study-main">
+      <section class="case-hero" data-case-reveal>
+        <div class="case-hero-grid">
+          <div>
+            <div class="section-tag case-kicker">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Case study</span>
+            </div>
+            <h1>Mobile banking app UX/UI for Trafio, validated with users before build</h1>
+          </div>
+          <aside class="case-hero-aside">
+            <p>We helped turn a sensitive money-management product into a calmer, clearer mobile experience with a direction ready for product validation and engineering.</p>
+            <div class="case-tags"><span>Fintech</span><span>Mobile app</span><span>UX/UI</span><span>Design system</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <figure class="case-cover" data-case-reveal>
+        <img src="/assets/case-cover-1.png?v=case-template-2" alt="Trafio mobile banking product case cover" width="944" height="800" />
+      </figure>
+
+      <section class="case-info" data-case-reveal>
+        <div class="case-info-item"><span>Client</span><strong>Trafio</strong></div>
+        <div class="case-info-item"><span>Industry</span><strong>Fintech</strong></div>
+        <div class="case-info-item"><span>Scope</span><strong>UX/UI, prototype, design system</strong></div>
+        <div class="case-info-item"><span>Focus</span><strong>Validated money flows</strong></div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">About the project</div>
+        <div class="case-story-content">
+          <h2>Calm product design for high-stakes financial decisions.</h2>
+          <p>Trafio needed a mobile banking experience that made balances, risk signals, spending behavior, and next actions feel understandable without flattening the complexity behind them.</p>
+          <p>We shaped the core flows, interface language, and product system so the team could validate the direction before committing to a larger build.</p>
+        </div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Challenge</div>
+        <div class="case-story-content">
+          <h2>Financial interfaces often overload people when they most need clarity.</h2>
+          <p>The work focused on reducing cognitive load, separating urgent signals from everyday finance, and making every screen feel trustworthy enough for repeated use.</p>
+        </div>
+      </section>
+
+      <div class="case-image-grid" data-case-reveal>
+        <figure class="case-image"><img src="/assets/case-cover-1.png?v=case-template-2" alt="Trafio dashboard interface on laptop" /></figure>
+        <figure class="case-image"><img src="/assets/hero-image.png" alt="Ailume generated finance interface compositions" /></figure>
+      </div>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Our process</div>
+        <div class="case-story-content">
+          <h2>From product assumptions to a clickable direction.</h2>
+          <p>We mapped priority journeys, explored interface patterns with AI-assisted variations, refined the strongest routes manually, and turned the approved direction into a prototype the team could test with users.</p>
+        </div>
+      </section>
+
+      <section class="case-story-section" data-case-reveal>
+        <div class="case-story-label">Results</div>
+        <div class="case-story-content">
+          <h2>A sharper product story and a reusable UI foundation.</h2>
+          <p>The final direction gave Trafio a calmer mobile experience, reusable components, and validated flows that could move into delivery without another round of visual rethinking.</p>
+        </div>
+      </section>
+
+      <div class="case-result-grid" data-case-reveal>
+        <article class="case-result-card"><span>First clickable direction</span><strong>8 days</strong></article>
+        <article class="case-result-card"><span>Core mobile journeys</span><strong>6 flows</strong></article>
+        <article class="case-result-card"><span>Reusable UI patterns</span><strong>24+</strong></article>
+      </div>
+
+      <section class="case-next" data-case-reveal>
+        <div>
+          <small>Next case</small>
+          <h2>SaaS platform UX/UI for FlowApps, unified under one design system</h2>
+        </div>
+        <a class="case-next-link" href="/cases/flowapps/">
+          <span>View next case</span>
+          <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+        </a>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div><h2 id="project-drawer-title">Let’s connect</h2><p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p></div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button>
+        </div>
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label>
+              <label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label>
+            </div>
+            <label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label>
+            <fieldset class="project-fieldset"><legend>How can we help you?</legend><div class="project-chip-row"><label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label><label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label><label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label><label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label><label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label></div></fieldset>
+            <button class="project-submit" type="submit"><span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></button>
+            <p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p>
+          </form>
+          <div class="project-success" hidden data-project-success><h3>Thanks. We'll get back with a useful next step.</h3><p>We reply with a scope direction, not a vague calendar loop.</p><button class="project-submit" type="button" data-project-close>Back to site</button></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div>
+      <div class="footer-side">
+        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a>
+      </div>
+    </footer>
+    <script src="/project-drawer.js?v=project-drawer-6" defer></script>
+    <script src="/theme-toggle.js?v=1" defer></script>
+    <script src="/case-pages.js?v=1" defer></script>
+  </body>
+</html>
+

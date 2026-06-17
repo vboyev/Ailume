@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>AI-Augmented Product Design Cost: Scope & Timeline Guide | Ailume</title>
+    <meta
+      name="description"
+      content="A practical guide to scoping AI-augmented product design: what affects cost, what belongs in a first sprint, and how teams avoid overbuilding."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/blog/ai-augmented-product-design-cost/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="AI-Augmented Product Design Cost: Scope & Timeline Guide | Ailume" />
+    <meta
+      property="og:description"
+      content="A practical guide to scoping AI-augmented product design without turning the first release into a rebuild."
+    />
+    <meta property="og:url" content="https://ailume.agency/blog/ai-augmented-product-design-cost/" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css?v=blog-template-2" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://ailume.agency/blog/ai-augmented-product-design-cost/",
+        "mainEntityOfPage": "https://ailume.agency/blog/ai-augmented-product-design-cost/",
+        "headline": "AI-Augmented Product Design Cost: Scope & Timeline Guide",
+        "description": "A practical guide to scoping AI-augmented product design: what affects cost, what belongs in a first sprint, and how teams avoid overbuilding.",
+        "datePublished": "2026-06-16",
+        "author": {
+          "@type": "Organization",
+          "name": "Ailume"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ailume",
+          "url": "https://ailume.agency/"
+        },
+        "image": "https://ailume.agency/assets/hero-image.png"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo line-reveal" href="/" aria-label="Ailume home">
+          <span class="line-inner" data-text="Ailume">Ailume</span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="/assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="blog-post-main">
+      <section class="blog-hero">
+        <div class="blog-hero-inner">
+          <ul class="blog-breadcrumbs" aria-label="Breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li><a href="/blog/ai-augmented-product-design-cost/">Blog</a></li>
+            <li>/</li>
+            <li>Pricing and scope</li>
+          </ul>
+          <h1 data-blog-reveal>How much does AI-augmented product design cost?</h1>
+          <div class="blog-hero-meta" data-blog-reveal>
+            <span>16 June 2026</span>
+            <span>6 min read</span>
+            <span>Pricing and Engagement</span>
+          </div>
+        </div>
+      </section>
+
+      <article class="blog-shell">
+        <div class="blog-intro-grid" data-blog-reveal>
+          <p class="blog-lead">
+            The real cost of product design is not the number of screens. It is the number of
+            decisions your team needs to make before engineering can move with confidence.
+          </p>
+          <aside class="blog-author-card" aria-label="Author">
+            <span class="blog-author-avatar" aria-hidden="true"></span>
+            <div>
+              <strong>Ailume team</strong>
+              <span>AI-augmented product design agency</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="blog-content-grid">
+          <aside class="blog-sidebar" data-blog-reveal>
+            <nav class="blog-toc" aria-label="Table of contents">
+              <strong>Table of contents</strong>
+              <ol>
+                <li><a href="#why-costs-vary">Why quotes vary</a></li>
+                <li><a href="#scope-tiers">Scope tiers</a></li>
+                <li><a href="#what-drives-budget">What drives budget</a></li>
+                <li><a href="#how-to-scope">How to scope v1</a></li>
+                <li><a href="#final-note">Final note</a></li>
+              </ol>
+            </nav>
+            <div class="blog-sidebar-cta">
+              <p>Need a scope you can actually use?</p>
+              <a class="deliver-link" href="/contact" data-project-open>
+                <span>Ask Ailume</span>
+                <span class="mini-icon" aria-hidden="true">
+                  <img src="/assets/arrow-up-right.svg" alt="" />
+                </span>
+              </a>
+            </div>
+          </aside>
+
+          <div class="blog-article" data-blog-reveal>
+            <figure class="blog-cover">
+              <img src="/assets/hero-image.png" alt="AI-generated product design interface compositions" width="1344" height="1240" />
+              <figcaption>AI-augmented design work is most useful when it narrows decisions, not when it creates more noise.</figcaption>
+            </figure>
+
+            <div class="blog-rich">
+              <p>
+                Ask three agencies for a product design quote and you will often get three prices
+                that do not even look like they belong to the same project. One proposal prices a
+                clickable prototype. Another includes research, UI exploration, design systems,
+                usability review, and handoff. The difference is not only effort. It is risk.
+              </p>
+
+              <h2 id="why-costs-vary">Why AI-augmented design quotes vary</h2>
+              <p>
+                AI speeds up synthesis, exploration, and documentation. It does not remove product
+                judgment. The best teams use AI to create more useful options, then rely on senior
+                designers to decide which direction is actually worth building.
+              </p>
+              <p>
+                That is why a cheaper quote can still become expensive later. If the first scope
+                skips user flows, system rules, edge states, or developer-ready handoff, the product
+                team pays for those decisions during engineering.
+              </p>
+
+              <div class="blog-callout">
+                A good first scope should answer one question: what does the team need to learn or
+                ship next without creating design debt?
+              </div>
+
+              <h2 id="scope-tiers">Typical scope tiers</h2>
+              <p>
+                These tiers are a practical way to think about the work. The exact number depends on
+                product complexity, stakeholder access, and how much of your system already exists.
+              </p>
+
+              <table class="blog-table">
+                <thead>
+                  <tr>
+                    <th>Scope</th>
+                    <th>Best for</th>
+                    <th>Typical output</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Design sprint</td>
+                    <td>Validating direction fast</td>
+                    <td>Flows, prototype, key screens</td>
+                  </tr>
+                  <tr>
+                    <td>Embedded team</td>
+                    <td>Ongoing roadmap support</td>
+                    <td>Feature UX/UI, iterations, handoff</td>
+                  </tr>
+                  <tr>
+                    <td>System scale</td>
+                    <td>Products with repeated UI patterns</td>
+                    <td>Components, states, tokens, docs</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2 id="what-drives-budget">What drives the budget</h2>
+              <p>
+                The biggest budget drivers are usually not visual polish. They are the amount of
+                product uncertainty, the number of roles and permissions, the depth of edge cases,
+                and whether your team needs a system that engineers can reuse.
+              </p>
+              <ul>
+                <li>Research synthesis and user-flow definition.</li>
+                <li>Number of product surfaces, roles, and states.</li>
+                <li>Level of interaction detail required in the prototype.</li>
+                <li>Design-system depth: components, tokens, patterns, and documentation.</li>
+                <li>Quality of handoff and engineering collaboration.</li>
+              </ul>
+
+              <div class="blog-inline-cta">
+                <div>
+                  <h2>Scope the next useful step.</h2>
+                  <p>Tell us what is slowing design down. We will map the leanest path forward.</p>
+                </div>
+                <a class="hero-cta" href="/contact" data-project-open>
+                  <span class="button-text line-reveal">
+                    <span class="line-inner" data-text="Start a project">Start a project</span>
+                  </span>
+                  <span class="cta-icon" aria-hidden="true">
+                    <img src="/assets/arrow-up-right.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+
+              <h2 id="how-to-scope">How to scope v1 without overbuilding</h2>
+              <p>
+                Start with the decision the product team needs to make. If you need investor
+                confidence, prototype the narrative. If engineering is blocked, define flows,
+                states, and component logic. If the roadmap is moving faster than design capacity,
+                build a system that makes the next screens cheaper.
+              </p>
+              <h3>What to leave out</h3>
+              <p>
+                Leave out anything that does not help the team validate, ship, or reduce repeated
+                decisions. AI can generate endless options. The work is choosing the few that make
+                product delivery clearer.
+              </p>
+
+              <h2 id="final-note">Final note</h2>
+              <p>
+                AI-augmented design works best when it compresses exploration and documentation
+                while keeping accountability human. The output should not feel like a pile of fast
+                screens. It should feel like a product team finally knows what to build next.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="/assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+          <div class="project-success" hidden data-project-success>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+      </div>
+      <div class="footer-side">
+        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="/assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
+    </footer>
+    <script src="/project-drawer.js?v=project-drawer-6" defer></script>
+    <script src="/theme-toggle.js?v=1" defer></script>
+    <script src="/blog-post.js?v=1" defer></script>
+  </body>
+</html>
