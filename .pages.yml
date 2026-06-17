@@ -1,0 +1,97 @@
+media:
+  input: assets/blog
+  output: /assets/blog
+
+content:
+  - name: blog
+    label: Blog posts
+    type: collection
+    path: content/blog
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, status]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: status
+        label: Status
+        type: select
+        default: draft
+        options:
+          values:
+            - draft
+            - published
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: seoTitle
+        label: SEO title
+        type: string
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers, and hyphens only."
+      - name: description
+        label: Meta description
+        type: text
+        required: true
+      - name: ogDescription
+        label: Social description
+        type: text
+      - name: category
+        label: Category
+        type: string
+        default: Product design
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+      - name: readTime
+        label: Read time
+        type: string
+        default: 6 min read
+      - name: author
+        label: Author
+        type: string
+        default: Ailume team
+      - name: authorRole
+        label: Author role
+        type: string
+        default: AI-augmented product design agency
+      - name: cover
+        label: Cover image
+        type: image
+        default: /assets/hero-image.png
+      - name: coverAlt
+        label: Cover alt text
+        type: string
+      - name: coverCaption
+        label: Cover caption
+        type: text
+      - name: lead
+        label: Lead
+        type: text
+        required: true
+      - name: toc
+        label: Table of contents
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: anchor
+            label: Anchor
+            type: string
+      - name: body
+        label: Article body
+        type: rich-text
+        required: true

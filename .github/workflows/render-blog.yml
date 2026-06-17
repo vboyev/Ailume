@@ -1,0 +1,36 @@
+name: Render blog posts
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "content/blog/**"
+      - "scripts/render-blog.mjs"
+      - ".pages.yml"
+      - ".github/workflows/render-blog.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Render blog
+        run: node scripts/render-blog.mjs
+
+      - name: Commit generated blog pages
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Render blog posts"
+          file_pattern: "blog/** sitemap.xml"
