@@ -1879,6 +1879,10 @@ html.hero-intro-run .hero-visual {
   gap: 16px;
 }
 
+.project-form[hidden] {
+  display: none;
+}
+
 .project-field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
