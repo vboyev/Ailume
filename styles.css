@@ -3465,9 +3465,6 @@ html[data-theme="dark"] .section-tag {
 
 html[data-theme="dark"] .tag-cube {
   background: var(--brand-primary);
-  animation: none;
-  opacity: 1;
-  filter: none;
 }
 
 html[data-theme="dark"] .page-hero p,
