@@ -3458,6 +3458,17 @@ html[data-theme="dark"] .final-cta .cta-light:focus-visible .mini-icon {
   background: #fff;
 }
 
+html[data-theme="dark"] .section-tag {
+  color: var(--brand-primary);
+}
+
+html[data-theme="dark"] .tag-cube {
+  background: var(--brand-primary);
+  animation: none;
+  opacity: 1;
+  filter: none;
+}
+
 html[data-theme="dark"] .page-hero p,
 html[data-theme="dark"] .page-copy,
 html[data-theme="dark"] .page-card p,
