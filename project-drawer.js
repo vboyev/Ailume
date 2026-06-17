@@ -20,10 +20,6 @@ if (projectDrawer) {
         <span></span>
       </div>
       <div class="project-success-copy">
-        <div class="section-tag compact-tag">
-          <span class="tag-cube" aria-hidden="true"></span>
-          <span>Request sent</span>
-        </div>
         <h3>Thanks, we got your request.</h3>
         <p>We'll review your message and reply with the next useful step.</p>
       </div>
@@ -93,6 +89,11 @@ if (projectDrawer) {
 
     if (isOpen) {
       projectDrawer.classList.add("is-visible");
+      projectDrawer.classList.remove("has-success");
+      if (form && success) {
+        form.hidden = false;
+        success.hidden = true;
+      }
       projectDrawer.setAttribute("aria-hidden", "false");
       document.body.classList.add("project-drawer-open");
 
@@ -113,6 +114,7 @@ if (projectDrawer) {
       if (!form || !success) return;
       form.hidden = false;
       success.hidden = true;
+      projectDrawer.classList.remove("has-success");
       form.reset();
       setFormError("");
       setSubmitState(false);
@@ -174,6 +176,7 @@ if (projectDrawer) {
       }
 
       form.hidden = true;
+      projectDrawer.classList.add("has-success");
       if (success) success.hidden = false;
     } catch (error) {
       setFormError("Something went wrong. Please email hello@ailume.agency.");
