@@ -292,7 +292,7 @@ function renderPost(post) {
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="${escapeHtml(coverAbsolute)}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=success-state-2" />
+    <link rel="stylesheet" href="/styles.css?v=deliver-gap-1" />
     <script type="application/ld+json">
       ${JSON.stringify(
         {

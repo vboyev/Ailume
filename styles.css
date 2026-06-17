@@ -1217,16 +1217,17 @@ html.hero-intro-run .hero-visual {
     grid-template-columns:
       36px
       minmax(0, calc(100% - var(--home-media-width) - 40px))
-      minmax(280px, 1fr)
+      minmax(280px, 388px)
+      minmax(64px, 1fr)
       auto;
   }
 
   .deliver-row p {
-    max-width: 520px;
+    max-width: 388px;
   }
 
   .deliver-link {
-    grid-column: auto;
+    grid-column: 5;
   }
 
   .process-section {
