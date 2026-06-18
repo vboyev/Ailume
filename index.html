@@ -894,6 +894,11 @@
           }
 
           function start(event) {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
             setTarget(event);
             position.currentX = position.targetX;
             position.currentY = position.targetY;
@@ -915,13 +920,12 @@
           }
 
           function stop() {
-            media.classList.remove("is-case-hover");
-            position.targetX = 50;
-            position.targetY = 50;
-
-            if (!frame) {
-              frame = requestAnimationFrame(render);
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
             }
+
+            media.classList.remove("is-case-hover");
           }
 
           media.addEventListener("pointerenter", start);
