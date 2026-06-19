@@ -8,15 +8,20 @@
         const key = "ailume-theme";
         const root = document.documentElement;
         let storedTheme = null;
-        try { storedTheme = window.localStorage.getItem(key); } catch (error) {}
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
         const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
         const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
         root.dataset.theme = theme;
         root.style.colorScheme = theme;
       })();
     </script>
-    <title>EdTech platform UX/UI for Clawerly | Ailume Case Study</title>
-    <meta name="description" content="How Ailume designed and validated retention-critical EdTech flows for Clawerly before build." />
+    <title>Clawerly - Language Learning Platform UX/UI Case Study | Ailume</title>
+    <meta
+      name="description"
+      content="How Ailume designed Clawerly - a language learning platform focused on momentum, comeback flows, and a design system that keeps retention experiences consistent."
+    />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
@@ -24,20 +29,32 @@
     <link rel="canonical" href="https://ailume.agency/cases/clawerly/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Ailume" />
-    <meta property="og:title" content="EdTech platform UX/UI for Clawerly | Ailume Case Study" />
-    <meta property="og:description" content="Retention-critical learning flows, tested before build and structured for product scale." />
+    <meta property="og:title" content="Clawerly - Language Learning Platform UX/UI Case Study | Ailume" />
+    <meta
+      property="og:description"
+      content="A language learning case study focused on visible progress, lesson rhythm, retention, and a reusable design system."
+    />
     <meta property="og:url" content="https://ailume.agency/cases/clawerly/" />
     <meta property="og:image" content="https://ailume.agency/assets/case-cover-3.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=deliver-stable-line-1" />
+    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
+    <script src="/analytics.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo line-reveal" href="/" aria-label="Ailume home"><span class="line-inner" data-text="Ailume">Ailume</span></a>
+        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
         <div class="header-actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" /><path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" /></svg></button>
-          <a class="header-cta" href="/contact" data-project-open><span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+          </a>
         </div>
       </div>
     </header>
@@ -45,58 +62,139 @@
     <main class="case-study-main">
       <section class="case-hero" data-case-reveal>
         <div class="case-hero-grid">
-          <div><div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study</span></div><h1>EdTech platform UX/UI for Clawerly: retention flows tested before build</h1></div>
-          <aside class="case-hero-aside"><p>Clawerly needed learning flows that could keep learners engaged, help teachers understand progress, and support product iteration before the engineering push.</p><div class="case-tags"><span>EdTech</span><span>AI</span><span>Mobile app</span><span>Design system</span></div></aside>
+          <div>
+            <div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study - EdTech - Language learning</span></div>
+            <h1>Learning that keeps its momentum.</h1>
+          </div>
+          <aside class="case-hero-aside">
+            <p>
+              Clawerly turns language practice into something people come back to. We designed the full learning experience - paths, lessons, progress, and the comeback after
+              a break - plus the system that lets new lesson types ship fast.
+            </p>
+            <div class="case-tags">
+              <span>UX/UI Design</span>
+              <span>EdTech</span>
+              <span>Web Platform</span>
+              <span>Design System</span>
+              <span>AI-Augmented Process</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <figure class="case-cover" data-case-reveal><img src="/assets/case-cover-3.png?v=case-template-2" alt="Clawerly EdTech platform interface case cover" width="1744" height="1280" /></figure>
+      <section class="case-cover" data-case-reveal>
+        <div class="case-placeholder case-placeholder-cover">
+          <span class="case-placeholder-label">Hero placeholder</span>
+          <p class="case-placeholder-text">Clawerly lesson and progress screens.</p>
+        </div>
+      </section>
 
       <section class="case-info" data-case-reveal>
-        <div class="case-info-item"><span>Client</span><strong>Clawerly</strong></div>
+        <div class="case-info-item"><span>Product</span><strong>Clawerly - language learning platform</strong></div>
         <div class="case-info-item"><span>Industry</span><strong>EdTech</strong></div>
-        <div class="case-info-item"><span>Scope</span><strong>UX/UI, testing, design system</strong></div>
-        <div class="case-info-item"><span>Focus</span><strong>Retention flows</strong></div>
+        <div class="case-info-item"><span>Platform</span><strong>Web platform</strong></div>
+        <div class="case-info-item"><span>Services</span><strong>UX/UI design, prototyping, design system</strong></div>
+        <div class="case-info-item"><span>Timeline</span><strong>[X] weeks</strong></div>
+        <div class="case-info-item"><span>Team</span><strong>2 senior product designers + AI-augmented workflow</strong></div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">About the project</div>
-        <div class="case-story-content"><h2>A learning product direction tested before the build cycle.</h2><p>We designed core learner and teacher experiences around motivation, progress visibility, and bite-sized learning actions that could be tested with users before full production.</p><p>The interface balances friendly education patterns with a product system strong enough to scale across lessons, tests, notes, and coaching flows.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>The real competitor is quitting.</h2>
+          <p>Nobody churns from a language app because it lacks features. They churn because motivation runs out: progress feels invisible, lessons feel the same, and the finish line looks far away.</p>
+          <p>Clawerly promise - interactive lessons, expert teachers, adaptive paths - only matters if the interface keeps that momentum alive. Our job was to design a platform where the next lesson always feels worth starting.</p>
+        </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Challenge</div>
-        <div class="case-story-content"><h2>Retention is won in small moments, not one big feature.</h2><p>The team needed to understand which interactions would keep learners returning, where progress should be surfaced, and how AI assistance could feel useful without taking over the learning experience.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The challenge</div>
+        <div class="case-section-content">
+          <h2>Motivation is a design problem, not a feature.</h2>
+          <p>Every screen either feeds momentum or quietly kills it. The hard moments are the plateaus, the returns after a break, and the times progress stops being visible.</p>
+          <p>The product had to make progress feel real, keep lessons light, and win the comeback when a lapsed learner decides whether to return.</p>
+        </div>
       </section>
 
-      <div class="case-image-grid" data-case-reveal>
-        <figure class="case-image"><img src="/assets/case-cover-3.png?v=case-template-2" alt="Clawerly laptop education dashboard" /></figure>
-        <figure class="case-image"><img src="/assets/case-cover-4.png?v=case-template-2" alt="Mobile learning statistics screens" /></figure>
-      </div>
-
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Our process</div>
-        <div class="case-story-content"><h2>Prototype first, then narrow the product bets.</h2><p>We shaped learning journeys, generated and evaluated alternate UI directions, prototyped the strongest retention patterns, and prepared a design system foundation for future screens.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Our approach</div>
+        <div class="case-section-content">
+          <h2>AI explores. Designers decide.</h2>
+          <div class="case-step-list">
+            <article class="case-step"><div class="case-step-copy"><h3>01 Frame</h3><p>AI synthesized engagement patterns, drop-off research, and learner reviews into a map of where motivation leaks. Designers turned that into three momentum loops: finish a lesson, see progress move, want the next one.</p></div></article>
+            <article class="case-step"><div class="case-step-copy"><h3>02 Explore</h3><p>AI generated progress models, lesson-flow structures, streaks, path maps, and skill trees. Designers kept what respected the learner: visible path plus proof of skill.</p></div></article>
+            <article class="case-step"><div class="case-step-copy"><h3>03 Prototype</h3><p>Core journeys went clickable fast - first lesson, return after a missed week, level-up, hard exercise - including empty streaks, failed tests, and the behind moment that usually triggers churn.</p></div></article>
+            <article class="case-step"><div class="case-step-copy"><h3>04 Scale</h3><p>The approved direction became a design system where new lesson formats assemble from existing parts instead of new screens.</p></div></article>
+          </div>
+        </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Results</div>
-        <div class="case-story-content"><h2>Validated flows and a clearer product path.</h2><p>Clawerly received a testable experience for learner retention, teacher visibility, and AI-supported practice, with UI rules ready to carry into new product areas.</p></div>
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide"><span class="case-placeholder-label">Exploration placeholder</span><p class="case-placeholder-text">Path maps, lesson sequences, streak logic, and comeback directions.</p></div>
+        <div class="case-placeholder case-placeholder-compact"><span class="case-placeholder-label">Prototype placeholder</span><p class="case-placeholder-text">Return flows, progress states, and retention-critical lesson checkpoints.</p></div>
       </section>
 
-      <div class="case-result-grid" data-case-reveal>
-        <article class="case-result-card"><span>Prototype cycles</span><strong>3</strong></article>
-        <article class="case-result-card"><span>Retention journeys</span><strong>7</strong></article>
-        <article class="case-result-card"><span>Reusable states</span><strong>30+</strong></article>
-      </div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The design</div>
+        <div class="case-section-content">
+          <h2>Every screen feeds the next lesson.</h2>
+          <div class="case-feature-grid">
+            <article class="case-feature"><div class="case-feature-copy"><h3>A path you can see the end of</h3><p>The learner always knows where they are, what comes next, and what progress actually means.</p></div><div class="case-placeholder case-placeholder-medium"><span class="case-placeholder-label">Design placeholder</span><p class="case-placeholder-text">Path view, lesson milestones, and unit structure.</p></div></article>
+            <article class="case-feature"><div class="case-feature-copy"><h3>Lessons with rhythm</h3><p>One task per step keeps momentum up and cognitive load down, even in longer sessions.</p></div><div class="case-placeholder case-placeholder-medium"><span class="case-placeholder-label">Design placeholder</span><p class="case-placeholder-text">Lesson cards, transitions, and micro-feedback moments.</p></div></article>
+            <article class="case-feature"><div class="case-feature-copy"><h3>Progress that proves something</h3><p>Skill growth is visible and honest, so the product rewards actual learning instead of just time spent.</p></div><div class="case-placeholder case-placeholder-medium"><span class="case-placeholder-label">Design placeholder</span><p class="case-placeholder-text">Skill summaries, test results, and level feedback.</p></div></article>
+            <article class="case-feature"><div class="case-feature-copy"><h3>A comeback, not a guilt trip</h3><p>Return flows start from confidence, helping users re-enter with momentum rather than shame.</p></div><div class="case-placeholder case-placeholder-medium"><span class="case-placeholder-label">Design placeholder</span><p class="case-placeholder-text">Return journey, missed-day states, and re-entry prompts.</p></div></article>
+            <article class="case-feature"><div class="case-feature-copy"><h3>Teachers in the loop</h3><p>Expert support lands exactly where learners stall, so help feels timely instead of hidden.</p></div><div class="case-placeholder case-placeholder-medium"><span class="case-placeholder-label">Design placeholder</span><p class="case-placeholder-text">Teacher touchpoints, feedback windows, and support moments.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Design system &amp; scale</div>
+        <div class="case-section-content">
+          <h2>A system for endless lessons.</h2>
+          <p>One component language carries the whole product. New lesson formats assemble from existing parts and ship without redesign, on documented, dev-ready files.</p>
+        </div>
+      </section>
+
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide"><span class="case-placeholder-label">System placeholder</span><p class="case-placeholder-text">Reusable patterns for lessons, progress, returns, and future content types.</p></div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">In their words</div>
+        <div class="case-section-content">
+          <h2>Why the retention layer mattered.</h2>
+          <div class="case-quote-grid">
+            <figure class="case-quote"><blockquote>"The clearest improvement was how the product started respecting the learner's energy. Progress felt visible, and the return after a break no longer felt like starting over."</blockquote><figcaption>Product stakeholder</figcaption></figure>
+            <figure class="case-quote"><blockquote>"The system work gave us room to expand. New lesson ideas stopped feeling like custom design projects and started fitting into a structure that already made sense."</blockquote><figcaption>Engineering-side collaborator</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Outcome</div>
+        <div class="case-section-content">
+          <h2>A platform people return to.</h2>
+          <ul class="case-outcome-list">
+            <li>Progress that feels real, so learners stay motivated.</li>
+            <li>A comeback flow that brings lapsed learners back.</li>
+            <li>Lessons light enough to keep the rhythm going.</li>
+            <li>A design system that ships new lesson types without redesign.</li>
+          </ul>
+        </div>
+      </section>
 
       <section class="case-next" data-case-reveal>
-        <div><small>Next case</small><h2>AI tutoring app UX/UI for ASI, on a design system built to scale</h2></div>
-        <a class="case-next-link" href="/cases/asi/"><span>View next case</span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+        <div>
+          <small>Next step</small>
+          <h2>Building a product that lives on retention?</h2>
+          <p>Then every screen is a retention decision. Tell us where users drop off - we'll show you where an AI-augmented design process moves it.</p>
+        </div>
+        <a class="case-next-link" href="#project-form" data-project-open"><span>Start a project</span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
       </section>
     </main>
 
-    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer">
       <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
         <div class="project-drawer-head"><div><h2 id="project-drawer-title">Let’s connect</h2><p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p></div><button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button></div>
         <div class="project-drawer-body"><form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form><div class="project-field-grid"><label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label><label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label></div><label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label><fieldset class="project-fieldset"><legend>How can we help you?</legend><div class="project-chip-row"><label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label><label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label><label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label><label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label><label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label></div></fieldset><button class="project-submit" type="submit"><span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></button><p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p></form><div class="project-success" hidden data-project-success><h3>Thanks. We'll get back with a useful next step.</h3><p>We reply with a scope direction, not a vague calendar loop.</p><button class="project-submit" type="button" data-project-close>Back to site</button></div></div>

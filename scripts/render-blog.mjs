@@ -292,7 +292,8 @@ function renderPost(post) {
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="${escapeHtml(coverAbsolute)}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=deliver-stable-line-1" />
+    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
+    <script src="/analytics.js?v=1" defer></script>
     <script type="application/ld+json">
       ${JSON.stringify(
         {
@@ -322,9 +323,7 @@ function renderPost(post) {
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo line-reveal" href="/" aria-label="Ailume home">
-          <span class="line-inner" data-text="Ailume">Ailume</span>
-        </a>
+        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
         <div class="header-actions">
           <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">

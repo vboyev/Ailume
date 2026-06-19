@@ -8,15 +8,20 @@
         const key = "ailume-theme";
         const root = document.documentElement;
         let storedTheme = null;
-        try { storedTheme = window.localStorage.getItem(key); } catch (error) {}
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
         const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
         const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
         root.dataset.theme = theme;
         root.style.colorScheme = theme;
       })();
     </script>
-    <title>SaaS platform UX/UI for FlowApps | Ailume Case Study</title>
-    <meta name="description" content="How Ailume unified FlowApps under one scalable SaaS UX/UI system with cleaner workflows, reusable components, and dev-ready handoff." />
+    <title>FlowApps - Project Management SaaS UX/UI Case Study | Ailume</title>
+    <meta
+      name="description"
+      content="How Ailume designed FlowApps - a feature-heavy project management SaaS with manager depth, team simplicity, and a design system built to scale."
+    />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
@@ -24,20 +29,32 @@
     <link rel="canonical" href="https://ailume.agency/cases/flowapps/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Ailume" />
-    <meta property="og:title" content="SaaS platform UX/UI for FlowApps | Ailume Case Study" />
-    <meta property="og:description" content="A scalable SaaS UX/UI system for FlowApps, designed to make complex workflows feel clear and consistent." />
+    <meta property="og:title" content="FlowApps - Project Management SaaS UX/UI Case Study | Ailume" />
+    <meta
+      property="og:description"
+      content="A SaaS case study focused on progressive density, scalable workflows, and a design system that absorbs complex product growth."
+    />
     <meta property="og:url" content="https://ailume.agency/cases/flowapps/" />
     <meta property="og:image" content="https://ailume.agency/assets/case-cover-2.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=deliver-stable-line-1" />
+    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
+    <script src="/analytics.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo line-reveal" href="/" aria-label="Ailume home"><span class="line-inner" data-text="Ailume">Ailume</span></a>
+        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
         <div class="header-actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" /><path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" /></svg></button>
-          <a class="header-cta" href="/contact" data-project-open><span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+          </a>
         </div>
       </div>
     </header>
@@ -46,86 +63,298 @@
       <section class="case-hero" data-case-reveal>
         <div class="case-hero-grid">
           <div>
-            <div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study</span></div>
-            <h1>SaaS platform UX/UI for FlowApps, unified under one design system</h1>
+            <div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study - B2B SaaS - Productivity</span></div>
+            <h1>Powerful, without the overwhelm.</h1>
           </div>
           <aside class="case-hero-aside">
-            <p>FlowApps needed a product surface that could handle complex workflow logic without fragmenting into one-off screens.</p>
-            <div class="case-tags"><span>B2B SaaS</span><span>Web platform</span><span>UX/UI</span><span>Design system</span></div>
+            <p>
+              FlowApps packs everything a manager needs - task boards, roles, time tracking, 50+ integrations - into a product a whole team will actually use. We designed
+              the full experience and the system underneath it, so depth and simplicity could coexist, and new modules could ship without a redesign.
+            </p>
+            <div class="case-tags">
+              <span>UX/UI Design</span>
+              <span>B2B SaaS</span>
+              <span>Web Platform</span>
+              <span>Design System</span>
+              <span>AI-Augmented Process</span>
+            </div>
           </aside>
         </div>
       </section>
 
-      <figure class="case-cover" data-case-reveal>
-        <img src="/assets/case-cover-2.png?v=case-template-2" alt="FlowApps SaaS platform interface case cover" width="1744" height="1280" />
-      </figure>
+      <section class="case-cover" data-case-reveal>
+        <div class="case-placeholder case-placeholder-cover">
+          <span class="case-placeholder-label">Hero placeholder</span>
+          <p class="case-placeholder-text">FlowApps dashboard on a laptop or tablet.</p>
+        </div>
+      </section>
 
       <section class="case-info" data-case-reveal>
-        <div class="case-info-item"><span>Client</span><strong>FlowApps</strong></div>
-        <div class="case-info-item"><span>Industry</span><strong>B2B SaaS</strong></div>
-        <div class="case-info-item"><span>Scope</span><strong>UX/UI, web app, components</strong></div>
-        <div class="case-info-item"><span>Focus</span><strong>Unified workflow system</strong></div>
+        <div class="case-info-item"><span>Product</span><strong>FlowApps - project &amp; task management SaaS</strong></div>
+        <div class="case-info-item"><span>Industry</span><strong>B2B SaaS / Productivity</strong></div>
+        <div class="case-info-item"><span>Platform</span><strong>Web app</strong></div>
+        <div class="case-info-item"><span>Services</span><strong>UX/UI design, prototyping, design system</strong></div>
+        <div class="case-info-item"><span>Timeline</span><strong>[X] weeks</strong></div>
+        <div class="case-info-item"><span>Team</span><strong>2 senior product designers + AI-augmented workflow</strong></div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">About the project</div>
-        <div class="case-story-content">
-          <h2>A complex workflow product needed one visual and interaction language.</h2>
-          <p>We redesigned the core platform experience around repeatable patterns, clear hierarchy, and a design system that could keep growing after the first release.</p>
-          <p>The result is a product interface that feels coherent across dashboards, lists, integrations, permissions, and team collaboration states.</p>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>Depth for managers. Calm for everyone.</h2>
+          <p>
+            Project management tools have a built-in trap: every feature you add for managers makes the product heavier for the people doing the work. Add 50+ integrations
+            on top, and most tools collapse into clutter.
+          </p>
+          <p>FlowApps wanted both ends at once: the control managers need and the simplicity that keeps a team inside the product every day.</p>
         </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Challenge</div>
-        <div class="case-story-content">
-          <h2>Workflow products break when every edge case gets its own UI rule.</h2>
-          <p>FlowApps needed reusable logic for dense screens, states, cards, tables, dropdowns, and collaboration controls, while still keeping the interface approachable for daily users.</p>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The challenge</div>
+        <div class="case-section-content">
+          <h2>Information density is where this product wins or loses.</h2>
+          <p>
+            The hard question was not what features - it was how much any one screen should say at once. Too little and managers feel limited; too much and everyone else
+            bounces.
+          </p>
+          <p>
+            The interface had to serve two audiences, one wide product surface, and a roadmap where new modules could not mean a new design language each time.
+          </p>
         </div>
       </section>
 
-      <div class="case-image-grid" data-case-reveal>
-        <figure class="case-image"><img src="/assets/case-cover-2.png?v=case-template-2" alt="FlowApps marketplace workflow screen" /></figure>
-        <figure class="case-image"><img src="/assets/whyus-2.png" alt="Workflow review interface composition" /></figure>
-      </div>
-
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Our process</div>
-        <div class="case-story-content">
-          <h2>We designed the system around reusable decisions, not isolated screens.</h2>
-          <p>We mapped product areas, clustered recurring states, explored UI directions, and translated the chosen direction into components, rules, and screen examples ready for engineering.</p>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Our approach</div>
+        <div class="case-section-content">
+          <h2>AI explores. Designers decide.</h2>
+          <div class="case-step-list">
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>01 Frame</h3>
+                <p>
+                  AI processed workflow patterns across leading PM tools, churn drivers from public reviews, and the client feature map. Designers chose the moments worth
+                  winning: a manager first setup and a teammate first task.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>02 Explore</h3>
+                <p>
+                  AI generated dashboard models, navigation systems, and board layouts. Designers chose progressive density: a calm default view with detail one deliberate
+                  step away.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>03 Prototype</h3>
+                <p>
+                  Core journeys went clickable fast - building a team, assigning roles, clearing a day, reading hours across a sprint - including empty boards, permission
+                  conflicts, and the 50-integration settings screen.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>04 Scale</h3>
+                <p>
+                  The approved direction became a design system with components, tokens, status patterns, and dev-ready handoff that absorbs new modules without redesign.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Results</div>
-        <div class="case-story-content">
-          <h2>A cleaner product surface with fewer design bottlenecks.</h2>
-          <p>The FlowApps team received a scalable interface foundation that shortened future screen creation and made product expansion easier to manage.</p>
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide">
+          <span class="case-placeholder-label">Exploration placeholder</span>
+          <p class="case-placeholder-text">Navigation models, role setups, and board states tested side by side.</p>
+        </div>
+        <div class="case-placeholder case-placeholder-compact">
+          <span class="case-placeholder-label">Prototype placeholder</span>
+          <p class="case-placeholder-text">Permissions, sprint tracking, integrations, and empty-state workflows.</p>
         </div>
       </section>
 
-      <div class="case-result-grid" data-case-reveal>
-        <article class="case-result-card"><span>Reusable product areas</span><strong>5</strong></article>
-        <article class="case-result-card"><span>Design-system coverage</span><strong>90%</strong></article>
-        <article class="case-result-card"><span>Iteration cost</span><strong>-30%</strong></article>
-      </div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The design</div>
+        <div class="case-section-content">
+          <h2>An interface that scales down as well as up.</h2>
+          <div class="case-feature-grid">
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>A dashboard with manners</h3>
+                <p>The default view stays calm, while deeper information appears only when a manager actually needs it.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Dashboard layouts with overview cards, progress, and action paths.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Status you can read across the room</h3>
+                <p>Boards, chips, and status patterns make progress visible immediately, even in dense views.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Task boards, list states, and sprint signals for fast scanning.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Roles without the admin maze</h3>
+                <p>Permissions and team settings share one readable logic, so setup feels guided instead of bureaucratic.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Role matrices, invite flows, and management states.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Time tracking people don't resent</h3>
+                <p>Hours, workload, and sprint summaries stay lightweight enough to use daily, not just during reporting week.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Timesheet modules, workload summaries, and review screens.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>50+ integrations, one pattern</h3>
+                <p>Integrations feel like part of the platform, not an unrelated settings annex glued onto the product.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Integration marketplace, activation flows, and sync states.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Design system &amp; scale</div>
+        <div class="case-section-content">
+          <h2>A system that absorbs the roadmap.</h2>
+          <p>
+            One set of components and tokens carries the entire platform. New modules join the product without joining the redesign queue, and engineering builds from
+            documented, dev-ready files.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide">
+          <span class="case-placeholder-label">System placeholder</span>
+          <p class="case-placeholder-text">Patterns for dashboards, boards, roles, integrations, and future modules.</p>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">In their words</div>
+        <div class="case-section-content">
+          <h2>What helped the product click.</h2>
+          <div class="case-quote-grid">
+            <figure class="case-quote">
+              <blockquote>
+                "The big shift was seeing complexity stop looking expensive. We still had all the depth we needed, but the product finally felt readable to the team actually
+                using it every day."
+              </blockquote>
+              <figcaption>Product stakeholder</figcaption>
+            </figure>
+            <figure class="case-quote">
+              <blockquote>
+                "The system work mattered as much as the UI. By the time we got to handoff, new modules were already behaving like part of the product instead of exceptions."
+              </blockquote>
+              <figcaption>Engineering-side collaborator</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Outcome</div>
+        <div class="case-section-content">
+          <h2>A heavy product that feels light.</h2>
+          <ul class="case-outcome-list">
+            <li>Manager depth and team simplicity in one interface.</li>
+            <li>A board you can read at a glance.</li>
+            <li>50+ integrations unified under a single UX pattern.</li>
+            <li>A design system that ships new modules without redesign.</li>
+          </ul>
+        </div>
+      </section>
 
       <section class="case-next" data-case-reveal>
-        <div><small>Next case</small><h2>EdTech platform UX/UI for Clawerly: retention flows tested before build</h2></div>
-        <a class="case-next-link" href="/cases/clawerly/"><span>View next case</span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+        <div>
+          <small>Next step</small>
+          <h2>Got more features than clarity?</h2>
+          <p>That's the brief we like best. Tell us where your product is heavier than your interface - we'll show you where an AI-augmented process moves it.</p>
+        </div>
+        <a class="case-next-link" href="#project-form" data-project-open">
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+        </a>
       </section>
     </main>
 
     <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
       <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
-        <div class="project-drawer-head"><div><h2 id="project-drawer-title">Let’s connect</h2><p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p></div><button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button></div>
-        <div class="project-drawer-body"><form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form><div class="project-field-grid"><label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label><label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label></div><label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label><fieldset class="project-fieldset"><legend>How can we help you?</legend><div class="project-chip-row"><label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label><label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label><label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label><label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label><label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label></div></fieldset><button class="project-submit" type="submit"><span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></button><p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p></form><div class="project-success" hidden data-project-success><h3>Thanks. We'll get back with a useful next step.</h3><p>We reply with a scope direction, not a vague calendar loop.</p><button class="project-submit" type="button" data-project-close>Back to site</button></div></div>
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button>
+        </div>
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label>
+              <label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label>
+            </div>
+            <label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label>
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span>
+              <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+            </button>
+            <p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p>
+          </form>
+          <div class="project-success" hidden data-project-success>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
       </aside>
     </div>
 
-    <footer class="site-footer"><div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div><div class="footer-side"><a class="footer-link" href="/privacy-policy.html">Privacy policy</a><a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a></div></footer>
-    <script src="/project-drawer.js?v=project-drawer-8" defer></script><script src="/theme-toggle.js?v=1" defer></script><script src="/case-pages.js?v=1" defer></script>
+    <footer class="site-footer">
+      <div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div>
+      <div class="footer-side">
+        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a>
+      </div>
+    </footer>
+
+    <script src="/project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="/theme-toggle.js?v=1" defer></script>
+    <script src="/case-pages.js?v=1" defer></script>
   </body>
 </html>
-

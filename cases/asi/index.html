@@ -8,15 +8,20 @@
         const key = "ailume-theme";
         const root = document.documentElement;
         let storedTheme = null;
-        try { storedTheme = window.localStorage.getItem(key); } catch (error) {}
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
         const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
         const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
         root.dataset.theme = theme;
         root.style.colorScheme = theme;
       })();
     </script>
-    <title>AI tutoring app UX/UI for ASI | Ailume Case Study</title>
-    <meta name="description" content="How Ailume designed a scalable AI tutoring UX/UI system for ASI across mobile learning, statistics, and practice flows." />
+    <title>ASI - AI Tutoring App UX/UI &amp; Design System | Ailume</title>
+    <meta
+      name="description"
+      content="How Ailume designed ASI - an AI tutoring app with conversational UX, learner momentum, and a design system that scales across new subjects and modes."
+    />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
@@ -24,20 +29,32 @@
     <link rel="canonical" href="https://ailume.agency/cases/asi/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Ailume" />
-    <meta property="og:title" content="AI tutoring app UX/UI for ASI | Ailume Case Study" />
-    <meta property="og:description" content="A scalable UX/UI system for AI tutoring, learning progress, and mobile education workflows." />
+    <meta property="og:title" content="ASI - AI Tutoring App UX/UI &amp; Design System | Ailume" />
+    <meta
+      property="og:description"
+      content="A tutoring app case study focused on trust, progress, and a scalable conversational design system."
+    />
     <meta property="og:url" content="https://ailume.agency/cases/asi/" />
     <meta property="og:image" content="https://ailume.agency/assets/case-cover-4.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=deliver-stable-line-1" />
+    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
+    <script src="/analytics.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo line-reveal" href="/" aria-label="Ailume home"><span class="line-inner" data-text="Ailume">Ailume</span></a>
+        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
         <div class="header-actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" /><path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" /></svg></button>
-          <a class="header-cta" href="/contact" data-project-open><span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+          </a>
         </div>
       </div>
     </header>
@@ -45,66 +62,290 @@
     <main class="case-study-main">
       <section class="case-hero" data-case-reveal>
         <div class="case-hero-grid">
-          <div><div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study</span></div><h1>AI tutoring app UX/UI for ASI, on a design system built to scale</h1></div>
-          <aside class="case-hero-aside"><p>ASI needed a product direction for tutoring, practice, progress, and mobile learning that could scale beyond the first set of screens.</p><div class="case-tags"><span>EdTech</span><span>Web platform</span><span>UX/UI</span><span>Retention design</span></div></aside>
+          <div>
+            <div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>Case study - EdTech - AI tutoring</span></div>
+            <h1>An AI tutor students actually trust.</h1>
+          </div>
+          <aside class="case-hero-aside">
+            <p>
+              ASI turns a chat window into a patient, around-the-clock tutor. We designed the full student-facing experience - onboarding, conversation, practice, and
+              progress - and the design system underneath it, so the product could keep adding subjects, modes, and platforms without slowing down.
+            </p>
+            <div class="case-tags">
+              <span>UX/UI Design</span>
+              <span>Conversational AI</span>
+              <span>Mobile App</span>
+              <span>Design System</span>
+              <span>AI-Augmented Process</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <figure class="case-cover" data-case-reveal><img src="/assets/case-cover-4.png?v=case-template-2" alt="ASI AI tutoring mobile app case cover" width="944" height="800" /></figure>
+      <section class="case-cover" data-case-reveal>
+        <div class="case-placeholder case-placeholder-cover">
+          <span class="case-placeholder-label">Hero placeholder</span>
+          <p class="case-placeholder-text">The ASI app on a phone, tutor chat open, clean and friendly.</p>
+        </div>
+      </section>
 
       <section class="case-info" data-case-reveal>
-        <div class="case-info-item"><span>Client</span><strong>ASI</strong></div>
-        <div class="case-info-item"><span>Industry</span><strong>AI EdTech</strong></div>
-        <div class="case-info-item"><span>Scope</span><strong>UX/UI, mobile, design system</strong></div>
-        <div class="case-info-item"><span>Focus</span><strong>Learning system scale</strong></div>
+        <div class="case-info-item"><span>Product</span><strong>ASI - AI tutoring app</strong></div>
+        <div class="case-info-item"><span>Industry</span><strong>EdTech / AI</strong></div>
+        <div class="case-info-item"><span>Platform</span><strong>Mobile, plus chat-platform integrations</strong></div>
+        <div class="case-info-item"><span>Services</span><strong>UX/UI design, prototyping, design system</strong></div>
+        <div class="case-info-item"><span>Timeline</span><strong>[X] weeks</strong></div>
+        <div class="case-info-item"><span>Team</span><strong>2 senior product designers + AI-augmented workflow</strong></div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">About the project</div>
-        <div class="case-story-content"><h2>A tutoring interface that makes progress visible and practice feel lighter.</h2><p>We designed ASI around learning loops: profile, practice, statistics, lesson context, and the next recommended action.</p><p>The system needed to support a friendly student-facing experience while staying disciplined enough for future product growth.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>Tutoring, the moment a student needs it.</h2>
+          <p>
+            ASI gives students help the second they are stuck - not the next school day. It is a conversational AI tutor that explains, quizzes, and tracks mastery, meeting
+            learners where they already spend time.
+          </p>
+          <p>
+            Our job was the part students actually touch: an interface that feels less like a chatbot and more like a tutor who knows them. And just as important, a system
+            disciplined enough to grow with the roadmap.
+          </p>
+        </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Challenge</div>
-        <div class="case-story-content"><h2>AI tutoring needs trust, rhythm, and clear feedback.</h2><p>The work focused on giving learners a sense of momentum, making progress data useful at a glance, and ensuring AI-driven recommendations felt like support rather than noise.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The challenge</div>
+        <div class="case-section-content">
+          <h2>AI tutoring needs trust, rhythm, and clear feedback.</h2>
+          <p>
+            A model that can answer anything still fails if students do not trust it, cannot feel their progress, or get lost in a wall of text. The interface had to do
+            three jobs at once and stay coherent as the product expanded.
+          </p>
+          <p>Answers had to feel guiding, practice had to feel light and motivating, and progress had to read at a glance.</p>
+        </div>
       </section>
 
-      <div class="case-image-grid" data-case-reveal>
-        <figure class="case-image"><img src="/assets/case-cover-4.png?v=case-template-2" alt="ASI mobile tutoring statistics screens" /></figure>
-        <figure class="case-image"><img src="/assets/case-cover-3.png?v=case-template-2" alt="EdTech learning dashboard on laptop" /></figure>
-      </div>
-
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Our process</div>
-        <div class="case-story-content"><h2>We built the foundation around reusable learning states.</h2><p>We defined learner journeys, explored mobile-first UI patterns, tested hierarchy for progress and practice cards, and translated the strongest direction into a scalable interface system.</p></div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Our approach</div>
+        <div class="case-section-content">
+          <h2>AI explores. Designers decide.</h2>
+          <div class="case-step-list">
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>01 Frame</h3>
+                <p>
+                  AI compressed the groundwork - a teardown of leading chat and tutoring apps plus patterns in how students disengage - into a clear map. Designers set the
+                  spine: ASI had to feel like a tutor.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>02 Explore</h3>
+                <p>
+                  AI generated chat layouts, onboarding flows, and gamification models. Designers kept the direction that guided students toward understanding instead of
+                  dumping answers.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>03 Prototype</h3>
+                <p>
+                  Tutor setup, live session, achievements, multiplayer quiz, typing, loading, errors, and empty states became clickable early, so awkward moments were fixed
+                  while cheap to change.
+                </p>
+              </div>
+            </article>
+            <article class="case-step">
+              <div class="case-step-copy">
+                <h3>04 Scale</h3>
+                <p>
+                  Interactive components, tokens, chat patterns, and animation specs were handed to engineering build-ready, so new subjects, game modes, and platforms could
+                  assemble from existing parts.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section class="case-story-section" data-case-reveal>
-        <div class="case-story-label">Results</div>
-        <div class="case-story-content"><h2>A cleaner AI learning product ready to expand.</h2><p>ASI received a flexible UX/UI foundation for tutoring, statistics, lessons, and practice flows, with system decisions ready for the next product cycle.</p></div>
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide">
+          <span class="case-placeholder-label">Exploration placeholder</span>
+          <p class="case-placeholder-text">Onboarding, live tutoring, feedback states, and learner progression patterns.</p>
+        </div>
+        <div class="case-placeholder case-placeholder-compact">
+          <span class="case-placeholder-label">Prototype placeholder</span>
+          <p class="case-placeholder-text">Quiz, loading, uncertainty, and recovery states inside the chat flow.</p>
+        </div>
       </section>
 
-      <div class="case-result-grid" data-case-reveal>
-        <article class="case-result-card"><span>Mobile product zones</span><strong>4</strong></article>
-        <article class="case-result-card"><span>System components</span><strong>28+</strong></article>
-        <article class="case-result-card"><span>Validated directions</span><strong>3</strong></article>
-      </div>
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">The design</div>
+        <div class="case-section-content">
+          <h2>A tutor in a chat. A system behind the chat.</h2>
+          <div class="case-feature-grid">
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Set up your own tutor</h3>
+                <p>Students shape the tutor before the first lesson, so help feels personal from the beginning.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Tutor profile setup, preferences, and onboarding path.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>A conversation that teaches</h3>
+                <p>The chat guides understanding step by step instead of acting like a blunt answer machine.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Conversation states for explain, hint, correct, and reflect.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Motivation built in</h3>
+                <p>Achievements, streak cues, and lightweight rewards give learners a reason to keep going without pressure.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Game loops, rewards, and practice reinforcement screens.</p>
+              </div>
+            </article>
+            <article class="case-feature">
+              <div class="case-feature-copy">
+                <h3>Progress you can read at a glance</h3>
+                <p>Statistics and mastery views show what improved, what still needs work, and what to do next.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Design placeholder</span>
+                <p class="case-placeholder-text">Mastery summaries, skill maps, and quiz performance states.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Design system &amp; scale</div>
+        <div class="case-section-content">
+          <h2>Built to grow with the curriculum.</h2>
+          <p>The UI kit covers chat, onboarding, gamification, and every state in between, with animation specified alongside components so interactions ship as designed.</p>
+        </div>
+      </section>
+
+      <section class="case-media-stack" data-case-reveal>
+        <div class="case-placeholder case-placeholder-wide">
+          <span class="case-placeholder-label">System placeholder</span>
+          <p class="case-placeholder-text">Components for chat, quizzes, gamification, stats, and future lesson modes.</p>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">In their words</div>
+        <div class="case-section-content">
+          <h2>Where the product gained confidence.</h2>
+          <div class="case-quote-grid">
+            <figure class="case-quote">
+              <blockquote>
+                "What changed most was the feeling. It stopped reading like a generic AI product and started feeling like a tutor students could build trust with over time."
+              </blockquote>
+              <figcaption>Product stakeholder</figcaption>
+            </figure>
+            <figure class="case-quote">
+              <blockquote>
+                "The design system was a major unlock. We were not just handing over screens - we were handing over a way to keep shipping new learning modes without losing
+                consistency."
+              </blockquote>
+              <figcaption>Engineering-side collaborator</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Outcome</div>
+        <div class="case-section-content">
+          <h2>A trustworthy tutor, on a system that keeps up.</h2>
+          <ul class="case-outcome-list">
+            <li>A conversational experience that feels like a tutor, not a chatbot.</li>
+            <li>Gamified practice that gives students a reason to return.</li>
+            <li>A design system that absorbs new subjects, modes, and platforms.</li>
+            <li>Engineering handoff with components, states, and motion documented - fewer open questions, faster build.</li>
+          </ul>
+        </div>
+      </section>
 
       <section class="case-next" data-case-reveal>
-        <div><small>Next case</small><h2>Mobile banking app UX/UI for Trafio, validated with users before build</h2></div>
-        <a class="case-next-link" href="/cases/trafio/"><span>View next case</span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></a>
+        <div>
+          <small>Next step</small>
+          <h2>Shipping a product that keeps growing?</h2>
+          <p>
+            Then your design system is doing the heavy lifting. Tell us what you're adding next - we'll show you where an AI-augmented process keeps it consistent and fast.
+          </p>
+        </div>
+        <a class="case-next-link" href="#project-form" data-project-open">
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+        </a>
       </section>
     </main>
 
     <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
       <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
-        <div class="project-drawer-head"><div><h2 id="project-drawer-title">Let’s connect</h2><p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p></div><button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button></div>
-        <div class="project-drawer-body"><form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form><div class="project-field-grid"><label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label><label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label></div><label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label><fieldset class="project-fieldset"><legend>How can we help you?</legend><div class="project-chip-row"><label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label><label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label><label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label><label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label><label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label></div></fieldset><button class="project-submit" type="submit"><span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span><span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span></button><p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p></form><div class="project-success" hidden data-project-success><h3>Thanks. We'll get back with a useful next step.</h3><p>We reply with a scope direction, not a vague calendar loop.</p><button class="project-submit" type="button" data-project-close>Back to site</button></div></div>
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button>
+        </div>
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label>
+              <label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label>
+            </div>
+            <label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label>
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span>
+              <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+            </button>
+            <p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p>
+          </form>
+          <div class="project-success" hidden data-project-success>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
       </aside>
     </div>
 
-    <footer class="site-footer"><div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div><div class="footer-side"><a class="footer-link" href="/privacy-policy.html">Privacy policy</a><a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a></div></footer>
-    <script src="/project-drawer.js?v=project-drawer-8" defer></script><script src="/theme-toggle.js?v=1" defer></script><script src="/case-pages.js?v=1" defer></script>
+    <footer class="site-footer">
+      <div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div>
+      <div class="footer-side">
+        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a>
+      </div>
+    </footer>
+
+    <script src="/project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="/theme-toggle.js?v=1" defer></script>
+    <script src="/case-pages.js?v=1" defer></script>
   </body>
 </html>
-
