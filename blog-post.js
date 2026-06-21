@@ -6,6 +6,14 @@ const blogRevealItems = document.querySelectorAll("[data-blog-reveal]");
 if (reduceBlogMotion || !("IntersectionObserver" in window)) {
   blogRevealItems.forEach((item) => item.classList.add("is-visible"));
 } else {
+  const revealPassedItems = () => {
+    blogRevealItems.forEach((item) => {
+      if (item.classList.contains("is-visible")) return;
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.96) item.classList.add("is-visible");
+    });
+  };
+
   const blogObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -24,5 +32,7 @@ if (reduceBlogMotion || !("IntersectionObserver" in window)) {
     item.style.setProperty("--blog-reveal-delay", `${Math.min(index, 8) * 70}ms`);
     blogObserver.observe(item);
   });
-}
 
+  revealPassedItems();
+  window.addEventListener("scroll", revealPassedItems, { passive: true });
+}

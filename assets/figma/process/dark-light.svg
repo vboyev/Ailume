@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="dark/light">
+<circle id="Ellipse 14325" cx="8" cy="8" r="7.11111" stroke="var(--stroke-0, black)" stroke-width="1.77778"/>
+<path id="Ellipse 14326" d="M8 3.55556C8.58365 3.55556 9.16159 3.67051 9.70082 3.89387C10.24 4.11722 10.73 4.4446 11.1427 4.8573C11.5554 5.27001 11.8828 5.75996 12.1061 6.29918C12.3295 6.83841 12.4444 7.41635 12.4444 8C12.4444 8.58365 12.3295 9.16159 12.1061 9.70082C11.8828 10.24 11.5554 10.73 11.1427 11.1427C10.73 11.5554 10.24 11.8828 9.70082 12.1061C9.16159 12.3295 8.58365 12.4444 8 12.4444L8 8L8 3.55556Z" fill="var(--fill-0, black)"/>
+</g>
+</svg>
