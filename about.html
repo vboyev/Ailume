@@ -29,35 +29,36 @@
     <title>About Ailume | AI-Augmented Product Design Unit by Halo Lab</title>
     <meta
       name="description"
-      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+      content="Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity."
     />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://ailume.agency/about.html" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Ailume" />
     <meta property="og:title" content="About Ailume | AI-Augmented Product Design Unit by Halo Lab" />
     <meta
       property="og:description"
-      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+      content="Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity."
     />
     <meta property="og:url" content="https://ailume.agency/about.html" />
-    <meta http-equiv="refresh" content="0; url=/" />
-    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
-    <meta property="og:image:alt" content="Ailume hero showcase" />
+    <meta property="og:image" content="https://ailume.agency/assets/about-hero-3.png" />
+    <meta property="og:image:alt" content="Ailume team presenting product design work" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@AilumeAgency" />
     <meta name="twitter:title" content="About Ailume | AI-Augmented Product Design Unit by Halo Lab" />
     <meta
       name="twitter:description"
-      content="Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity."
+      content="Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity."
     />
-    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
-    <script>
-      window.location.replace("/");
-    </script>
+    <meta name="twitter:image" content="https://ailume.agency/assets/about-hero-3.png" />
+    <meta name="twitter:image:alt" content="Ailume team presenting product design work" />
     <link
       rel="preload"
       href="assets/fonts/SuisseIntl-Regular.woff2"
@@ -72,7 +73,9 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=footer-static-1" />
+    <link rel="preload" as="image" href="assets/about-hero-3.png?v=3" />
+    <link rel="preload" as="image" href="assets/about-image-b.png?v=2" />
+    <link rel="stylesheet" href="styles.css?v=about-v2-2" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -89,43 +92,79 @@
             }
           },
           {
+            "@type": "WebSite",
+            "@id": "https://ailume.agency/#website",
+            "url": "https://ailume.agency/",
+            "name": "Ailume",
+            "publisher": {
+              "@id": "https://ailume.agency/#organization"
+            }
+          },
+          {
             "@type": "AboutPage",
             "@id": "https://ailume.agency/about.html#webpage",
             "url": "https://ailume.agency/about.html",
             "name": "About Ailume | AI-Augmented Product Design Unit by Halo Lab",
-            "description": "Ailume is a small, focused product design unit inside Halo Lab — experienced designers using AI-augmented workflows to give scaling B2B teams more design capacity.",
+            "description": "Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity.",
+            "isPartOf": {
+              "@id": "https://ailume.agency/#website"
+            },
             "about": {
               "@id": "https://ailume.agency/#organization"
             }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ailume.agency/about.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ailume.agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About us",
+                "item": "https://ailume.agency/about.html"
+              }
+            ]
           }
         ]
       }
     </script>
     <script src="analytics.js?v=1" defer></script>
-
   </head>
-  <body>
-    <header class="site-header">
+  <body class="about-v2-body">
+    <header class="site-header" data-node-id="93:96">
       <div class="header-inner">
         <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
 
-        <a class="logo" href="index.html" aria-label="Ailume home"><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+        <a class="logo" href="index.html" aria-label="Ailume home"
+          ><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20"
+        /></a>
 
         <nav class="main-nav" aria-label="Main navigation">
           <a class="nav-link" href="index.html">
-            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Home">Home</span>
+            </span>
           </a>
           <a class="nav-link" href="process.html">
-            <span class="line-reveal"><span class="line-inner" data-text="Our process">Our process</span></span>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Process">Process</span>
+            </span>
           </a>
           <a class="nav-link" href="index.html#cases">
-            <span class="line-reveal"><span class="line-inner" data-text="Cases">Cases</span></span>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Cases">Cases</span>
+            </span>
           </a>
-          <a class="nav-link is-active" href="about.html">
-            <span class="line-reveal"><span class="line-inner" data-text="About us">About us</span></span>
-          </a>
-          <a class="nav-link" href="blog/ai-augmented-product-design-cost/">
-            <span class="line-reveal"><span class="line-inner" data-text="BLOG">BLOG</span></span>
+          <a class="nav-link is-active" href="about.html" aria-current="page">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="About">About</span>
+            </span>
           </a>
         </nav>
 
@@ -158,10 +197,9 @@
 
       <div class="mobile-menu" aria-label="Mobile navigation">
         <a class="mobile-link" href="index.html">Home</a>
-        <a class="mobile-link" href="process.html">Our process</a>
+        <a class="mobile-link" href="process.html">Process</a>
         <a class="mobile-link" href="index.html#cases">Cases</a>
-        <a class="mobile-link is-active" href="about.html">About us</a>
-        <a class="mobile-link" href="blog/ai-augmented-product-design-cost/">BLOG</a>
+        <a class="mobile-link" href="about.html" aria-current="page">About</a>
         <a class="mobile-cta" href="/contact" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
@@ -171,22 +209,28 @@
       </div>
     </header>
 
-    <main class="page-main">
-      <section class="page-hero hero-intro">
-        <div class="page-hero-grid">
-          <div>
-            <div class="section-tag hero-intro-item">
-              <span class="tag-cube" aria-hidden="true"></span>
-              <span>About AILUME</span>
+    <main class="page-main about-v2-main">
+      <section class="page-hero about-v2-hero hero-intro" aria-labelledby="about-hero-title">
+        <div class="page-hero-grid about-v2-hero-grid">
+          <div class="about-v2-hero-copy">
+            <div class="hero-title-block">
+              <div class="section-tag hero-intro-item">
+                <span class="tag-cube" aria-hidden="true"></span>
+                <span>About AILUME</span>
+              </div>
+              <h1 class="hero-display hero-intro-item" id="about-hero-title">
+                A small unit.<br />
+                A serious track record
+              </h1>
             </div>
-            <h1 class="hero-intro-item">A small unit. A serious track record.</h1>
-            <p class="hero-intro-item">
-              AILUME is a focused product design unit inside Halo Lab — built from the people and
-              product experience behind hundreds of shipped projects, and structured around one job:
-              giving scaling B2B teams more design capacity.
+
+            <p class="hero-description hero-intro-item">
+              AILUME is a focused product design unit built on years of shipped work at Halo Lab,
+              with one job: more design capacity for scaling B2B teams.
             </p>
-            <div class="page-actions hero-intro-item">
-              <a class="hero-cta" href="#team">
+
+            <div class="page-actions hero-actions hero-intro-item">
+              <a class="hero-cta" href="#about-team">
                 <span class="button-text line-reveal">
                   <span class="line-inner" data-text="Meet the team">Meet the team</span>
                 </span>
@@ -197,219 +241,403 @@
             </div>
           </div>
 
-          <aside class="page-hero-card about-hero-card hero-intro-item" aria-label="About AILUME summary">
-            <img src="assets/hero-image.png" alt="" loading="eager" decoding="async" />
-            <span>Inside Halo Lab</span>
-            <strong>Focused product design capacity, backed by a delivery culture that has shipped since 2013.</strong>
+          <div class="hero-visual about-v2-hero-visual hero-intro-item">
+            <img
+              src="assets/about-hero-3.png?v=3"
+              alt="Ailume team presenting interface work on a large screen"
+              width="1254"
+              height="1254"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="logos-section about-v2-logos" aria-label="Trusted by teams">
+        <div class="logos-caption">
+          <span>Built for teams outpacing their design capacity</span>
+        </div>
+
+        <div class="logos-row">
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-1.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-2.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-3.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-4.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-5.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-6.svg" alt="" /></span>
+          <span class="client-logo" aria-hidden="true"><img src="assets/logos/logo-7.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-1.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-2.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-3.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-4.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-5.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-6.svg" alt="" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-7.svg" alt="" /></span>
+        </div>
+      </section>
+
+      <section class="page-section about-v2-shift" data-reveal>
+        <div class="about-v2-shift-grid">
+          <div class="about-v2-shift-copy">
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>The tools changed. The agency model did not.</span>
+            </div>
+            <h2>
+              AI made design faster: research, exploration, prototyping, systems. Most agencies just
+              bolted it on. We rebuilt the model around it, to see how much a small senior team can
+              really deliver.
+            </h2>
+          </div>
+
+          <aside class="about-v2-stat-card" data-reveal="media">
+            <div class="about-v2-stat-row">
+              <span>Product delivery</span>
+              <strong>68% ↑</strong>
+            </div>
+            <div class="about-v2-stat-row">
+              <span>Decision time</span>
+              <strong>2.4x ↑</strong>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section class="page-section with-border" data-reveal>
-        <div class="page-split">
-          <div>
-            <div class="section-tag">
-              <span class="tag-cube" aria-hidden="true"></span>
-              <span>The reason</span>
-            </div>
-            <h2>The tools changed. The agency model did not.</h2>
-          </div>
-          <div class="page-copy">
-            <p>
-              AI changed how quickly designers can research, explore, prototype, and build systems.
-              Most agencies either ignored that shift or turned AI into another vague service line.
-            </p>
-            <p>
-              AILUME is a dedicated unit rebuilt around AI-augmented workflows, not a slogan. The
-              goal is simple: more useful design output, faster decisions, and human judgment where
-              quality actually lives.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section" data-reveal>
-        <div class="page-quote">
+      <section class="page-section about-v2-quote-wrap" data-reveal>
+        <div class="about-v2-quote-card">
+          <img
+            class="about-v2-quote-avatar"
+            src="assets/about-avatar-1.png"
+            alt="Portrait of Valentyn Shvets"
+            width="96"
+            height="96"
+            loading="lazy"
+            decoding="async"
+          />
           <blockquote>
             “We've been shipping digital products since 2013 — through every platform shift this
-            industry produced. AILUME is us taking AI seriously as a production shift.”
+            industry produced. When AI became genuinely production-ready for design work late last
+            year, we knew the difference between a trend and a turning point.”
           </blockquote>
-          <cite>Co-Founder, Halo Lab</cite>
-        </div>
-      </section>
-
-      <section class="page-section with-border" data-reveal>
-        <div class="page-split">
-          <div>
-            <div class="section-tag">
-              <span class="tag-cube" aria-hidden="true"></span>
-              <span>Under the hood</span>
-            </div>
-            <h2>Same people. Sharper focus.</h2>
-          </div>
-          <div class="page-card-grid two">
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/outcome-icon1.svg" alt="" /></span>
-              <span class="page-card-kicker">We inherit</span>
-              <h3>Real product delivery history.</h3>
-              <p>
-                Years of shipped product work, established design standards, engineering-aware
-                delivery, complex-industry experience, and a proven delivery culture.
-              </p>
-            </article>
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/outcome-icon2.svg" alt="" /></span>
-              <span class="page-card-kicker">We run differently</span>
-              <h3>A narrower product-design model.</h3>
-              <p>
-                Product design only, a small senior team close to the work, productized engagements,
-                AI-augmented production, and velocity as an operating metric.
-              </p>
-            </article>
+          <div class="about-v2-quote-meta">
+            <strong>Valentyn Shvets</strong>
+            <span>Co-Founder, Halo Lab</span>
           </div>
         </div>
       </section>
 
-      <section class="page-section with-border" data-reveal>
-        <div class="page-split">
+      <section class="page-section about-v2-focus" id="about-team">
+        <div class="about-v2-centered-intro" data-reveal>
+          <div class="section-tag centered-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Behind the work of Halo Lab</span>
+          </div>
+          <h2>Same people. Sharper focus</h2>
+          <p>
+            Halo Lab is full-cycle design and development company. AILUME is its product design unit
+            — structured around AI, senior craft, and scaling B2B teams — nothing else.
+          </p>
+        </div>
+
+        <div class="page-card-grid two about-v2-pillar-grid">
+          <article class="page-card about-v2-pillar-card" data-reveal="media">
+            <div class="about-v2-card-head">
+              <h3>What we inherit</h3>
+              <span class="about-v2-icon-box" aria-hidden="true">
+                <img src="assets/outcome-icon1.svg" alt="" />
+              </span>
+            </div>
+            <ul class="about-v2-checklist">
+              <li>Years of shipped product work</li>
+              <li>Established design standards</li>
+              <li>Engineering-aware delivery</li>
+              <li>Experience across complex industries</li>
+              <li>A proven delivery culture</li>
+            </ul>
+          </article>
+
+          <article class="page-card about-v2-pillar-card" data-reveal="media">
+            <div class="about-v2-card-head">
+              <h3>What we run differently</h3>
+              <span class="about-v2-icon-box" aria-hidden="true">
+                <img src="assets/outcome-icon2.svg" alt="" />
+              </span>
+            </div>
+            <ul class="about-v2-checklist">
+              <li>Product design only — no brand work</li>
+              <li>A small senior team close to the work</li>
+              <li>Product-led engagements</li>
+              <li>An AI-augmented production model</li>
+              <li>Velocity as the operating metric</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section about-v2-track">
+        <div class="page-split about-v2-track-split" data-reveal>
           <div>
             <div class="section-tag">
               <span class="tag-cube" aria-hidden="true"></span>
-              <span>Track record</span>
+              <span>The track record</span>
             </div>
-            <h2>A decade of product design. Then AI changed the math.</h2>
+            <h2>
+              A decade of product<br />
+              design. Then AI<br />
+              changed the math.
+            </h2>
           </div>
-          <div class="page-copy">
+
+          <div class="page-copy about-v2-track-copy">
             <p>
-              The numbers behind AILUME come from the team’s Halo Lab work since 2013. AILUME is a
-              focused product-design unit built on that foundation, with its own case studies as the
-              first engagements go live.
+              Ten years of shipping products taught us what good looks like. AI changed how fast we
+              can get there. AILUME is a senior team built around that shift, in how it works and in
+              what it may now deliver.
             </p>
           </div>
         </div>
-        <div class="page-stat-grid" data-reveal>
-          <article class="page-stat-card about-stat-card"><img src="assets/outcome-icon1.svg" alt="" /><span>Projects shipped</span><strong>500+</strong></article>
-          <article class="page-stat-card about-stat-card"><img src="assets/outcome-icon2.svg" alt="" /><span>Client rating</span><strong>4.9</strong></article>
-          <article class="page-stat-card about-stat-card"><img src="assets/outcome-icon3.svg" alt="" /><span>Industries covered</span><strong>20+</strong></article>
-          <article class="page-stat-card about-stat-card"><img src="assets/figma/process/icon-system.svg" alt="" /><span>Delivered by</span><strong>Halo Lab</strong></article>
+
+        <div class="page-stat-grid about-v2-proof-grid">
+          <article class="page-stat-card about-v2-proof-card" data-reveal="media">
+            <div class="about-v2-proof-head">
+              <span>Brief to first concepts</span>
+              <i class="about-v2-proof-mark about-v2-proof-mark-one" aria-hidden="true"></i>
+            </div>
+            <strong>8 days</strong>
+          </article>
+          <article class="page-stat-card about-v2-proof-card" data-reveal="media">
+            <div class="about-v2-proof-head">
+              <span>Design-system coverage</span>
+              <i class="about-v2-proof-mark about-v2-proof-mark-two" aria-hidden="true"></i>
+            </div>
+            <strong>90%</strong>
+          </article>
+          <article class="page-stat-card about-v2-proof-card" data-reveal="media">
+            <div class="about-v2-proof-head">
+              <span>Cost per iteration</span>
+              <i class="about-v2-proof-mark about-v2-proof-mark-three" aria-hidden="true"
+                ><span></span
+              ></i>
+            </div>
+            <strong>-30%</strong>
+          </article>
         </div>
       </section>
 
-      <section class="page-section with-border" data-reveal>
-        <div class="page-split">
-          <div>
+      <section class="page-section about-v2-photo-section" data-reveal="media">
+        <div class="about-v2-photo-frame">
+            <img
+              src="assets/about-image-b.png?v=2"
+              alt="Ailume team reviewing product interface decisions around a large screen"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+            />
+        </div>
+      </section>
+
+      <section class="page-section about-v2-principles">
+        <div class="page-split about-v2-principles-split">
+          <div data-reveal>
             <div class="section-tag">
               <span class="tag-cube" aria-hidden="true"></span>
-              <span>Principles</span>
+              <span>Our principles</span>
             </div>
-            <h2>The standards behind the work.</h2>
+            <h2>
+              The standards<br />
+              behind the work
+            </h2>
           </div>
-          <ol class="page-list">
-            <li>
+
+          <ol class="page-list about-v2-principles-list">
+            <li data-reveal>
               <span>01</span>
               <div>
-                <strong>Judgment over output.</strong>
-                <p>Producing more options matters only when the team knows which ones deserve to survive.</p>
+                <strong>Judgment over output</strong>
+                <p>We explore more ideas, but only show what deserves to survive</p>
               </div>
             </li>
-            <li>
+            <li data-reveal>
               <span>02</span>
               <div>
-                <strong>AI removes effort, not accountability.</strong>
-                <p>Designers stay responsible for every recommendation, decision, and deliverable.</p>
+                <strong>AI removes effort, not accountability</strong>
+                <p>We answer for every recommendation we make</p>
               </div>
             </li>
-            <li>
+            <li data-reveal>
               <span>03</span>
               <div>
-                <strong>Fewer layers, better work.</strong>
-                <p>The closer clients are to the people solving the problem, the less context gets lost.</p>
+                <strong>Fewer layers, better work</strong>
+                <p>The closer you are to the people solving the problem, the less context is lost</p>
               </div>
             </li>
-            <li>
+            <li data-reveal>
               <span>04</span>
               <div>
-                <strong>Design must survive engineering.</strong>
-                <p>A strong concept is not enough. The work has to remain coherent as a real product.</p>
+                <strong>Design must survive engineering</strong>
+                <p>Work has to stay coherent when it becomes a real product</p>
               </div>
             </li>
-            <li>
+            <li data-reveal>
               <span>05</span>
               <div>
-                <strong>Speed buys room to think.</strong>
-                <p>Working faster creates more chances to test, challenge, and improve the direction.</p>
+                <strong>Speed buys room to think</strong>
+                <p>Working faster means more chances to test, challenge, and improve</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="page-section with-border" id="team" data-reveal>
-        <div class="page-split">
-          <div>
-            <div class="section-tag">
-              <span class="tag-cube" aria-hidden="true"></span>
-              <span>People</span>
-            </div>
-            <h2>Small enough to stay close. Experienced enough to lead.</h2>
-          </div>
-          <div class="page-card-grid four">
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/figma/process/icon-research.svg" alt="" /></span>
-              <span class="page-card-kicker">Product design</span>
-              <h3>Senior product designer</h3>
-              <p>Owns UX direction, interface quality, and the recommendation behind each decision.</p>
-            </article>
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/figma/process/icon-system.svg" alt="" /></span>
-              <span class="page-card-kicker">Systems</span>
-              <h3>Design systems lead</h3>
-              <p>Keeps components, states, patterns, and docs aligned with the product as it grows.</p>
-            </article>
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/figma/process/icon-prototype.svg" alt="" /></span>
-              <span class="page-card-kicker">Prototype</span>
-              <h3>Product prototyper</h3>
-              <p>Turns promising directions into clickable experiences fast enough to validate early.</p>
-            </article>
-            <article class="page-card about-icon-card">
-              <span class="about-page-icon"><img src="assets/figma/process/icon-handoff.svg" alt="" /></span>
-              <span class="page-card-kicker">Delivery</span>
-              <h3>Design partner</h3>
-              <p>Connects goals, team rhythm, scope, and decisions so the work keeps moving.</p>
-            </article>
+      <section class="page-section about-v2-quote-wrap" data-reveal>
+        <div class="about-v2-quote-card">
+          <img
+            class="about-v2-quote-avatar"
+            src="assets/about-avatar-2.png"
+            alt="Portrait of Aaron Brownlow"
+            width="96"
+            height="96"
+            loading="lazy"
+            decoding="async"
+          />
+          <blockquote>
+            “For ten years our bottleneck was never talent — it was hours. AI removed the hours. The
+            same senior designers now explore ten directions where we used to afford two, and validate
+            with users before a single sprint is booked. Clients feel it as one thing: speed without a
+            quality tax.”
+          </blockquote>
+          <div class="about-v2-quote-meta">
+            <strong>Aaron Brownlow</strong>
+            <span>Co-Founder, Ailume</span>
           </div>
         </div>
       </section>
 
-      <section class="page-section with-border" data-reveal>
-        <div class="page-split">
+      <section class="page-section about-v2-neutral">
+        <div class="page-split about-v2-neutral-split">
+          <div data-reveal>
+            <div class="section-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Our point of view</span>
+            </div>
+            <h2>We're not neutral</h2>
+            <div class="page-copy">
+              <p>
+                You don't hire us to speed Figma or requests. We question weak assumptions, surface
+                missing decisions, simplify what doesn't need to exist, and recommend the direction we
+                believe in — with the reasoning attached.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-v2-neutral-visual" data-reveal="media">
+            <div class="about-v2-neutral-photo">
+              <img
+                src="assets/about-image-a.png?v=2"
+                alt="Two teammates reviewing work together at a desk"
+                width="2752"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <aside class="about-v2-neutral-card">
+              <span class="about-v2-icon-box" aria-hidden="true">
+                <img src="assets/outcome-icon3.svg" alt="" />
+              </span>
+              <strong>We own the company</strong>
+              <p>We own the quality of our recommendations.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section about-v2-testimonials">
+        <div class="about-v2-testimonial-head" data-reveal>
           <div>
             <div class="section-tag">
               <span class="tag-cube" aria-hidden="true"></span>
-              <span>Point of view</span>
+              <span>Testimonials</span>
             </div>
-            <h2>We are not neutral about the work.</h2>
+            <h2>
+              What clients say<br />
+              about working with us
+            </h2>
           </div>
-          <div class="page-copy">
+
+          <div class="about-v2-arrows" aria-hidden="true">
+            <button type="button" tabindex="-1">
+              <span>&larr;</span>
+            </button>
+            <button type="button" tabindex="-1">
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="about-v2-testimonial-grid">
+          <article class="about-v2-testimonial-card" data-reveal>
+            <div class="about-v2-rating">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>5.0</span>
+            </div>
             <p>
-              Clients do not hire AILUME to operate Figma on request. We question weak assumptions,
-              identify missing decisions, simplify unnecessary complexity, and recommend the direction
-              we believe will work best.
+              “Halo Lab is very organized in planning to achieve the goals within the set deadlines.
+              We feel they were part of our internal team project.”
             </p>
-            <p>You own the company. We own the quality of our recommendation.</p>
-          </div>
+            <div class="about-v2-testimonial-person">
+              <img src="assets/about-avatar-1.png" alt="Alvaro Araujo" width="64" height="64" loading="lazy" decoding="async" />
+              <div>
+                <strong>Alvaro Araujo</strong>
+                <span>Founder &amp; CEO, Relocate Now</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-v2-testimonial-card" data-reveal>
+            <div class="about-v2-rating">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>5.0</span>
+            </div>
+            <p>
+              “Their experts have a very diverse range of skills and always find a solution to exposed
+              issues. The communication process was clear.”
+            </p>
+            <div class="about-v2-testimonial-person">
+              <img src="assets/about-avatar-2.png" alt="Saidou Soumare" width="64" height="64" loading="lazy" decoding="async" />
+              <div>
+                <strong>Saidou Soumare</strong>
+                <span>CTO, Vehicle Operation Platform</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-v2-testimonial-card" data-reveal>
+            <div class="about-v2-rating">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>5.0</span>
+            </div>
+            <p>
+              “During the collaboration, Halo Lab prioritized our people, always taking into account
+              our input and ideas and giving all team members a voice.”
+            </p>
+            <div class="about-v2-testimonial-person">
+              <span class="about-v2-avatar-fallback" aria-hidden="true">JL</span>
+              <div>
+                <strong>Justin Lopez</strong>
+                <span>Demand Generation Manager, WeSpire</span>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="final-cta" id="contact" data-reveal>
-        <div class="section-tag compact-tag">
-          <span class="tag-cube" aria-hidden="true"></span>
-          <span>Start here</span>
-        </div>
-        <h2>Build with the people behind the work.</h2>
-        <p>Tell us what your product team is trying to move — and what keeps getting in the way.</p>
-        <a class="final-cta-button" href="/contact" data-project-open>
+      <section class="final-cta" id="contact">
+        <h2>Build with the<br />people behind the work</h2>
+        <p>Tell us what your product team is trying to move —<br />and what keeps getting in the way</p>
+        <a class="hero-secondary cta-light" href="/contact" data-project-open>
           <span class="line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -476,13 +704,16 @@
           </form>
 
           <div class="project-success" hidden data-project-success>
-            <div class="section-tag compact-tag">
-              <span class="tag-cube" aria-hidden="true"></span>
-              <span>Request sent</span>
-            </div>
-            <h3>Thanks. We'll get back with a useful next step.</h3>
-            <p>We reply with a scope direction, not a vague calendar loop.</p>
-            <button class="project-submit" type="button" data-project-close>Back to site</button>
+            <h3>Thanks, we got your request.</h3>
+            <p>We'll review your message and reply with the next useful step.</p>
+            <button class="hero-secondary project-success-button" type="button" data-project-close>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Back to site">Back to site</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
           </div>
         </div>
       </aside>
@@ -509,29 +740,59 @@
       });
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const revealItems = document.querySelectorAll("[data-reveal]");
 
-      revealItems.forEach((element, index) => {
-        element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 80}ms`);
-      });
+      const revealTargets = document.querySelectorAll("[data-reveal]");
+      const logosCaption = document.querySelector(".logos-caption");
+      const logoItems = Array.from(document.querySelectorAll(".logos-row .client-logo"));
+
+      function revealClientLogos() {
+        logosCaption?.classList.add("is-visible");
+        logoItems.forEach((element, index) => {
+          element.dataset.reveal = "up";
+          element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 90}ms`);
+          element.classList.add("is-visible");
+        });
+      }
 
       if (reduceMotion || !("IntersectionObserver" in window)) {
-        revealItems.forEach((element) => element.classList.add("is-visible"));
+        revealClientLogos();
+        revealTargets.forEach((element) => element.classList.add("is-visible"));
       } else {
         document.documentElement.classList.add("reveal-ready");
 
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
             entries.forEach((entry) => {
               if (!entry.isIntersecting) return;
               entry.target.classList.add("is-visible");
               observer.unobserve(entry.target);
             });
           },
-          { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+          {
+            threshold: 0.16,
+            rootMargin: "0px 0px -8% 0px"
+          }
         );
 
-        revealItems.forEach((element) => revealObserver.observe(element));
+        revealTargets.forEach((element) => observer.observe(element));
+
+        const logosSection = document.querySelector(".logos-section");
+        if (logosSection) {
+          const logoObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                revealClientLogos();
+                logoObserver.disconnect();
+              });
+            },
+            {
+              threshold: 0.35
+            }
+          );
+
+          logoObserver.observe(logosSection);
+        }
       }
     </script>
   </body>
