@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="canonical" href="https://ailume.agency/about.html" />
+    <link rel="canonical" href="https://ailume.agency/about" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Ailume" />
@@ -47,7 +47,7 @@
       property="og:description"
       content="Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity."
     />
-    <meta property="og:url" content="https://ailume.agency/about.html" />
+    <meta property="og:url" content="https://ailume.agency/about" />
     <meta property="og:image" content="https://ailume.agency/assets/about-hero-3.png" />
     <meta property="og:image:alt" content="Ailume team presenting product design work" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -102,8 +102,8 @@
           },
           {
             "@type": "AboutPage",
-            "@id": "https://ailume.agency/about.html#webpage",
-            "url": "https://ailume.agency/about.html",
+            "@id": "https://ailume.agency/about#webpage",
+            "url": "https://ailume.agency/about",
             "name": "About Ailume | AI-Augmented Product Design Unit by Halo Lab",
             "description": "Ailume is a focused product design unit built on years of shipped work at Halo Lab, giving scaling B2B teams more design capacity.",
             "isPartOf": {
@@ -115,7 +115,7 @@
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://ailume.agency/about.html#breadcrumbs",
+            "@id": "https://ailume.agency/about#breadcrumbs",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -127,7 +127,7 @@
                 "@type": "ListItem",
                 "position": 2,
                 "name": "About us",
-                "item": "https://ailume.agency/about.html"
+                "item": "https://ailume.agency/about"
               }
             ]
           }
@@ -141,29 +141,19 @@
       <div class="header-inner">
         <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
 
-        <a class="logo" href="index.html" aria-label="Ailume home"
+        <a class="logo" href="/" aria-label="Ailume home"
           ><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20"
         /></a>
 
         <nav class="main-nav" aria-label="Main navigation">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="/">
             <span class="line-reveal">
               <span class="line-inner" data-text="Home">Home</span>
             </span>
           </a>
-          <a class="nav-link" href="process.html">
+          <a class="nav-link is-active" href="/about" aria-current="page">
             <span class="line-reveal">
-              <span class="line-inner" data-text="Process">Process</span>
-            </span>
-          </a>
-          <a class="nav-link" href="index.html#cases">
-            <span class="line-reveal">
-              <span class="line-inner" data-text="Cases">Cases</span>
-            </span>
-          </a>
-          <a class="nav-link is-active" href="about.html" aria-current="page">
-            <span class="line-reveal">
-              <span class="line-inner" data-text="About">About</span>
+              <span class="line-inner" data-text="About us">About us</span>
             </span>
           </a>
         </nav>
@@ -196,10 +186,8 @@
       </div>
 
       <div class="mobile-menu" aria-label="Mobile navigation">
-        <a class="mobile-link" href="index.html">Home</a>
-        <a class="mobile-link" href="process.html">Process</a>
-        <a class="mobile-link" href="index.html#cases">Cases</a>
-        <a class="mobile-link" href="about.html" aria-current="page">About</a>
+        <a class="mobile-link" href="/">Home</a>
+        <a class="mobile-link" href="/about" aria-current="page">About us</a>
         <a class="mobile-cta" href="/contact" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
