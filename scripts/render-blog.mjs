@@ -446,13 +446,8 @@ async function readPosts() {
 async function renderSitemap(posts) {
   const staticUrls = [
     "",
-    "about.html",
-    "process.html",
-    "privacy-policy.html",
-    "cases/trafio/",
-    "cases/flowapps/",
-    "cases/clawerly/",
-    "cases/asi/"
+    "about",
+    "privacy-policy.html"
   ];
   const publishedPosts = posts.filter((post) => post.data.status === "published");
   const urls = [

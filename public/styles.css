@@ -6756,6 +6756,7 @@ html[data-theme="dark"] .case-placeholder-label {
 
 .about-v2-main .page-hero,
 .about-v2-main .page-section {
+  max-width: var(--site-max-width);
   border-bottom: 0;
 }
 
@@ -6899,12 +6900,16 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-quote-card {
-  min-height: 356px;
-  padding: 56px 96px;
+  min-height: 420px;
+  padding: 88px 96px;
   border-radius: 8px;
   background: #000;
   color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-v2-quote-avatar {
@@ -6917,12 +6922,12 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-quote-card blockquote {
-  max-width: 783px;
+  max-width: 872px;
   margin: 0 auto;
   color: #fff;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
+  font-size: var(--font-h4);
+  line-height: var(--lh-h4);
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -6995,9 +7000,9 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-icon-box {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7006,8 +7011,8 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-icon-box img {
-  width: 20px;
-  height: 20px;
+  width: 48px;
+  height: 48px;
   display: block;
 }
 
@@ -7090,67 +7095,26 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-proof-mark {
-  position: relative;
-  height: 16px;
+  height: 15px;
   flex: 0 0 auto;
-}
-
-.about-v2-proof-mark-one {
-  width: 14px;
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-  background: #000;
-  border-radius: 2px;
-}
-
-.about-v2-proof-mark-two {
-  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .about-v2-proof-mark-two::before,
 .about-v2-proof-mark-two::after,
 .about-v2-proof-mark-three::before,
 .about-v2-proof-mark-three::after,
-.about-v2-proof-mark-three {
+.about-v2-proof-mark-three > span,
+.about-v2-proof-mark-one::before {
   content: "";
-  position: absolute;
-  top: 0;
-  width: 14px;
-  height: 16px;
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  width: 13px;
+  height: 15px;
+  display: block;
   background: #000;
-  border-radius: 2px;
-}
-
-.about-v2-proof-mark-two::before {
-  left: 0;
-}
-
-.about-v2-proof-mark-two::after {
-  left: 11px;
-}
-
-.about-v2-proof-mark-three {
-  width: 36px;
-  background: transparent;
-}
-
-.about-v2-proof-mark-three::before {
-  left: 0;
-}
-
-.about-v2-proof-mark-three::after {
-  left: 11px;
-}
-
-.about-v2-proof-mark-three > span {
-  position: absolute;
-  top: 0;
-  left: 22px;
-  width: 14px;
-  height: 16px;
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-  background: #000;
-  border-radius: 2px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.31C1 1.12 2.32 .41 3.31 1.07L11.15 6.26C12.04 6.85 12.04 8.15 11.15 8.74L3.31 13.93C2.32 14.59 1 13.88 1 12.69V2.31Z' fill='black'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.31C1 1.12 2.32 .41 3.31 1.07L11.15 6.26C12.04 6.85 12.04 8.15 11.15 8.74L3.31 13.93C2.32 14.59 1 13.88 1 12.69V2.31Z' fill='black'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .about-v2-proof-card strong {
@@ -7284,8 +7248,8 @@ html[data-theme="dark"] .case-placeholder-label {
 }
 
 .about-v2-arrows button {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border: 1px solid var(--line-soft);
   border-radius: 999px;
   background: transparent;
@@ -7294,6 +7258,8 @@ html[data-theme="dark"] .case-placeholder-label {
   align-items: center;
   justify-content: center;
   padding: 0;
+  font-size: 22px;
+  line-height: 1;
 }
 
 .about-v2-testimonial-grid {
@@ -7387,10 +7353,10 @@ html[data-theme="dark"] .about-v2-icon-box {
 }
 
 html[data-theme="dark"] .about-v2-icon-box img {
-  filter: brightness(0) invert(0);
+  filter: none;
 }
 
-html[data-theme="dark"] .about-v2-proof-mark-one,
+html[data-theme="dark"] .about-v2-proof-mark-one::before,
 html[data-theme="dark"] .about-v2-proof-mark-two::before,
 html[data-theme="dark"] .about-v2-proof-mark-two::after,
 html[data-theme="dark"] .about-v2-proof-mark-three::before,
