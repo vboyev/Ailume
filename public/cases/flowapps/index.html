@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : prefersDark ? "dark" : "light";
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>FlowApps - Project Management SaaS UX/UI Case Study | Ailume</title>
+    <meta
+      name="description"
+      content="How Ailume designed FlowApps - a feature-heavy project management SaaS with manager depth, team simplicity, and a design system built to scale."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/cases/flowapps/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="FlowApps - Project Management SaaS UX/UI Case Study | Ailume" />
+    <meta
+      property="og:description"
+      content="A SaaS case study focused on progressive density, scalable workflows, and a design system that absorbs complex product growth."
+    />
+    <meta property="og:url" content="https://ailume.agency/cases/flowapps/" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <meta property="og:image" content="https://ailume.agency/assets/case-cover-2.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
+    <script src="/analytics.js?v=1" defer></script>
+    <script>
+      window.location.replace("/");
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-study-main">
+      <section class="case-hero" data-case-reveal>
+        <div class="case-hero-grid">
+          <div>
+            <div class="section-tag case-kicker"><span class="tag-cube" aria-hidden="true"></span><span>FlowApps</span></div>
+            <h1>Project management SaaS UX/UI for FlowApps, bringing a crowded feature surface under one system.</h1>
+          </div>
+          <aside class="case-hero-aside">
+            <p>A workflow platform redesigned to stay readable for both managers and teams as the product grows in scope.</p>
+            <div class="case-tags">
+              <span>UX/UI Design</span>
+              <span>B2B SaaS</span>
+              <span>Web Platform</span>
+              <span>Design System</span>
+              <span>AI-Augmented Process</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="case-cover" data-case-reveal>
+        <div class="case-placeholder case-placeholder-cover">
+          <span class="case-placeholder-label">Hero placeholder</span>
+          <p class="case-placeholder-text">Large workflow dashboard mock block matching the Figma placeholder composition.</p>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>A scalable workflow tool without visual overload.</h2>
+          <p>FlowApps had to support managers, contributors, reporting, and a growing ecosystem of integrations without becoming visually exhausting.</p>
+          <p>We designed the platform around progressive density: calm defaults first, deeper information only when it helps the task at hand.</p>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Challenge</div>
+        <div class="case-section-content">
+          <h2>Complex products usually break at the hierarchy layer.</h2>
+          <p>The system needed to feel lightweight for day-to-day execution while still giving managers meaningful control and visibility.</p>
+          <p>That meant solving navigation, status, permissions, and integrations as one coherent structure rather than as separate feature buckets.</p>
+          <div class="case-media-grid">
+            <div class="case-placeholder case-placeholder-wide">
+              <span class="case-placeholder-label">Research placeholder</span>
+              <p class="case-placeholder-text">Dashboard density tests, role models, workflow maps, and navigation experiments.</p>
+            </div>
+            <div class="case-placeholder case-placeholder-compact">
+              <span class="case-placeholder-label">Prototype placeholder</span>
+              <p class="case-placeholder-text">Permission states, setup journeys, and integration activation flows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Approach</div>
+        <div class="case-section-content">
+          <h2>AI sped up exploration across a wide product surface.</h2>
+          <div class="case-process-grid">
+            <article class="case-process-card">
+              <span class="case-process-step">01 Frame</span>
+              <h3>Prioritize the essential flows</h3>
+              <p>We reduced the product to the journeys that matter most: manager setup, teammate task completion, and cross-team oversight.</p>
+            </article>
+            <article class="case-process-card">
+              <span class="case-process-step">02 Explore</span>
+              <h3>Test multiple density models</h3>
+              <p>AI helped fan out dashboard, list, and board directions so designers could converge quickly on the clearest hierarchy.</p>
+            </article>
+            <article class="case-process-card">
+              <span class="case-process-step">03 Validate</span>
+              <h3>Prototype the heavy parts early</h3>
+              <p>Permissions, empty states, workload views, and integration paths became clickable before the team committed to build.</p>
+            </article>
+            <article class="case-process-card">
+              <span class="case-process-step">04 Systemize</span>
+              <h3>Turn approved UI into product rules</h3>
+              <p>The final interface became a reusable library of components, states, and handoff guidance for future modules.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Design</div>
+        <div class="case-section-content">
+          <h2>Control for managers. Clarity for everyone else.</h2>
+          <div class="case-feature-list">
+            <article class="case-feature-row">
+              <div class="case-feature-copy">
+                <h3>A dashboard that stays calm</h3>
+                <p>The default workspace surfaces what matters now, with more detail arriving only when a manager actively needs it.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Screen placeholder</span>
+                <p class="case-placeholder-text">Overview, summary, and action-state compositions.</p>
+              </div>
+            </article>
+            <article class="case-feature-row">
+              <div class="case-feature-copy">
+                <h3>Status with readable hierarchy</h3>
+                <p>Boards, chips, progress states, and list structures were aligned so the product remains scannable at a glance.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Flow placeholder</span>
+                <p class="case-placeholder-text">Task boards, list states, and sprint status patterns.</p>
+              </div>
+            </article>
+            <article class="case-feature-row">
+              <div class="case-feature-copy">
+                <h3>Integrations inside one product language</h3>
+                <p>Marketplace and activation flows feel native to FlowApps rather than like an admin annex bolted onto the side.</p>
+              </div>
+              <div class="case-placeholder case-placeholder-medium">
+                <span class="case-placeholder-label">Interaction placeholder</span>
+                <p class="case-placeholder-text">Marketplace cards, activation, and sync management states.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">System</div>
+        <div class="case-section-content">
+          <h2>One product language for a growing SaaS platform.</h2>
+          <p>We turned the approved experience into a design system that standardizes hierarchy, status, permissions, and actions across future releases.</p>
+          <div class="case-media-grid">
+            <div class="case-placeholder case-placeholder-wide">
+              <span class="case-placeholder-label">System placeholder</span>
+              <p class="case-placeholder-text">Components, status rules, and module patterns.</p>
+            </div>
+            <div class="case-placeholder case-placeholder-compact">
+              <span class="case-placeholder-label">Spec placeholder</span>
+              <p class="case-placeholder-text">Guidelines, states, and handoff annotations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" data-case-reveal>
+        <div class="case-section-label">Outcome</div>
+        <div class="case-section-content">
+          <h2>A dense product made easier to read, extend, and ship.</h2>
+          <div class="case-stat-grid">
+            <article class="case-stat-card">
+              <span>Usability</span>
+              <strong>Calmer default views</strong>
+            </article>
+            <article class="case-stat-card">
+              <span>Validation</span>
+              <strong>Critical flows tested early</strong>
+            </article>
+            <article class="case-stat-card">
+              <span>Scale</span>
+              <strong>Systemized module growth</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-next" data-case-reveal>
+        <div>
+          <small>Next step</small>
+          <h2>Trying to simplify a product without flattening what makes it powerful?</h2>
+          <p>We help teams structure complexity into clearer systems, faster validation loops, and design that scales with the roadmap.</p>
+        </div>
+        <a class="case-next-link" href="#project-form" data-project-open">
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+        </a>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close><span aria-hidden="true"></span></button>
+        </div>
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field"><span>Email</span><input class="project-input" type="email" name="email" placeholder="E-mail" required /></label>
+              <label class="project-field"><span>Full name</span><input class="project-input" type="text" name="name" placeholder="Full name" required /></label>
+            </div>
+            <label class="project-field"><span>Message</span><textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea></label>
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal"><span class="line-inner" data-text="Send a message">Send a message</span></span>
+              <span class="cta-icon" aria-hidden="true"><img src="/assets/arrow-up-right.svg" alt="" /></span>
+            </button>
+            <p class="project-drawer-note">By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a></p>
+          </form>
+          <div class="project-success" hidden data-project-success>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta"><span>2026 © Ailume. All rights reserved</span></div>
+      <div class="footer-side">
+        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer"><span>Part of</span><img src="/assets/halolab.svg" alt="Halo Lab" /></a>
+      </div>
+    </footer>
+
+    <script src="/project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="/theme-toggle.js?v=1" defer></script>
+    <script src="/case-pages.js?v=1" defer></script>
+  </body>
+</html>

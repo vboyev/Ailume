@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="en" class="hero-intro-ready">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>AI-Augmented Product Design Agency | Ailume</title>
+    <meta
+      name="description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="AI-Augmented Product Design Agency | Ailume" />
+    <meta
+      property="og:description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta property="og:url" content="https://ailume.agency/" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume hero showcase" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="AI-Augmented Product Design Agency | Ailume" />
+    <meta
+      name="twitter:description"
+      content="Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=footer-static-1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "description": "AI-augmented product design agency for scaling B2B teams.",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ailume.agency/#website",
+            "url": "https://ailume.agency/",
+            "name": "Ailume",
+            "publisher": {
+              "@id": "https://ailume.agency/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ailume.agency/#webpage",
+            "url": "https://ailume.agency/",
+            "name": "AI-Augmented Product Design Agency | Ailume",
+            "isPartOf": {
+              "@id": "https://ailume.agency/#website"
+            },
+            "about": {
+              "@id": "https://ailume.agency/#organization"
+            },
+            "description": "Ailume helps scaling B2B teams explore more, validate faster, and ship better UX/UI through designer-led, AI-augmented workflows."
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ailume.agency/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is an AI-augmented product design agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An AI-augmented product design agency uses AI inside the design workflow for research synthesis, exploration, prototyping, and design systems to ship faster and at lower cost. AI accelerates the process; experienced designers stay responsible for product judgment, quality, and every final decision."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does AI improve the design process?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It removes the slow parts. AI digests research and feedback, generates more directions to explore, builds clickable prototypes quickly, and helps document design systems. That frees experienced designers to spend their time on product thinking, judgment, and craft, so you get more output without dropping quality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does AI replace your designers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. AI supports the workflow; it never makes the call. Our designers own the problem, product and UX judgment, visual quality, and every final decision. AI explores; designers decide."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's the difference between an AI-augmented and an AI-powered design agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mostly framing; both mean AI is used in the work. We say AI-augmented on purpose: it keeps experienced designers at the center and AI as the multiplier, not the product. We are not an agency that builds AI products; we are a design team that uses AI to work faster."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is AI-augmented design lower quality?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The opposite, when senior designers steer it. AI lets us explore more directions and iterate more often, so the final work is more considered, not less. Quality control stays fully human: a senior designer reviews and approves every direction and every screen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it cost less than hiring in-house or a traditional agency?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually yes, for the output you get. A small senior team with AI leverage delivers the volume of a larger one, without the overhead of an internal team or the layers of a big agency. You add design capacity without permanently adding headcount."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you work with our existing product and design system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, it's a core use case. We add new features and screens, extend and maintain your design system, and deliver clean, dev-ready handoff, so a live product keeps moving and stays consistent as it grows."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is AILUME best suited for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Scaling B2B teams whose roadmap is moving faster than their design capacity, teams that need senior design at volume but don't want to build a large in-house team or wait on a slow agency retainer."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script src="analytics.js?v=1" defer></script>
+
+  </head>
+  <body>
+    <header class="site-header" data-node-id="93:96">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo" href="index.html" aria-label="Ailume home"><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="/">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Home">Home</span>
+            </span>
+          </a>
+          <a class="nav-link" href="/about">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="About us">About us</span>
+            </span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          <a class="header-cta" href="/contact" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="/">Home</a>
+        <a class="mobile-link" href="/about">About us</a>
+        <a class="mobile-cta" href="/contact" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section hero-intro" data-node-id="93:95">
+        <div class="hero-copy">
+          <div class="hero-content">
+            <div class="hero-title-block">
+              <h1 class="section-tag hero-intro-item hero-kicker">
+                <span class="tag-cube" aria-hidden="true"></span>
+                <span>AI-augmented product design agency</span>
+              </h1>
+
+              <h2 class="hero-intro-item hero-display">Product design,<br />accelerated by AI</h2>
+            </div>
+
+            <p class="hero-description hero-intro-item">
+              We help scaling B2B teams explore more, validate faster, and ship
+              production-ready UX/UI — with experienced designers and AI-augmented workflows.
+            </p>
+          </div>
+
+          <div class="hero-actions hero-intro-item">
+            <a class="hero-cta" href="/contact" data-project-open>
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Start a project">Start a project</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-intro-item" aria-hidden="true">
+          <img
+            src="assets/hero-image.png"
+            alt=""
+            decoding="async"
+            fetchpriority="high"
+            width="672"
+            height="620"
+          />
+        </div>
+      </section>
+
+      <section class="logos-section" data-node-id="120:103" aria-label="Trusted by teams">
+        <div class="logos-caption">
+          <span>Built for teams outpacing their design capacity</span>
+        </div>
+
+        <div class="logos-row">
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-1.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-2.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-3.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-4.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-5.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-6.svg" alt="" />
+          </span>
+          <span class="client-logo" aria-hidden="true">
+            <img src="assets/logos/logo-7.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-1.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-2.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-3.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-4.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-5.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-6.svg" alt="" />
+          </span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true">
+            <img src="assets/logos/logo-7.svg" alt="" />
+          </span>
+        </div>
+      </section>
+
+      <section class="why-section" data-node-id="93:152" aria-labelledby="why-title">
+        <div class="why-heading">
+          <div class="section-tag why-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Why Ailume?</span>
+          </div>
+
+          <h2 id="why-title">Grow your roadmap, not your design overhead</h2>
+
+          <p>
+            AILUME uses AI to remove drag from the design process, so experienced
+            designers explore more, decide faster, and keep systems moving.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-media">
+              <img src="assets/whyus-1.png" alt="" loading="lazy" decoding="async" />
+            </div>
+            <h3>All your design work, one team</h3>
+            <p>Research, flows, prototypes, design systems, and handoff in one place.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-media">
+              <img src="assets/whyus-2.png" alt="" loading="lazy" decoding="async" />
+            </div>
+            <h3>We work inside your workflow</h3>
+            <p>Visible thinking, clear feedback, and decisions that keep teams moving.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-media">
+              <img src="assets/whyus-3.png" alt="" loading="lazy" decoding="async" />
+            </div>
+            <h3>A design system that grows with you</h3>
+            <p>Decisions become reusable patterns, tokens, and docs for consistency.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="deliver-section" data-node-id="93:185" aria-labelledby="deliver-title">
+        <div class="deliver-heading">
+          <div class="section-tag deliver-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What we deliver</span>
+          </div>
+
+          <h2 id="deliver-title">
+            AILUME uses AI to remove drag from the design process so experienced
+            designers can explore more ideas, turn research into decisions faster,
+            and keep systems moving with the product.
+          </h2>
+        </div>
+
+        <div class="deliver-list">
+          <article class="deliver-row">
+            <span class="deliver-index">01</span>
+            <h3>Design Sprint</h3>
+            <p>From brief to clickable prototype. Explore, design, and validate a focused product direction fast.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">02</span>
+            <h3>Embedded Design Team</h3>
+            <p>A product design team, embedded in yours. Ongoing design capacity without the delay of hiring.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Get a team">Get a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">03</span>
+            <h3>Design System &amp; Scale</h3>
+            <p>Components, tokens, patterns, and documentation that keep product delivery consistent.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="process-section" aria-labelledby="process-title">
+        <div class="process-copy">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>How we work</span>
+          </div>
+          <h2 id="process-title">Set it up once. Use the leverage every cycle.</h2>
+          <p>AI accelerates research, exploration, prototyping, and systems. Designers remain responsible for product direction, quality, and every final recommendation.</p>
+        </div>
+        <div class="process-visual" aria-hidden="true">
+          <img src="assets/howwework.png" alt="" loading="lazy" decoding="async" />
+        </div>
+      </section>
+
+      <section class="outcomes-section" aria-labelledby="outcomes-title">
+        <div class="section-heading center-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Outcomes</span>
+          </div>
+          <h2 id="outcomes-title">More design output.<br />Fewer bottlenecks.</h2>
+          <p>AI does not replace the designer. It gives good designers more leverage and product teams more room to explore.</p>
+        </div>
+
+        <div class="outcomes-grid">
+          <article class="outcome-card">
+            <div>
+              <h3>More directions</h3>
+              <span class="dark-icon" aria-hidden="true">
+                <img src="assets/outcome-icon1.svg" alt="" />
+              </span>
+            </div>
+            <p>Explore before committing to build.</p>
+          </article>
+          <article class="outcome-card">
+            <div>
+              <h3>Faster validation</h3>
+              <span class="dark-icon" aria-hidden="true">
+                <img src="assets/outcome-icon2.svg" alt="" />
+              </span>
+            </div>
+            <p>From brief to prototype in days, not weeks.</p>
+          </article>
+          <article class="outcome-card">
+            <div>
+              <h3>Cleaner handoff</h3>
+              <span class="dark-icon" aria-hidden="true">
+                <img src="assets/outcome-icon3.svg" alt="" />
+              </span>
+            </div>
+            <p>Prepare systems and states for engineering.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-section" aria-labelledby="proof-title">
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Proof</span>
+        </div>
+        <h2 id="proof-title">The math behind the work</h2>
+        <div class="metrics-grid">
+          <article>
+            <p>Brief to first concepts</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span></span>
+            <strong>8 days</strong>
+          </article>
+          <article>
+            <p>Design-system coverage</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span></span>
+            <strong>90%</strong>
+          </article>
+          <article>
+            <p>Cost per iteration</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span><span></span></span>
+            <strong>-30%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div>
+          <div class="section-tag faq-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>FAQ</span>
+          </div>
+          <h2 id="faq-title">What clients ask us most</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What is an AI-augmented product design agency?</summary>
+            <div class="faq-panel">
+              <p>An AI-augmented product design agency uses AI inside the design workflow — for research synthesis, exploration, prototyping, and design systems — to ship faster and at lower cost. AI accelerates the process; experienced designers stay responsible for product judgment, quality, and every final decision. In short: design with AI, not designing AI products.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How does AI improve the design process?</summary>
+            <div class="faq-panel">
+              <p>It removes the slow parts. AI digests research and feedback, generates more directions to explore, builds clickable prototypes quickly, and helps document design systems. That frees experienced designers to spend their time on product thinking, judgment, and craft — so you get more output without dropping quality.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does AI replace your designers?</summary>
+            <div class="faq-panel">
+              <p>No. AI supports the workflow; it never makes the call. Our designers own the problem, product and UX judgment, visual quality, and every final decision. AI explores; designers decide. The tool creates leverage — the team keeps accountability.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What's the difference between an AI-augmented and an AI-powered design agency?</summary>
+            <div class="faq-panel">
+              <p>Mostly framing — both mean AI is used in the work. We say "AI-augmented" on purpose: it keeps experienced designers at the center and AI as the multiplier, not the product. We're not an agency that builds AI products; we're a design team that uses AI to work faster.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is AI-augmented design lower quality?</summary>
+            <div class="faq-panel">
+              <p>The opposite, when senior designers steer it. AI lets us explore more directions and iterate more often, so the final work is more considered, not less. Quality control stays fully human: a senior designer reviews and approves every direction and every screen.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does it cost less than hiring in-house or a traditional agency?</summary>
+            <div class="faq-panel">
+              <p>Usually yes, for the output you get. A small senior team with AI leverage delivers the volume of a larger one, without the overhead of an internal team or the layers of a big agency. You add design capacity without permanently adding headcount.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can you work with our existing product and design system?</summary>
+            <div class="faq-panel">
+              <p>Yes — it's a core use case. We add new features and screens, extend and maintain your design system, and deliver clean, dev-ready handoff, so a live product keeps moving and stays consistent as it grows.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Who is AILUME best suited for?</summary>
+            <div class="faq-panel">
+              <p>Scaling B2B teams whose roadmap is moving faster than their design capacity — teams that need senior design at volume but don't want to build a large in-house team or wait on a slow agency retainer.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contact">
+        <h2>Let's start your project.</h2>
+        <p>Tell us what you're building and where design is slowing you down.<br />We'll scope it with you and get moving fast.</p>
+        <a class="hero-secondary cta-light" href="/contact" data-project-open>
+          <span class="line-reveal">
+            <span class="line-inner" data-text="Start a project">Start a project</span>
+          </span>
+          <span class="mini-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+      </div>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
+    </footer>
+    <script src="project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
+    <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
+      const faqItems = document.querySelectorAll(".faq-list details");
+
+      function closeFaq(details) {
+        const panel = details.querySelector(".faq-panel");
+        if (!panel || !details.open || details.dataset.animating === "true") return;
+
+        details.dataset.animating = "true";
+        details.dataset.closing = "true";
+        panel.style.height = `${panel.scrollHeight}px`;
+
+        requestAnimationFrame(() => {
+          panel.style.height = "0px";
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.open = false;
+            details.dataset.closing = "false";
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      function openFaq(details) {
+        const panel = details.querySelector(".faq-panel");
+        if (!panel || details.open || details.dataset.animating === "true") return;
+
+        faqItems.forEach((item) => {
+          if (item !== details) closeFaq(item);
+        });
+
+        details.open = true;
+        details.dataset.closing = "false";
+        details.dataset.animating = "true";
+        panel.style.height = "0px";
+
+        requestAnimationFrame(() => {
+          panel.style.height = `${panel.scrollHeight}px`;
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      faqItems.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const panel = details.querySelector(".faq-panel");
+
+        if (!summary || !panel) return;
+
+        details.open = false;
+        details.dataset.closing = "false";
+        details.dataset.animating = "false";
+        panel.style.height = "0px";
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (details.open) {
+            closeFaq(details);
+            return;
+          }
+
+          openFaq(details);
+        });
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (finePointer && !reduceMotion) {
+        document.querySelectorAll(".case-media").forEach((media) => {
+          let frame = 0;
+          const position = {
+            currentX: 50,
+            currentY: 50,
+            targetX: 50,
+            targetY: 50
+          };
+
+          function setTarget(event) {
+            const rect = media.getBoundingClientRect();
+            position.targetX = ((event.clientX - rect.left) / rect.width) * 100;
+            position.targetY = ((event.clientY - rect.top) / rect.height) * 100;
+          }
+
+          function render() {
+            position.currentX += (position.targetX - position.currentX) * 0.18;
+            position.currentY += (position.targetY - position.currentY) * 0.18;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+
+            if (
+              Math.abs(position.targetX - position.currentX) > 0.02 ||
+              Math.abs(position.targetY - position.currentY) > 0.02
+            ) {
+              frame = requestAnimationFrame(render);
+              return;
+            }
+
+            frame = 0;
+          }
+
+          function start(event) {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            setTarget(event);
+            position.currentX = position.targetX;
+            position.currentY = position.targetY;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+            media.classList.add("is-case-hover");
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function move(event) {
+            setTarget(event);
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function stop() {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            media.classList.remove("is-case-hover");
+          }
+
+          media.addEventListener("pointerenter", start);
+          media.addEventListener("pointermove", move);
+          media.addEventListener("pointerleave", stop);
+        });
+      }
+
+      const revealSelectors = [
+        ".why-heading",
+        ".deliver-heading",
+        ".outcomes-section .section-heading",
+        ".process-copy",
+        ".process-visual",
+        ".cases-section .section-heading",
+        ".proof-section > .section-tag",
+        ".proof-section > h2",
+        ".faq-section > div:first-child"
+      ];
+      const revealGroups = [
+        ".why-card",
+        ".deliver-row",
+        ".outcome-card",
+        ".case-card",
+        ".metrics-grid article",
+        ".faq-list details",
+        ".final-cta > *"
+      ];
+
+      function prepareReveal() {
+        revealSelectors.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((element) => {
+            element.dataset.reveal = element.matches(".process-visual") ? "media" : "up";
+          });
+        });
+
+        revealGroups.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((element, index) => {
+            element.dataset.reveal = element.matches(".why-card, .outcome-card, .case-card, .metrics-grid article, .process-visual")
+              ? "media"
+              : "up";
+            element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 90}ms`);
+          });
+        });
+      }
+
+      prepareReveal();
+
+      const logosCaption = document.querySelector(".logos-caption");
+      const logoItems = Array.from(document.querySelectorAll(".logos-row .client-logo"));
+
+      function revealClientLogos() {
+        logosCaption?.classList.add("is-visible");
+        logoItems.forEach((element, index) => {
+          element.dataset.reveal = "up";
+          element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 90}ms`);
+          element.classList.add("is-visible");
+        });
+      }
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealClientLogos();
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        if (logosCaption) {
+          logosCaption.dataset.reveal = "up";
+        }
+
+        const logosObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              revealClientLogos();
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -8% 0px",
+            threshold: 0.18
+          }
+        );
+
+        const logosSection = document.querySelector(".logos-section");
+        if (logosSection) {
+          logosObserver.observe(logosSection);
+        }
+
+        function revealPassedElements() {
+          document.querySelectorAll("[data-reveal]:not(.is-visible)").forEach((element) => {
+            const bounds = element.getBoundingClientRect();
+
+            if (bounds.top < window.innerHeight * 0.88) {
+              element.classList.add("is-visible");
+            }
+          });
+        }
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -12% 0px",
+            threshold: 0.12
+          }
+        );
+
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          revealObserver.observe(element);
+        });
+
+        revealPassedElements();
+        window.addEventListener("scroll", revealPassedElements, { passive: true });
+        window.addEventListener("resize", revealPassedElements);
+      }
+    </script>
+  </body>
+</html>

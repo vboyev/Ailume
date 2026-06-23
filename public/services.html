@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services | AILUME</title>
+    <meta name="description" content="Design sprints, embedded product design teams, and design systems for scaling B2B teams using AI-augmented workflows.">
+    <link rel="stylesheet" href="./ailume-home.css?v=site-pages-2">
+    <script src="analytics.js?v=1" defer></script>
+
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="./index.html" aria-label="AILUME home">
+        <span class="brand-mark">AI</span>
+        <span class="brand-word">AILUME</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link active" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <a class="header-cta line-link" href="#contact-panel" data-contact-open>Start a project</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>Menu</button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <a class="mobile-link" href="./index.html">Home</a>
+      <a class="mobile-link active" href="./services.html">Services</a>
+      <a class="mobile-link" href="./work.html">Work</a>
+      <a class="mobile-link" href="./process.html">Process</a>
+      <a class="mobile-link" href="./about.html">About</a>
+      <a class="mobile-link" href="#contact-panel" data-contact-open>Start a project</a>
+    </div>
+
+    <div class="contact-drawer" id="contact-panel" aria-hidden="true" data-contact-drawer>
+      <button class="contact-backdrop" type="button" aria-label="Close contact panel" data-contact-close></button>
+      <aside class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contact-panel-title">
+        <button class="contact-close" type="button" aria-label="Close contact panel" data-contact-close>×</button>
+        <div class="contact-panel-scroll">
+          <h2 id="contact-panel-title">Let's break the ice</h2>
+          <form class="drawer-form" action="#" method="post" data-drawer-form>
+            <div class="drawer-field-grid">
+              <label><span>Email</span><input class="drawer-field" type="email" name="email" placeholder="E-mail" required></label>
+              <label><span>Full name</span><input class="drawer-field" type="text" name="name" placeholder="Full name" required></label>
+            </div>
+            <label><span>Message</span><textarea class="drawer-field" name="message" rows="5" placeholder="What's your goal, budget and timeline?" required></textarea></label>
+            <fieldset class="help-fieldset">
+              <legend>How can we help you?</legend>
+              <label><input type="checkbox" name="help" value="Design Sprint"><span>Design Sprint</span></label>
+              <label><input type="checkbox" name="help" value="Embedded Team"><span>Embedded Team</span></label>
+              <label><input type="checkbox" name="help" value="Design System"><span>Design System</span></label>
+              <label><input type="checkbox" name="help" value="UX/UI Audit"><span>UX/UI Audit</span></label>
+              <label><input type="checkbox" name="help" value="Prototype"><span>Prototype</span></label>
+            </fieldset>
+            <button class="drawer-submit" type="submit">Send request</button>
+            <div class="drawer-microcopy">
+              <p>By clicking send you accept our <a href="#">privacy policy</a></p>
+              <p>Prefer email? <a href="mailto:hello@ailume.co">hello@ailume.co</a></p>
+            </div>
+          </form>
+          <div class="drawer-success" hidden data-drawer-success>
+            <p class="eyebrow blue">Hooray</p>
+            <h3>We've got the details.</h3>
+            <p>We reply within one business day with a real answer, not a calendar link.</p>
+            <button class="drawer-submit" type="button" data-contact-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <main>
+      <section class="hero page-hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Services</p>
+            <h1>Three ways to increase your design capacity.</h1>
+            <p class="hero-subhead">Choose the level of support that fits the roadmap: a focused sprint, an embedded design team, or a design system built to keep delivery consistent.</p>
+            <div class="button-row">
+              <a class="button button-light" href="#contact-panel" data-contact-open>Start a project</a>
+              <a class="button button-ghost" href="./process.html">See how we work</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deliver">
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="card-index">01</div>
+            <p class="card-kicker">Design Sprint</p>
+            <h3>From brief to clickable prototype.</h3>
+            <p>Explore, design, and validate a focused product direction fast. Best for new products, features, flows, and redesigns that need momentum.</p>
+            <a class="card-link" href="#contact-panel" data-contact-open>Book a sprint</a>
+          </article>
+          <article class="service-card">
+            <div class="card-index">02</div>
+            <p class="card-kicker">Embedded Design Team</p>
+            <h3>A product design team, embedded in yours.</h3>
+            <p>Ongoing design capacity inside your roadmap and tools without the delay and overhead of building a larger internal team.</p>
+            <a class="card-link" href="#contact-panel" data-contact-open>Get a team</a>
+          </article>
+          <article class="service-card">
+            <div class="card-index">03</div>
+            <p class="card-kicker">Design System &amp; Scale</p>
+            <h3>Components, tokens, patterns, and documentation.</h3>
+            <p>Keep product delivery consistent as the roadmap grows and the interface expands across teams, features, and surfaces.</p>
+            <a class="card-link" href="#contact-panel" data-contact-open>Scale my system</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="compact-section">
+        <div class="section-intro">
+          <p class="eyebrow">Engagement Fit</p>
+          <h2>Pick the model by bottleneck.</h2>
+        </div>
+        <div class="stack-grid">
+          <article class="stack-card">
+            <p class="card-kicker">Need direction</p>
+            <h3>Use a sprint when the team needs clarity before build.</h3>
+            <p>We move from product material to explored directions, clickable prototypes, and clear decisions.</p>
+          </article>
+          <article class="stack-card">
+            <p class="card-kicker">Need capacity</p>
+            <h3>Use an embedded team when design demand is ongoing.</h3>
+            <p>We plug into planning, product rituals, and delivery cycles so the roadmap keeps moving.</p>
+          </article>
+          <article class="stack-card">
+            <p class="card-kicker">Need consistency</p>
+            <h3>Use system support when the interface is scaling.</h3>
+            <p>We turn repeated decisions into reusable components, patterns, tokens, and documentation.</p>
+          </article>
+          <article class="stack-card">
+            <p class="card-kicker">Need leverage</p>
+            <h3>Use AI-augmented workflows where speed matters.</h3>
+            <p>AI helps explore and synthesize faster. Designers keep judgment, taste, and final decisions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="cta-content">
+          <p class="eyebrow">Start Here</p>
+          <h2>Tell us where design is slowing you down.</h2>
+          <p>We will show you which engagement model fits best and where an AI-augmented workflow can make a meaningful difference.</p>
+          <button class="button button-light" type="button" data-contact-open>Start a project</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AILUME</span>
+      <span>Product design, accelerated by AI.</span>
+      <a href="#contact-panel" data-contact-open>Start a project</a>
+    </footer>
+
+    <script src="./ailume-home.js"></script>
+  </body>
+</html>
