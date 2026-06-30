@@ -19,24 +19,20 @@
     </script>
     <title>Designing an Intuitive Learning Journey | Ailume Blog</title>
     <meta name="description" content="A practical blog article layout for Ailume with author sidebar, table of contents, article content, CTAs, FAQ, and responsive reading flow." />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://ailume.agency/blog/ai-augmented-product-design-cost/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Ailume" />
     <meta property="og:title" content="Designing an Intuitive Learning Journey | Ailume" />
     <meta property="og:description" content="A structured Ailume blog post with author context, content sections, CTAs, and FAQ." />
     <meta property="og:url" content="https://ailume.agency/blog/ai-augmented-product-design-cost/" />
-    <meta http-equiv="refresh" content="0; url=/" />
     <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/styles.css?v=footer-static-1" />
-    <script src="/analytics.js?v=1" defer></script>
-    <script>
-      window.location.replace("/");
-    </script>
+    <link rel="stylesheet" href="../../styles.css?v=home-why-restored-1" />
+    <script src="../../analytics.js?v=1" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -47,8 +43,9 @@
         "description": "A structured Ailume blog post with author context, content sections, CTAs, and FAQ.",
         "datePublished": "2023-04-17",
         "author": {
-                "@type": "Organization",
-                "name": "Ailume"
+                "@type": "Person",
+                "name": "Valentine Boyev",
+                "url": "https://www.linkedin.com/in/vboyev/"
         },
         "publisher": {
                 "@type": "Organization",
@@ -59,10 +56,28 @@
 }
     </script>
   </head>
-  <body>
+  <body class="article-blog-body">
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="/" aria-label="Ailume home"><img src="/assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo" href="../../index.html" aria-label="Ailume home"><img src="../../assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="../../index.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+          </a>
+          <a class="nav-link" href="../../process.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Process">Process</span></span>
+          </a>
+          <a class="nav-link" href="../../index.html#cases">
+            <span class="line-reveal"><span class="line-inner" data-text="Cases">Cases</span></span>
+          </a>
+          <a class="nav-link" href="../../about.html">
+            <span class="line-reveal"><span class="line-inner" data-text="About">About</span></span>
+          </a>
+        </nav>
+
         <div class="header-actions">
           <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -70,109 +85,266 @@
               <path d="M8.00011 3.55557C10.4547 3.55557 12.4446 5.54541 12.4446 8.00001C12.4446 10.4546 10.4547 12.4445 8.00011 12.4445L8.00011 3.55557Z" fill="currentColor" />
             </svg>
           </button>
-          <a class="header-cta" href="/contact" data-project-open>
+          <a class="header-cta" href="#project-form" data-project-open>
             <span class="button-text line-reveal">
               <span class="line-inner" data-text="Start a project">Start a project</span>
             </span>
             <span class="cta-icon" aria-hidden="true">
-              <img src="/assets/arrow-up-right.svg" alt="" />
+              <img src="../../assets/arrow-up-right.svg" alt="" />
             </span>
           </a>
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
         </div>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="../../index.html">Home</a>
+        <a class="mobile-link" href="../../process.html">Process</a>
+        <a class="mobile-link" href="../../index.html#cases">Cases</a>
+        <a class="mobile-link" href="../../about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true"><img src="../../assets/arrow-up-right.svg" alt="" /></span>
+        </a>
       </div>
     </header>
 
-    <main class="blog-post-main">
-      <section class="blog-hero">
-        <div class="blog-hero-inner">
-          <ul class="blog-breadcrumbs" aria-label="Breadcrumbs">
-            <li><a href="/">Home</a></li>
-            <li>/</li>
-            <li><a href="/blog/ai-augmented-product-design-cost/">Blog</a></li>
-            <li>/</li>
-            <li>Design Process</li>
-          </ul>
-          <h1 data-blog-reveal>Designing an intuitive learning journey powered by a real robot companion</h1>
-          <div class="blog-hero-meta" data-blog-reveal>
-            <span>17 April 2023</span>
-            <span>5 min read</span>
+    <main class="article-blog-main">
+      <article class="article-blog-page">
+        <header class="article-blog-hero">
+          <nav class="article-blog-breadcrumbs" aria-label="Breadcrumbs">
+            <a href="./">Blog</a>
+            <span>/</span>
             <span>Design Process</span>
+          </nav>
+
+          <div class="article-blog-heading-row">
+            <h1>Designing an intuitive learning journey powered by a real robot companion</h1>
           </div>
-        </div>
-      </section>
 
-      <article class="blog-shell">
-        <div class="blog-intro-grid" data-blog-reveal>
-          <p class="blog-lead">Imagine taking your child to a routine check-up, then trying to access the doctor's follow-up instructions - only to face confusing medical jargon and a phone-unfriendly PDF.</p>
-          <aside class="blog-author-card" aria-label="Author">
-            <span class="blog-author-avatar" aria-hidden="true"></span>
-            <div>
-              <strong>Sergiy Sumnikov</strong>
-              <span>Senior Healthcare IT &amp; AI Consultant</span>
+          <div class="article-blog-meta-row">
+            <div class="article-blog-meta">
+              <span class="article-blog-date">17 Apr 2023</span>
+              <span>5 min read</span>
             </div>
-          </aside>
-        </div>
+            <div class="article-blog-summary" aria-label="Summary tools">
+              <span>Sum up</span>
+              <a href="#" target="_blank" rel="noopener noreferrer" data-ai-summary="chatgpt" aria-label="Summarize with ChatGPT">
+                <img src="../../assets/blog/chatgpt.svg" alt="" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" data-ai-summary="perplexity" aria-label="Summarize with Perplexity">
+                <img src="../../assets/blog/perplexity.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </header>
 
-        <div class="blog-content-grid">
-          <aside class="blog-sidebar" data-blog-reveal>
-            <nav class="blog-toc" aria-label="Table of contents">
+        <div class="article-blog-banner"><span>Banner</span></div>
+
+        <div class="article-blog-layout">
+          <aside class="article-blog-sidebar">
+            <div class="article-author">
+              <img class="article-author-avatar" src="../../assets/about/valentine-avatar.png" alt="" width="64" height="64" />
+              <div>
+                <div class="article-author-name-row">
+                  <strong>Valentine Boyev</strong>
+                  <a class="article-author-linkedin" href="https://www.linkedin.com/in/vboyev/" target="_blank" rel="noopener noreferrer" aria-label="Valentine Boyev on LinkedIn">
+                    <span class="article-author-linkedin-icon" aria-hidden="true">in</span>
+                    <span class="article-author-linkedin-arrow" aria-hidden="true"></span>
+                  </a>
+                </div>
+                <span class="article-author-role">Founder &amp; CEO at Ailume</span>
+              </div>
+            </div>
+
+            <nav class="article-toc" aria-label="Table of contents">
               <strong>Table of contents</strong>
+              <span class="article-toc-progress" aria-hidden="true"><i></i></span>
               <ol>
                 <li><a href="#what-is-a-telehealth-app">What is a telehealth app?</a></li>
                 <li><a href="#market-overview">Telemedicine market overview &amp; key trends</a></li>
                 <li><a href="#types">Types of telemedicine applications</a></li>
                 <li><a href="#benefits">Benefits of telemedicine app development</a></li>
                 <li><a href="#features">Core and advanced features of a telemedicine app</a></li>
-                <li><a href="#future">The future of telemedicine app development</a></li>
+                <li><a href="#future">EHR/EMR integration and interoperability</a></li>
               </ol>
             </nav>
-            <div class="blog-sidebar-cta">
-              <p>Need a scope you can actually use?</p>
-              <a class="deliver-link" href="/contact" data-project-open>
-                <span>Ask Ailume</span>
-                <span class="mini-icon" aria-hidden="true">
-                  <img src="/assets/arrow-up-right.svg" alt="" />
-                </span>
-              </a>
-            </div>
+
+            <a class="article-question-card" href="#project-form" data-project-open>
+              <span>
+                <strong>Have a question?</strong>
+                <small>Ask our experts</small>
+              </span>
+              <i aria-hidden="true"><img src="../../assets/blog/banner-error.svg" alt="" /></i>
+            </a>
           </aside>
 
-          <div class="blog-article" data-blog-reveal>
-            <figure class="blog-cover">
-              <img src="/assets/hero-image.png" alt="Ailume blog post desktop layout" width="1344" height="1240" />
-              <figcaption>Remote care solutions make healthcare faster and more accessible.</figcaption>
+          <div class="article-blog-content">
+            <p class="article-blog-lead">
+              Imagine taking your child to a routine check-up, then trying to access the doctor’s follow-up
+              instructions — only to face confusing medical jargon and a phone-unfriendly PDF. Most people won’t
+              struggle through it. They’ll leave the portal and call the clinic instead.
+            </p>
+
+            <figure class="article-image-block">
+              <div><span>Blog image</span></div>
+              <figcaption>Remote care solutions make healthcare faster and more accessible</figcaption>
             </figure>
 
-            <div class="blog-rich">
-              <p>Imagine taking your child to a routine check-up, then trying to access the doctor's follow-up instructions - only to face confusing medical jargon and a phone-unfriendly PDF. Most people won't struggle through it. They'll leave the portal and call the clinic instead.</p>
-
-              <h2 id="what-is-a-telehealth-app">What is a telehealth app?</h2>
-
+            <section class="article-section" id="what-is-a-telehealth-app">
+              <h2>What is a telehealth app?</h2>
               <p>A telehealth platform lets patients and healthcare providers stay connected from a distance through video calls, phone consultations, secure messages, and digital monitoring tools. At its core, telemedicine app development focuses on enabling safe, compliant, and structured remote care.</p>
+              <p>Live consultations, asynchronous messaging, digital prescriptions, remote diagnostics, and EHR access are all possible through telemedicine apps — integrated with cloud infrastructure to store and transmit PHI securely under HIPAA and GDPR.</p>
+            </section>
 
-              <h2 id="market-overview">Telemedicine market overview &amp; key trends</h2>
+            <figure class="article-image-block article-image-block-short">
+              <div><span>Blog image</span></div>
+              <figcaption>A mobile-first product keeps care instructions accessible after the visit</figcaption>
+            </figure>
 
-              <p>The telehealth market has shifted from pandemic exception to sustained structural growth. The global market was valued at USD 114.98B in 2024, projected to reach USD 380.3B by 2030.</p>
+            <section class="article-section" id="market-overview">
+              <h2>Telemedicine market overview &amp; key trends</h2>
+              <p>Telehealth has moved from emergency workaround to standard digital healthcare infrastructure. Providers now expect secure video visits, asynchronous care, remote monitoring, and integrations with clinical systems.</p>
+              <p>For product teams, the opportunity is not simply to digitize appointments. It is to design a journey that helps patients understand next steps and helps clinicians reduce avoidable administrative work.</p>
+            </section>
 
-              <h2 id="types">Types of telemedicine applications</h2>
+            <section class="article-section" id="types">
+              <h2>Types of telemedicine applications</h2>
+              <p>Before investing in telemedicine app development, define which category fits your strategy. A patient-facing portal, a clinician dashboard, a remote monitoring app, and a behavioral health product all carry different workflow and compliance needs.</p>
+              <ul>
+                <li>Live consultation products for scheduled and urgent care.</li>
+                <li>Asynchronous messaging for follow-up questions and care coordination.</li>
+                <li>Remote patient monitoring for chronic conditions and device data.</li>
+                <li>Care-plan portals for instructions, prescriptions, and education.</li>
+              </ul>
+            </section>
 
-              <p>Before investing in telemedicine app development, define which category fits your strategy. Clinical telemedicine platforms, mental health services, and remote patient monitoring tools each need different product decisions.</p>
+            <figure class="article-image-block article-image-block-short">
+              <div><span>Blog image</span></div>
+              <figcaption>Different telehealth categories require different product decisions</figcaption>
+            </figure>
 
-              <h2 id="benefits">How much does it cost to build a telehealth app?</h2>
+            <section class="article-section" id="benefits">
+              <h2>Benefits of telemedicine app development</h2>
+              <p>A well-designed remote-care product reduces wait time, keeps instructions accessible, and helps clinics handle routine follow-up without pushing every question back to the phone.</p>
+              <h3>Better access to care</h3>
+              <p>Patients can reach providers without travel, especially when the journey is designed around simple next steps, readable language, and mobile use.</p>
+              <h3>Operational efficiency</h3>
+              <p>Structured intake, care-plan templates, and automated reminders help teams reduce repetitive administrative tasks.</p>
+            </section>
 
-              <p>The final price varies significantly based on feature depth, integrations, regulations, and compliance scope.</p>
+            <figure class="article-quote">
+              <blockquote>“We’ve been shipping digital products since 2013 — through every platform shift this industry produced. When AI became genuinely production-ready for design work late last year, we knew the difference between a trend and a turning point.”</blockquote>
+              <cite>
+                <span><img src="../../assets/blog/figma-quote-avatar.png" alt="" /></span>
+                <strong>Daniel H</strong>
+                <em>Co-Founder</em>
+              </cite>
+            </figure>
 
-              <h2 id="future">The future of telemedicine app development</h2>
+            <section class="article-section" id="features">
+              <h2>Core and advanced features of a telemedicine app</h2>
+              <p>The right feature set depends on your service model, but most production-ready telehealth products need secure authentication, scheduling, video calls, payments, messaging, clinical documentation, and integrations.</p>
+              <div class="article-table-wrap">
+                <table class="article-table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Purpose</th>
+                      <th>Design risk</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Scheduling</td>
+                      <td>Book and manage appointments</td>
+                      <td>Unclear availability and time-zone errors</td>
+                    </tr>
+                    <tr>
+                      <td>Messaging</td>
+                      <td>Support asynchronous follow-up</td>
+                      <td>Unstructured threads that create clinical ambiguity</td>
+                    </tr>
+                    <tr>
+                      <td>Care plans</td>
+                      <td>Explain next steps after a visit</td>
+                      <td>Dense instructions that patients abandon</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-              <p>Today's telemedicine is practical. What comes next is defined by the features turning into the baseline across serious remote-care projects.</p>
+            <section class="article-inline-cta">
+              <span class="article-inline-cta-tag">Ready for production?</span>
+              <h2>We’ll review your architecture and provide you with a concrete implementation plan.</h2>
+              <a class="article-cta-button" href="#project-form" data-project-open>
+                <span>Start a project</span>
+                <img src="../../assets/arrow-up-right.svg" alt="" />
+              </a>
+            </section>
 
-              <h2 id="features">Mental health and chronic care growth</h2>
+            <section class="article-section" id="future">
+              <h2>The future of telemedicine app development</h2>
+              <p>Telehealth continues to evolve. What comes next is defined by the features turning into the baseline across serious remote-care projects.</p>
+              <h3>AI-driven virtual care</h3>
+              <p>AI agents are expected to support triage, intake, and documentation at scale, reducing administrative burden on providers. Predictive models will identify high-risk patients earlier.</p>
+              <h3>Early AI adoption strategies</h3>
+              <p>Teams building for this now will have a significant advantage over those who retrofit AI later. Our <a href="../../services.html">AI integration</a> services can help implement these tools responsibly and in line with regulatory expectations.</p>
+            </section>
 
-              <p>Behavioral health will continue prioritizing accessibility and privacy, while chronic care depends on consistent monitoring, proactive alerts, and provider-friendly workflows.</p>
-            </div>
+            <section class="article-inline-cta">
+              <span class="article-inline-cta-tag">Ready for production?</span>
+              <h2>We’ll review your architecture and provide you with a concrete implementation plan.</h2>
+              <a class="article-cta-button" href="#project-form" data-project-open>
+                <span>Start a project</span>
+                <img src="../../assets/arrow-up-right.svg" alt="" />
+              </a>
+            </section>
+
+            <section class="article-faq">
+              <h2>FAQ</h2>
+              <details>
+                <summary>Can one UX design system work for multiple products?</summary>
+                <p>Yes, if the system defines shared foundations while allowing product-specific patterns where workflows differ.</p>
+              </details>
+              <details>
+                <summary>How do you measure the effectiveness of a UX system?</summary>
+                <p>Track design velocity, implementation rework, support questions, component adoption, and consistency across shipped flows.</p>
+              </details>
+              <details>
+                <summary>What risks can arise when scaling a design system?</summary>
+                <p>The main risks are unclear ownership, undocumented exceptions, and components that do not reflect real product states.</p>
+              </details>
+              <details>
+                <summary>How do you roll out changes without breaking products?</summary>
+                <p>Version changes, document migration notes, review critical flows, and involve engineering before the system update ships.</p>
+              </details>
+              <details>
+                <summary>Can AI be integrated into a design system?</summary>
+                <p>Yes. AI can assist documentation, audits, content variants, and component maintenance while designers keep final control.</p>
+              </details>
+            </section>
           </div>
         </div>
       </article>
+
+      <section class="process-final-cta article-final-cta">
+        <div class="process-final-cta-inner">
+          <h2>Bring us the bottleneck</h2>
+          <p>
+            Show us where your roadmap is slowing down. We’ll recommend the smallest useful engagement
+            to get it moving again — and tell you where AI helps and where it doesn’t.
+          </p>
+          <a class="hero-cta process-final-cta-button" href="#project-form" data-project-open>
+            <span class="button-text line-reveal"><span class="line-inner" data-text="Start a project">Start a project</span></span>
+            <span class="cta-icon" aria-hidden="true"><img src="../../assets/arrow-up-right.svg" alt="" /></span>
+          </a>
+        </div>
+      </section>
     </main>
 
 
@@ -218,11 +390,11 @@
                 <span class="line-inner" data-text="Send a message">Send a message</span>
               </span>
               <span class="cta-icon" aria-hidden="true">
-                <img src="/assets/arrow-up-right.svg" alt="" />
+                <img src="../../assets/arrow-up-right.svg" alt="" />
               </span>
             </button>
             <p class="project-drawer-note">
-              By clicking send you accept our <a href="/privacy-policy.html">Privacy policy</a>.<br />
+              By clicking send you accept our <a href="../../privacy-policy.html">Privacy policy</a>.<br />
               Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
             </p>
           </form>
@@ -236,15 +408,15 @@
         <span>2026 © Ailume. All rights reserved</span>
       </div>
       <div class="footer-side">
-        <a class="footer-link" href="/privacy-policy.html">Privacy policy</a>
+        <a class="footer-link" href="../../privacy-policy.html">Privacy policy</a>
         <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
           <span>Part of</span>
-          <img src="/assets/halolab.svg" alt="Halo Lab" />
+          <img src="../../assets/halolab.svg" alt="Halo Lab" />
         </a>
       </div>
     </footer>
-    <script src="/project-drawer.js?v=project-drawer-8" defer></script>
-    <script src="/theme-toggle.js?v=1" defer></script>
-    <script src="/blog-post.js?v=1" defer></script>
+    <script src="../../project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="../../theme-toggle.js?v=1" defer></script>
+    <script src="../../blog-post.js?v=1" defer></script>
   </body>
 </html>

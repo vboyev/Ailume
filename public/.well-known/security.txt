@@ -1,0 +1,5 @@
+Contact: mailto:hello@ailume.agency
+Preferred-Languages: en
+Canonical: https://ailume.agency/.well-known/security.txt
+Policy: https://ailume.agency/privacy-policy.html
+Expires: 2027-06-23T23:59:59Z

@@ -1,38 +1,27 @@
-document.documentElement.classList.add("blog-page-ready");
+const summaryLinks = document.querySelectorAll("[data-ai-summary]");
 
-const reduceBlogMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const blogRevealItems = document.querySelectorAll("[data-blog-reveal]");
+if (summaryLinks.length) {
+  const title = document.querySelector(".article-blog-hero h1")?.textContent?.trim() || document.title;
+  const lead = document.querySelector(".article-blog-lead")?.textContent?.trim() || "";
+  const sectionTitles = Array.from(document.querySelectorAll(".article-section h2"))
+    .map((heading) => heading.textContent.trim())
+    .filter(Boolean)
+    .slice(0, 6)
+    .join("; ");
+  const articleUrl = window.location.href.split("#")[0];
+  const prompt = [
+    "Summarize this article in 5 concise bullets.",
+    `Title: ${title}`,
+    lead ? `Intro: ${lead}` : "",
+    sectionTitles ? `Sections: ${sectionTitles}` : "",
+    `URL: ${articleUrl}`
+  ].filter(Boolean).join("\n\n");
+  const encodedPrompt = encodeURIComponent(prompt);
 
-if (reduceBlogMotion || !("IntersectionObserver" in window)) {
-  blogRevealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealPassedItems = () => {
-    blogRevealItems.forEach((item) => {
-      if (item.classList.contains("is-visible")) return;
-      const rect = item.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.96) item.classList.add("is-visible");
-    });
-  };
-
-  const blogObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      rootMargin: "0px 0px -12% 0px",
-      threshold: 0.12
-    }
-  );
-
-  blogRevealItems.forEach((item, index) => {
-    item.style.setProperty("--blog-reveal-delay", `${Math.min(index, 8) * 70}ms`);
-    blogObserver.observe(item);
+  summaryLinks.forEach((link) => {
+    const provider = link.dataset.aiSummary;
+    link.href = provider === "perplexity"
+      ? `https://www.perplexity.ai/search/new?q=${encodedPrompt}`
+      : `https://chat.openai.com/?q=${encodedPrompt}`;
   });
-
-  revealPassedItems();
-  window.addEventListener("scroll", revealPassedItems, { passive: true });
 }

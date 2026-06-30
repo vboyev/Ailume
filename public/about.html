@@ -75,7 +75,7 @@
     />
     <link rel="preload" as="image" href="assets/about-hero-3.png?v=3" />
     <link rel="preload" as="image" href="assets/about-image-b.png?v=2" />
-    <link rel="stylesheet" href="styles.css?v=about-v2-2" />
+    <link rel="stylesheet" href="styles.css?v=home-why-restored-1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -126,7 +126,7 @@
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "About us",
+                "name": "About",
                 "item": "https://ailume.agency/about"
               }
             ]
@@ -141,19 +141,24 @@
       <div class="header-inner">
         <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
 
-        <a class="logo" href="/" aria-label="Ailume home"
+        <a class="logo" href="index.html" aria-label="Ailume home"
           ><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20"
         /></a>
 
         <nav class="main-nav" aria-label="Main navigation">
-          <a class="nav-link" href="/">
+          <a class="nav-link" href="index.html">
             <span class="line-reveal">
               <span class="line-inner" data-text="Home">Home</span>
             </span>
           </a>
-          <a class="nav-link is-active" href="/about" aria-current="page">
+          <a class="nav-link" href="process.html">
             <span class="line-reveal">
-              <span class="line-inner" data-text="About us">About us</span>
+              <span class="line-inner" data-text="Process">Process</span>
+            </span>
+          </a>
+          <a class="nav-link is-active" href="about.html" aria-current="page">
+            <span class="line-reveal">
+              <span class="line-inner" data-text="About">About</span>
             </span>
           </a>
         </nav>
@@ -169,7 +174,7 @@
             </svg>
           </button>
 
-          <a class="header-cta" href="/contact" data-project-open>
+          <a class="header-cta" href="#project-form" data-project-open>
             <span class="button-text line-reveal">
               <span class="line-inner" data-text="Start a project">Start a project</span>
             </span>
@@ -186,9 +191,10 @@
       </div>
 
       <div class="mobile-menu" aria-label="Mobile navigation">
-        <a class="mobile-link" href="/">Home</a>
-        <a class="mobile-link" href="/about" aria-current="page">About us</a>
-        <a class="mobile-cta" href="/contact" data-project-open>
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="about.html" aria-current="page">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
           <span>Start a project</span>
           <span class="cta-icon" aria-hidden="true">
             <img src="assets/arrow-up-right.svg" alt="" />
@@ -218,9 +224,9 @@
             </p>
 
             <div class="page-actions hero-actions hero-intro-item">
-              <a class="hero-cta" href="#about-team">
+              <a class="hero-cta" href="#project-form" data-project-open>
                 <span class="button-text line-reveal">
-                  <span class="line-inner" data-text="Meet the team">Meet the team</span>
+                  <span class="line-inner" data-text="Start a project">Start a project</span>
                 </span>
                 <span class="cta-icon" aria-hidden="true">
                   <img src="assets/arrow-up-right.svg" alt="" />
@@ -280,14 +286,14 @@
           </div>
 
           <aside class="about-v2-stat-card" data-reveal="media">
-            <div class="about-v2-stat-row">
-              <span>Product delivery</span>
-              <strong>68% ↑</strong>
-            </div>
-            <div class="about-v2-stat-row">
-              <span>Decision time</span>
-              <strong>2.4x ↑</strong>
-            </div>
+            <img
+              src="assets/about/ai-made-design-faster.png"
+              alt="Product delivery and decision time performance metrics"
+              width="794"
+              height="416"
+              loading="lazy"
+              decoding="async"
+            />
           </aside>
         </div>
       </section>
@@ -296,8 +302,8 @@
         <div class="about-v2-quote-card">
           <img
             class="about-v2-quote-avatar"
-            src="assets/about-avatar-1.png"
-            alt="Portrait of Valentyn Shvets"
+            src="assets/about/valentine-avatar.png"
+            alt="Portrait of Valentine Boyev"
             width="96"
             height="96"
             loading="lazy"
@@ -309,8 +315,8 @@
             year, we knew the difference between a trend and a turning point.”
           </blockquote>
           <div class="about-v2-quote-meta">
-            <strong>Valentyn Shvets</strong>
-            <span>Co-Founder, Halo Lab</span>
+            <strong>Valentine Boyev</strong>
+            <span>Co-Founder of Ailume</span>
           </div>
         </div>
       </section>
@@ -319,12 +325,13 @@
         <div class="about-v2-centered-intro" data-reveal>
           <div class="section-tag centered-tag">
             <span class="tag-cube" aria-hidden="true"></span>
-            <span>Behind the work of Halo Lab</span>
+            <span>UNDER THE HOOD OF HALO LAB</span>
           </div>
           <h2>Same people. Sharper focus</h2>
           <p>
-            Halo Lab is full-cycle design and development company. AILUME is its product design unit
-            — structured around AI, senior craft, and scaling B2B teams — nothing else.
+            Halo Lab is a full-cycle design and development company. AILUME is its
+            product-design unit with a narrow mandate: AI-augmented UX/UI for scaling
+            B2B teams — nothing else.
           </p>
         </div>
 
@@ -333,7 +340,7 @@
             <div class="about-v2-card-head">
               <h3>What we inherit</h3>
               <span class="about-v2-icon-box" aria-hidden="true">
-                <img src="assets/outcome-icon1.svg" alt="" />
+                <img src="assets/about/what-we-inherit-icon.svg" alt="" />
               </span>
             </div>
             <ul class="about-v2-checklist">
@@ -349,7 +356,7 @@
             <div class="about-v2-card-head">
               <h3>What we run differently</h3>
               <span class="about-v2-icon-box" aria-hidden="true">
-                <img src="assets/outcome-icon2.svg" alt="" />
+                <img src="assets/about/what-we-run-differently-icon.svg" alt="" />
               </span>
             </div>
             <ul class="about-v2-checklist">
@@ -380,8 +387,8 @@
           <div class="page-copy about-v2-track-copy">
             <p>
               Ten years of shipping products taught us what good looks like. AI changed how fast we
-              can get there. AILUME is a senior team built around that shift, in how it works and in
-              what it may now deliver.
+              can get there. Ailume is a small senior team built around that shift, not as a slogan,
+              but as a better way to work.
             </p>
           </div>
         </div>
@@ -389,40 +396,40 @@
         <div class="page-stat-grid about-v2-proof-grid">
           <article class="page-stat-card about-v2-proof-card" data-reveal="media">
             <div class="about-v2-proof-head">
-              <span>Brief to first concepts</span>
+              <span>Completed projects<br />across industries</span>
               <i class="about-v2-proof-mark about-v2-proof-mark-one" aria-hidden="true"></i>
             </div>
-            <strong>8 days</strong>
+            <strong>500+</strong>
           </article>
           <article class="page-stat-card about-v2-proof-card" data-reveal="media">
             <div class="about-v2-proof-head">
-              <span>Design-system coverage</span>
+              <span>Amount of raises and exits<br />of our clients</span>
               <i class="about-v2-proof-mark about-v2-proof-mark-two" aria-hidden="true"></i>
             </div>
-            <strong>90%</strong>
+            <strong>$1B+</strong>
           </article>
           <article class="page-stat-card about-v2-proof-card" data-reveal="media">
             <div class="about-v2-proof-head">
-              <span>Cost per iteration</span>
+              <span>Recent market cap of<br />our biggest client</span>
               <i class="about-v2-proof-mark about-v2-proof-mark-three" aria-hidden="true"
                 ><span></span
               ></i>
             </div>
-            <strong>-30%</strong>
+            <strong>$321B</strong>
           </article>
         </div>
       </section>
 
       <section class="page-section about-v2-photo-section" data-reveal="media">
         <div class="about-v2-photo-frame">
-            <img
-              src="assets/about-image-b.png?v=2"
-              alt="Ailume team reviewing product interface decisions around a large screen"
-              width="1672"
-              height="941"
-              loading="lazy"
-              decoding="async"
-            />
+          <img
+            src="assets/about-image-b.png?v=2"
+            alt="Ailume team reviewing product interface decisions around a large screen"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
 
@@ -483,8 +490,8 @@
         <div class="about-v2-quote-card">
           <img
             class="about-v2-quote-avatar"
-            src="assets/about-avatar-2.png"
-            alt="Portrait of Aaron Brownlow"
+            src="assets/about/artem-avatar.png"
+            alt="Portrait of Artem Borysenko"
             width="96"
             height="96"
             loading="lazy"
@@ -497,8 +504,8 @@
             quality tax.”
           </blockquote>
           <div class="about-v2-quote-meta">
-            <strong>Aaron Brownlow</strong>
-            <span>Co-Founder, Ailume</span>
+            <strong>Artem Borysenko</strong>
+            <span>Co-Founder of Ailume</span>
           </div>
         </div>
       </section>
@@ -513,7 +520,7 @@
             <h2>We're not neutral</h2>
             <div class="page-copy">
               <p>
-                You don't hire us to speed Figma or requests. We question weak assumptions, surface
+                You don't hire us to operate Figma on request. We question weak assumptions, surface
                 missing decisions, simplify what doesn't need to exist, and recommend the direction we
                 believe in — with the reasoning attached.
               </p>
@@ -523,20 +530,20 @@
           <div class="about-v2-neutral-visual" data-reveal="media">
             <div class="about-v2-neutral-photo">
               <img
-                src="assets/about-image-a.png?v=2"
+                src="assets/about/were-not-neutral.png"
                 alt="Two teammates reviewing work together at a desk"
-                width="2752"
-                height="1536"
+                width="1804"
+                height="880"
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <aside class="about-v2-neutral-card">
               <span class="about-v2-icon-box" aria-hidden="true">
-                <img src="assets/outcome-icon3.svg" alt="" />
+                <img src="assets/about/point-of-view-icon.svg" alt="" />
               </span>
-              <strong>We own the company</strong>
-              <p>We own the quality of our recommendations.</p>
+              <strong>You own the company.</strong>
+              <p>We own the quality of our recommendation.</p>
             </aside>
           </div>
         </div>
@@ -555,28 +562,28 @@
             </h2>
           </div>
 
-          <div class="about-v2-arrows" aria-hidden="true">
-            <button type="button" tabindex="-1">
-              <span>&larr;</span>
+          <div class="about-v2-arrows" aria-label="Testimonials navigation">
+            <button class="about-v2-arrow" type="button" data-testimonial-prev aria-label="Previous testimonials">
+              <img src="assets/about/arrow-right.svg" alt="" aria-hidden="true" />
             </button>
-            <button type="button" tabindex="-1">
-              <span>&rarr;</span>
+            <button class="about-v2-arrow" type="button" data-testimonial-next aria-label="Next testimonials">
+              <img src="assets/about/arrow-right.svg" alt="" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        <div class="about-v2-testimonial-grid">
-          <article class="about-v2-testimonial-card" data-reveal>
+        <div class="about-v2-testimonial-grid" data-testimonial-grid>
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card>
             <div class="about-v2-rating">
-              <span class="tag-cube" aria-hidden="true"></span>
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
               <span>5.0</span>
             </div>
             <p>
-              “Halo Lab is very organized in planning to achieve the goals within the set deadlines.
+              “They are very organized in planning to achieve the goals within the set deadlines.
               We feel they were part of our internal team project.”
             </p>
             <div class="about-v2-testimonial-person">
-              <img src="assets/about-avatar-1.png" alt="Alvaro Araujo" width="64" height="64" loading="lazy" decoding="async" />
+              <img src="assets/about/client-1.png" alt="Alvaro Araujo" width="96" height="96" loading="lazy" decoding="async" />
               <div>
                 <strong>Alvaro Araujo</strong>
                 <span>Founder &amp; CEO, Relocate Now</span>
@@ -584,9 +591,9 @@
             </div>
           </article>
 
-          <article class="about-v2-testimonial-card" data-reveal>
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card>
             <div class="about-v2-rating">
-              <span class="tag-cube" aria-hidden="true"></span>
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
               <span>5.0</span>
             </div>
             <p>
@@ -594,7 +601,7 @@
               issues. The communication process was clear.”
             </p>
             <div class="about-v2-testimonial-person">
-              <img src="assets/about-avatar-2.png" alt="Saidou Soumare" width="64" height="64" loading="lazy" decoding="async" />
+              <img src="assets/about/client-2.png" alt="Saidou Soumare" width="96" height="96" loading="lazy" decoding="async" />
               <div>
                 <strong>Saidou Soumare</strong>
                 <span>CTO, Vehicle Operation Platform</span>
@@ -602,20 +609,74 @@
             </div>
           </article>
 
-          <article class="about-v2-testimonial-card" data-reveal>
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card>
             <div class="about-v2-rating">
-              <span class="tag-cube" aria-hidden="true"></span>
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
               <span>5.0</span>
             </div>
             <p>
-              “During the collaboration, Halo Lab prioritized our people, always taking into account
+              “During the collaboration, team prioritized our people, always taking into account
               our input and ideas and giving all team members a voice.”
             </p>
             <div class="about-v2-testimonial-person">
-              <span class="about-v2-avatar-fallback" aria-hidden="true">JL</span>
+              <img src="assets/about/client-3.png" alt="Justin Lopez" width="96" height="96" loading="lazy" decoding="async" />
               <div>
                 <strong>Justin Lopez</strong>
                 <span>Demand Generation Manager, WeSpire</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card hidden>
+            <div class="about-v2-rating">
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
+              <span>5.0</span>
+            </div>
+            <p>
+              “Team worked on our web platform, including an industry-centered landing page, and quickly
+              adapted to the specific requirements, delivering all items on time.”
+            </p>
+            <div class="about-v2-testimonial-person">
+              <img src="assets/about/client-4.png" alt="Mario Zusag" width="96" height="96" loading="lazy" decoding="async" />
+              <div>
+                <strong>Mario Zusag</strong>
+                <span>CTO, nyra health</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card hidden>
+            <div class="about-v2-rating">
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
+              <span>5.0</span>
+            </div>
+            <p>
+              “They developed websites and landing pages. Their professionalism and ability to understand
+              our needs are impressive.”
+            </p>
+            <div class="about-v2-testimonial-person">
+              <img src="assets/about/client-5.png" alt="Peter Hedlund" width="96" height="96" loading="lazy" decoding="async" />
+              <div>
+                <strong>Peter Hedlund</strong>
+                <span>SVP, Marketing</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-v2-testimonial-card" data-reveal data-testimonial-card hidden>
+            <div class="about-v2-rating">
+              <span class="about-v2-rating-star" aria-hidden="true">★</span>
+              <span>5.0</span>
+            </div>
+            <p>
+              “Our collaboration with their exceptional end-to-end service resulted in a stunning SaaS
+              platform with seamless UI/UX design.”
+            </p>
+            <div class="about-v2-testimonial-person">
+              <img src="assets/about/client-6.png" alt="Saidou Soumare" width="96" height="96" loading="lazy" decoding="async" />
+              <div>
+                <strong>Saidou Soumare</strong>
+                <span>CTO at Linkbycar</span>
               </div>
             </div>
           </article>
@@ -625,7 +686,7 @@
       <section class="final-cta" id="contact">
         <h2>Build with the<br />people behind the work</h2>
         <p>Tell us what your product team is trying to move —<br />and what keeps getting in the way</p>
-        <a class="hero-secondary cta-light" href="/contact" data-project-open>
+        <a class="hero-secondary cta-light" href="#project-form" data-project-open>
           <span class="line-reveal">
             <span class="line-inner" data-text="Start a project">Start a project</span>
           </span>
@@ -782,6 +843,45 @@
           logoObserver.observe(logosSection);
         }
       }
+
+      const testimonialCards = Array.from(document.querySelectorAll("[data-testimonial-card]"));
+      const testimonialPrev = document.querySelector("[data-testimonial-prev]");
+      const testimonialNext = document.querySelector("[data-testimonial-next]");
+      const testimonialPageSize = 3;
+      let testimonialPage = 0;
+
+      function renderTestimonials() {
+        if (!testimonialCards.length) return;
+
+        const maxPage = Math.max(0, Math.ceil(testimonialCards.length / testimonialPageSize) - 1);
+        const start = testimonialPage * testimonialPageSize;
+        const end = start + testimonialPageSize;
+
+        testimonialCards.forEach((card, index) => {
+          const isVisible = index >= start && index < end;
+
+          card.hidden = !isVisible;
+          card.classList.toggle("is-visible-first", isVisible && index === start);
+          card.classList.toggle("is-visible", isVisible);
+        });
+
+        testimonialPrev?.removeAttribute("disabled");
+        testimonialNext?.removeAttribute("disabled");
+      }
+
+      testimonialPrev?.addEventListener("click", () => {
+        const maxPage = Math.max(0, Math.ceil(testimonialCards.length / testimonialPageSize) - 1);
+        testimonialPage = testimonialPage === 0 ? maxPage : testimonialPage - 1;
+        renderTestimonials();
+      });
+
+      testimonialNext?.addEventListener("click", () => {
+        const maxPage = Math.max(0, Math.ceil(testimonialCards.length / testimonialPageSize) - 1);
+        testimonialPage = testimonialPage === maxPage ? 0 : testimonialPage + 1;
+        renderTestimonials();
+      });
+
+      renderTestimonials();
     </script>
   </body>
 </html>

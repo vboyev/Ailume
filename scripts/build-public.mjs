@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, rmSync, copyFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -21,6 +21,7 @@ const copyTargets = [
   "styles.css",
   "theme-toggle.js",
   "work.html",
+  ".well-known",
   "assets",
   "blog",
   "cases"
@@ -39,5 +40,14 @@ for (const target of copyTargets) {
 }
 
 mkdirSync(join(publicDir, "about"), { recursive: true });
-copyFileSync(join(rootDir, "about.html"), join(publicDir, "about", "index.html"));
 
+const aboutIndexHtml = readFileSync(join(rootDir, "about.html"), "utf8")
+  .replaceAll('href="assets/', 'href="/assets/')
+  .replaceAll('src="assets/', 'src="/assets/')
+  .replaceAll('href="styles.css', 'href="/styles.css')
+  .replaceAll('src="analytics.js', 'src="/analytics.js')
+  .replaceAll('src="project-drawer.js', 'src="/project-drawer.js')
+  .replaceAll('src="theme-toggle.js', 'src="/theme-toggle.js')
+  .replaceAll('href="privacy-policy.html', 'href="/privacy-policy.html');
+
+writeFileSync(join(publicDir, "about", "index.html"), aboutIndexHtml);
