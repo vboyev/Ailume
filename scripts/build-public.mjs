@@ -9,6 +9,9 @@ const publicDir = join(rootDir, "public");
 const copyTargets = [
   "index.html",
   "about.html",
+  "design-sprint.html",
+  "embedded-design-team.html",
+  "design-system.html",
   "analytics.js",
   "blog-post.js",
   "case-pages.js",

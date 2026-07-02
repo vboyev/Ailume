@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en" class="hero-intro-ready">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>Design System Services | Tokens, Components, Docs — Ailume</title>
+    <meta
+      name="description"
+      content="Ailume builds and scales design systems — audits, tokens, components, patterns, and documentation that keep product delivery consistent."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/design-system" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="Design System Services | Tokens, Components, Docs — Ailume" />
+    <meta
+      property="og:description"
+      content="Ailume builds and scales design systems — audits, tokens, components, patterns, and documentation that keep product delivery consistent."
+    />
+    <meta property="og:url" content="https://ailume.agency/design-system" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume design system service overview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="Design System Services | Tokens, Components, Docs — Ailume" />
+    <meta
+      name="twitter:description"
+      content="Ailume builds and scales design systems — audits, tokens, components, patterns, and documentation that keep product delivery consistent."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=service-pages-1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "description": "AI-augmented product design agency for scaling B2B teams.",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ailume.agency/design-system#service",
+            "name": "Design System & Scale",
+            "serviceType": "Design system services",
+            "description": "Design system audit, build, and scale: design tokens, component libraries, patterns, and AI-maintained documentation that keep product delivery consistent across teams.",
+            "provider": {
+              "@id": "https://ailume.agency/#organization"
+            },
+            "areaServed": "Worldwide",
+            "url": "https://ailume.agency/design-system"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ailume.agency/design-system#webpage",
+            "url": "https://ailume.agency/design-system",
+            "name": "Design System Services | Tokens, Components, Docs — Ailume",
+            "description": "Ailume builds and scales design systems — audits, tokens, components, patterns, and documentation that keep product delivery consistent.",
+            "about": {
+              "@id": "https://ailume.agency/design-system#service"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ailume.agency/design-system#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ailume.agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Design System & Scale",
+                "item": "https://ailume.agency/design-system"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ailume.agency/design-system#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you build new design systems or fix existing ones?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Both. We build systems from scratch for products that never had one, and we audit, consolidate, and extend systems that drifted. The starting point is always the same: an inventory of what exists and a map of what to unify first."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to build a design system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Foundations — tokens, primitives, and the first critical components — land in weeks, not quarters. Coverage then grows in staged milestones in priority order, so the system pays off from the first release instead of after a year-long rebuild."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you deliver the design system in code or just in Figma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Both sides of the contract. The Figma library ships with tokens exported in a format your stack consumes, and we review component parity with your engineers — so design and code stay mapped one-to-one instead of drifting apart."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who maintains the design system afterwards?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your choice. We hand over a contribution model and governance rules your team can run, or our embedded design team keeps maintaining the system as the product grows. Either way, the documentation stays current — AI keeps it in sync."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you use AI in design system work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "AI scans the product during audits, generates variant and state coverage, and writes and maintains the documentation layer most systems never get. Designers own the structure, naming, and quality of every token and component."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does a design system cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It's scoped by coverage: how many components, patterns, and platforms the system must serve first. Because AI removes most production and documentation drag, the same coverage typically costs meaningfully less than a traditional agency build."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script src="analytics.js?v=1" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo" href="index.html" aria-label="Ailume home"><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+          </a>
+          <a class="nav-link" href="process.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Process">Process</span></span>
+          </a>
+          <a class="nav-link" href="about.html">
+            <span class="line-reveal"><span class="line-inner" data-text="About">About</span></span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          <a class="header-cta" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-main about-process-main service-page">
+      <section class="about-process-hero hero-intro">
+        <div class="about-process-hero-copy">
+          <h1 class="hero-intro-item">A design system that keeps every release consistent</h1>
+          <p class="hero-intro-item">
+            Design system services for scaling B2B products. We turn repeated design
+            decisions into tokens, components, patterns, and documentation — so every team
+            ships the same product.
+          </p>
+          <a class="hero-cta hero-intro-item" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Scale my system">Scale my system</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+        <div class="about-process-visual hero-intro-item" aria-label="Design system library placeholder">
+          <div class="media-placeholder" data-label="Component library preview" role="img" aria-label="Placeholder: design system component library preview"></div>
+        </div>
+      </section>
+
+      <section class="logos-section process-logos" aria-label="Client logos" data-reveal>
+        <div class="logos-caption">
+          <span>Built for teams outpacing their design capacity</span>
+        </div>
+        <div class="logos-row">
+          <span class="client-logo"><img src="assets/logos/logo-1.svg" alt="Oppo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-2.svg" alt="Wealthtrace" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-3.svg" alt="FlowsApp" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-4.svg" alt="Sync" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-5.svg" alt="ASI" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-6.svg" alt="UnbugAi" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-7.svg" alt="Traflo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-1.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-2.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-3.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-4.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-5.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-6.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-7.svg" alt="" loading="lazy" decoding="async" /></span>
+        </div>
+      </section>
+
+      <section class="about-definition process-definition" data-reveal>
+        <div class="process-definition-copy">
+          <h2 class="section-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What is a design system?</span>
+          </h2>
+          <p>
+            A design system is the shared foundation a product ships on: tokens, components,
+            patterns, and documentation kept in sync between design and code — so new
+            features assemble from proven parts.
+          </p>
+          <p>We use AI to generate and maintain the documentation layer most systems never get. Designers own structure and quality.</p>
+        </div>
+        <div class="process-definition-visual" aria-label="Design tokens placeholder">
+          <div class="media-placeholder" data-label="Tokens &amp; variants visual" role="img" aria-label="Placeholder: design tokens and component variants illustration"></div>
+        </div>
+      </section>
+
+      <section class="service-video" hidden data-reveal aria-label="Design system showreel">
+        <div class="media-placeholder service-video-placeholder" data-label="Fullscreen system video" role="img" aria-label="Placeholder: fullscreen design system video"></div>
+      </section>
+
+      <section class="deliver-section service-deliver" data-reveal aria-labelledby="system-deliver-title">
+        <div class="deliver-heading">
+          <div class="section-tag deliver-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What we build</span>
+          </div>
+          <h2 id="system-deliver-title">
+            From audit to governance — everything a working design system needs,
+            in Figma and in code.
+          </h2>
+        </div>
+
+        <div class="deliver-list">
+          <article class="deliver-row">
+            <span class="deliver-index">01</span>
+            <h3>Design system audit</h3>
+            <p>Every screen, component, and inconsistency inventoried — with AI-assisted scanning — into a clear map of what to unify first.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">02</span>
+            <h3>Tokens &amp; foundations</h3>
+            <p>Color, type, spacing, radius, and elevation as named design tokens — one source of truth for design and engineering.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">03</span>
+            <h3>Component library</h3>
+            <p>Accessible, variant-complete components in Figma, mapped one-to-one to your codebase.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">04</span>
+            <h3>Patterns &amp; templates</h3>
+            <p>Repeatable flows — forms, tables, empty states, onboarding — solved once and reused everywhere.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">05</span>
+            <h3>Documentation &amp; governance</h3>
+            <p>Usage rules, do-and-don'ts, and a contribution process — AI-maintained, so docs never fall behind the product.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Scale my system">Scale my system</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-grow" data-reveal aria-labelledby="system-steps-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Step by step</span>
+          </div>
+          <h2 id="system-steps-title">How we build a design system</h2>
+          <p>
+            Staged milestones in priority order — following our
+            <a href="process.html">decision-led design process</a> — so the system pays off
+            from the first release, not after a year-long rebuild.
+          </p>
+        </div>
+        <ol class="about-step-list">
+          <li>
+            <span>01</span>
+            <div>
+              <strong>Audit &amp; scope</strong>
+              <p>We inventory the current UI, measure inconsistency, and agree what the system must cover first to pay off fastest.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <strong>Foundations</strong>
+              <p>Design tokens and primitives land first, so every later component inherits the same decisions — in Figma and in code.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <strong>Components &amp; patterns</strong>
+              <p>The library grows in priority order — built against real product screens, not abstract examples — with engineering reviewing parity.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <strong>Documentation &amp; adoption</strong>
+              <p>Docs, usage rules, and a contribution model roll out with the system. We stay on to govern it — or hand it to your team.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="service-compare" data-reveal aria-labelledby="system-compare-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>The difference</span>
+          </div>
+          <h2 id="system-compare-title">UI kit vs design system</h2>
+          <p>
+            Most scaling products have a UI kit and call it a system. The difference shows up
+            in every release.
+          </p>
+        </div>
+        <div class="service-table-wrap">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th scope="col">Criteria</th>
+                <th scope="col">Design system built by Ailume</th>
+                <th scope="col">UI kit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Scope</th>
+                <td class="is-lead is-up">Tokens, components, patterns, docs — in design and code</td>
+                <td class="is-down">Screens and styles in Figma</td>
+              </tr>
+              <tr>
+                <th scope="row">Source of truth</th>
+                <td class="is-lead is-up">One versioned system</td>
+                <td class="is-down">Whatever file is newest</td>
+              </tr>
+              <tr>
+                <th scope="row">Documentation</th>
+                <td class="is-lead is-up">Built in, AI-maintained</td>
+                <td class="is-down">Rare, goes stale</td>
+              </tr>
+              <tr>
+                <th scope="row">Cost of a new feature</th>
+                <td class="is-lead is-up">Assembled from proven parts</td>
+                <td class="is-down">Redrawn each time</td>
+              </tr>
+              <tr>
+                <th scope="row">Consistency across teams</th>
+                <td class="is-lead is-up">Enforced by structure</td>
+                <td class="is-down">Drifts with every release</td>
+              </tr>
+              <tr>
+                <th scope="row">Engineering parity</th>
+                <td class="is-lead is-up">Mapped one-to-one to code</td>
+                <td class="is-down">Design ≠ code</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="cases-section service-cases" data-reveal aria-labelledby="system-cases-title">
+        <div class="section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Selected work</span>
+          </div>
+          <h2 id="system-cases-title">Systems working in real products</h2>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/asi/" aria-label="ASI AI tutoring design system case study">
+              <img src="assets/case-cover-4.png" alt="ASI design system with tokens, components, and multi-platform coverage" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/asi/">An AI tutor students trust, on a system built to scale.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/flowapps/" aria-label="FlowApps project management case study">
+              <img src="assets/case-cover-2.png" alt="FlowApps project management SaaS interface" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/flowapps/">Project management that's powerful for managers, simple for the team.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/clawerly/" aria-label="Clawerly language learning case study">
+              <img src="assets/case-cover-3.png" alt="Clawerly language learning platform interface" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/clawerly/">A language app that keeps learners coming back.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-solve" data-reveal aria-labelledby="system-when-title">
+        <div class="about-section-heading centered">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>When you need it</span>
+          </div>
+          <h2 id="system-when-title">Signals you've outgrown<br />your UI kit</h2>
+          <p>If two or more of these sound familiar, the product needs<br />a system, not more screens</p>
+        </div>
+        <div class="about-solve-grid">
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-0.svg?v=process-assets-20260629" alt="" /></span>
+            <p>The same button exists in five slightly different versions</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-1.svg?v=process-assets-20260629" alt="" /></span>
+            <p>New designers and engineers take weeks to learn "how we do things"</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-2.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Every feature re-opens debates the team already settled</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-3.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Design and code drifted apart and handoff turned into archaeology</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-4.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Multiple teams ship to one product with visibly different results</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-5.svg?v=process-assets-20260629" alt="" /></span>
+            <p>A rebrand or redesign is coming and the UI has no single source of truth</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-section" data-reveal aria-labelledby="system-proof-title">
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Proof</span>
+        </div>
+        <h2 id="system-proof-title">The math behind the system</h2>
+        <div class="metrics-grid">
+          <article>
+            <p>Design-system coverage</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span></span>
+            <strong>90%</strong>
+          </article>
+          <article>
+            <p>Brief to first concepts</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span></span>
+            <strong>8 days</strong>
+          </article>
+          <article>
+            <p>Cost per iteration</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span><span></span></span>
+            <strong>-30%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="service-related" data-reveal aria-labelledby="system-related-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Other engagements</span>
+          </div>
+          <h2 id="system-related-title">The system works best with momentum</h2>
+        </div>
+        <div class="service-related-grid">
+          <a class="service-related-card" href="design-sprint.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Design Sprint</h3>
+              <p>Rethinking a core flow before systematizing it? Validate the direction in a fixed-scope design sprint first.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Book a sprint">Book a sprint</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="embedded-design-team.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Embedded Design Team</h3>
+              <p>Want the system maintained as the product grows? An embedded design team keeps it — and the roadmap — moving.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Hire a team">Hire a team</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="process.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Method</p>
+              <h3>Our process</h3>
+              <p>See how approved work becomes reusable components, tokens, and documentation in our decision-led workflow.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="See the process">See the process</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-faq-section" data-reveal aria-labelledby="system-faq-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>FAQ</span>
+          </div>
+          <h2 id="system-faq-title">What clients ask us most</h2>
+        </div>
+        <div class="page-faq about-faq">
+          <details open>
+            <summary>Do you build new design systems or fix existing ones?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Both. We build systems from scratch for products that never had one, and we audit, consolidate, and extend systems that drifted. The starting point is always the same: an inventory of what exists and a map of what to unify first.</p></div>
+          </details>
+          <details>
+            <summary>How long does it take to build a design system?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Foundations — tokens, primitives, and the first critical components — land in weeks, not quarters. Coverage then grows in staged milestones in priority order, so the system pays off from the first release instead of after a year-long rebuild.</p></div>
+          </details>
+          <details>
+            <summary>Do you deliver the design system in code or just in Figma?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Both sides of the contract. The Figma library ships with tokens exported in a format your stack consumes, and we review component parity with your engineers — so design and code stay mapped one-to-one instead of drifting apart.</p></div>
+          </details>
+          <details>
+            <summary>Who maintains the design system afterwards?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Your choice. We hand over a contribution model and governance rules your team can run — or our <a href="embedded-design-team.html">embedded design team</a> keeps maintaining the system as the product grows. Either way, the documentation stays current: AI keeps it in sync.</p></div>
+          </details>
+          <details>
+            <summary>How do you use AI in design system work?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>AI scans the product during audits, generates variant and state coverage, and writes and maintains the documentation layer most systems never get. Designers own the structure, naming, and quality of every token and component.</p></div>
+          </details>
+          <details>
+            <summary>What does a design system cost?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>It's scoped by coverage: how many components, patterns, and platforms the system must serve first. Because AI removes most production and documentation drag, the same coverage typically costs meaningfully less than a traditional agency build — here's <a href="blog/ai-augmented-product-design-cost/">the math behind AI-augmented product design cost</a>.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="process-final-cta" data-reveal>
+        <div class="process-final-cta-inner">
+          <h2>Scale your system</h2>
+          <p>
+            Show us your product and your UI kit. We'll map what a working design system
+            would cover first — and what it would save you every release after that.
+          </p>
+          <a class="hero-secondary cta-light process-final-cta-button" href="#project-form" data-project-open>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Scale my system">Scale my system</span>
+            </span>
+            <span class="mini-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" checked /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+      </div>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
+    <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealItems = document.querySelectorAll("[data-reveal]");
+
+      revealItems.forEach((element, index) => {
+        element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 80}ms`);
+      });
+
+      const faqItems = document.querySelectorAll(".page-faq details");
+
+      function closeFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || !details.open || details.dataset.animating === "true") return;
+
+        details.dataset.animating = "true";
+        panel.style.height = `${panel.scrollHeight}px`;
+
+        requestAnimationFrame(() => {
+          panel.style.height = "0px";
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.open = false;
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      function openFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || details.open || details.dataset.animating === "true") return;
+
+        faqItems.forEach((item) => {
+          if (item !== details) closeFaq(item);
+        });
+
+        details.open = true;
+        details.dataset.animating = "true";
+        panel.style.height = "0px";
+
+        requestAnimationFrame(() => {
+          panel.style.height = `${panel.scrollHeight}px`;
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      faqItems.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const panel = details.querySelector(".page-faq-answer");
+        if (!summary || !panel) return;
+
+        details.open = false;
+        details.dataset.animating = "false";
+        panel.style.height = "0px";
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (details.open) {
+            closeFaq(details);
+            return;
+          }
+
+          openFaq(details);
+        });
+      });
+
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (finePointer && !reduceMotion) {
+        document.querySelectorAll(".case-media").forEach((media) => {
+          let frame = 0;
+          const position = { currentX: 50, currentY: 50, targetX: 50, targetY: 50 };
+
+          function setTarget(event) {
+            const rect = media.getBoundingClientRect();
+            position.targetX = ((event.clientX - rect.left) / rect.width) * 100;
+            position.targetY = ((event.clientY - rect.top) / rect.height) * 100;
+          }
+
+          function render() {
+            position.currentX += (position.targetX - position.currentX) * 0.18;
+            position.currentY += (position.targetY - position.currentY) * 0.18;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+
+            if (
+              Math.abs(position.targetX - position.currentX) > 0.02 ||
+              Math.abs(position.targetY - position.currentY) > 0.02
+            ) {
+              frame = requestAnimationFrame(render);
+              return;
+            }
+
+            frame = 0;
+          }
+
+          function start(event) {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            setTarget(event);
+            position.currentX = position.targetX;
+            position.currentY = position.targetY;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+            media.classList.add("is-case-hover");
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function move(event) {
+            setTarget(event);
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function stop() {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            media.classList.remove("is-case-hover");
+          }
+
+          media.addEventListener("pointerenter", start);
+          media.addEventListener("pointermove", move);
+          media.addEventListener("pointerleave", stop);
+        });
+      }
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((element) => element.classList.add("is-visible"));
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+        );
+
+        revealItems.forEach((element) => revealObserver.observe(element));
+      }
+    </script>
+  </body>
+</html>

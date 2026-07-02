@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en" class="hero-intro-ready">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>Embedded Design Team | Senior Product Designers — Ailume</title>
+    <meta
+      name="description"
+      content="Hire an embedded design team: senior product designers working inside your roadmap and tools, with AI-augmented speed — no months-long hiring."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/embedded-design-team" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="Embedded Design Team | Senior Product Designers — Ailume" />
+    <meta
+      property="og:description"
+      content="Hire an embedded design team: senior product designers working inside your roadmap and tools, with AI-augmented speed — no months-long hiring."
+    />
+    <meta property="og:url" content="https://ailume.agency/embedded-design-team" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume embedded design team overview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="Embedded Design Team | Senior Product Designers — Ailume" />
+    <meta
+      name="twitter:description"
+      content="Hire an embedded design team: senior product designers working inside your roadmap and tools, with AI-augmented speed — no months-long hiring."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=service-pages-1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "description": "AI-augmented product design agency for scaling B2B teams.",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ailume.agency/embedded-design-team#service",
+            "name": "Embedded Design Team",
+            "serviceType": "Embedded product design team",
+            "description": "A senior product design team embedded in your roadmap, tools, and rituals — ongoing design capacity with AI-augmented speed, without the delay and overhead of hiring.",
+            "provider": {
+              "@id": "https://ailume.agency/#organization"
+            },
+            "areaServed": "Worldwide",
+            "url": "https://ailume.agency/embedded-design-team"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ailume.agency/embedded-design-team#webpage",
+            "url": "https://ailume.agency/embedded-design-team",
+            "name": "Embedded Design Team | Senior Product Designers — Ailume",
+            "description": "Hire an embedded design team: senior product designers working inside your roadmap and tools, with AI-augmented speed — no months-long hiring.",
+            "about": {
+              "@id": "https://ailume.agency/embedded-design-team#service"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ailume.agency/embedded-design-team#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ailume.agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Embedded Design Team",
+                "item": "https://ailume.agency/embedded-design-team"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ailume.agency/embedded-design-team#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How fast can an embedded design team start?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Days, not quarters. We scope your roadmap and stack in one call, match the team, and the first tickets are usually in motion within the first week — while a comparable in-house hire is still in the second interview round."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who actually works on our product?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Named senior product designers, led by a design lead — the same people every sprint, not a rotating bench. AI tools multiply their output, but every decision and every screen is owned by a designer you know by name."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What tools and rituals do you join?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yours. Figma, Slack, Linear, Jira, Notion — plus your planning, standups, and reviews where it makes sense. Embedding means we adapt to your process; you don't adopt ours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is this different from an agency retainer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A retainer sends tickets over a wall and gets designs back. An embedded design team sits inside your planning: it hears the context, joins the trade-off discussions, and designs ahead of engineering — so decisions happen in hours, not in weekly syncs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we scale the team up or down?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, month to month. Add a specialist for a heavy quarter, scale down after a launch. No recruiting cycle to undo, no severance math — capacity follows the roadmap."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the embedded team replace our in-house designers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No — it extends them. We often pair with an in-house design lead who owns direction, while the embedded team adds senior production capacity and keeps the design system consistent across everything that ships."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does an embedded design team cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "One predictable monthly fee, shaped by the team's size and seniority. With AI leverage, a compact senior team typically delivers the output of a much larger traditional one — usually below the fully-loaded cost of building the same capacity in-house."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script src="analytics.js?v=1" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo" href="index.html" aria-label="Ailume home"><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+          </a>
+          <a class="nav-link" href="process.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Process">Process</span></span>
+          </a>
+          <a class="nav-link" href="about.html">
+            <span class="line-reveal"><span class="line-inner" data-text="About">About</span></span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          <a class="header-cta" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-main about-process-main service-page">
+      <section class="about-process-hero hero-intro">
+        <div class="about-process-hero-copy">
+          <h1 class="hero-intro-item">An embedded design team that ships with your roadmap</h1>
+          <p class="hero-intro-item">
+            Ailume's embedded design team gives scaling B2B products ongoing senior design
+            capacity — inside your tools, rituals, and sprint cadence — without the delay
+            and overhead of hiring.
+          </p>
+          <a class="hero-cta hero-intro-item" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Hire a team">Hire a team</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+        <div class="about-process-visual hero-intro-item" aria-label="Embedded design team workspace placeholder">
+          <div class="media-placeholder" data-label="Team workspace preview" role="img" aria-label="Placeholder: embedded design team shared workspace preview"></div>
+        </div>
+      </section>
+
+      <section class="logos-section process-logos" aria-label="Client logos" data-reveal>
+        <div class="logos-caption">
+          <span>Built for teams outpacing their design capacity</span>
+        </div>
+        <div class="logos-row">
+          <span class="client-logo"><img src="assets/logos/logo-1.svg" alt="Oppo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-2.svg" alt="Wealthtrace" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-3.svg" alt="FlowsApp" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-4.svg" alt="Sync" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-5.svg" alt="ASI" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-6.svg" alt="UnbugAi" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-7.svg" alt="Traflo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-1.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-2.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-3.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-4.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-5.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-6.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-7.svg" alt="" loading="lazy" decoding="async" /></span>
+        </div>
+      </section>
+
+      <section class="about-definition process-definition" data-reveal>
+        <div class="process-definition-copy">
+          <h2 class="section-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What is an embedded design team?</span>
+          </h2>
+          <p>
+            An embedded design team is a group of senior product designers who work inside
+            your company like in-house staff — in your planning, tools, and delivery
+            cycles — without recruiting or growing permanent headcount.
+          </p>
+          <p>Ours comes with AI leverage built in: a compact senior team that delivers the output of a much larger one.</p>
+        </div>
+        <div class="process-definition-visual" aria-label="Embedded team collaboration placeholder">
+          <div class="media-placeholder" data-label="Collaboration visual" role="img" aria-label="Placeholder: embedded team collaboration illustration"></div>
+        </div>
+      </section>
+
+      <section class="service-video" hidden data-reveal aria-label="Embedded design team showreel">
+        <div class="media-placeholder service-video-placeholder" data-label="Fullscreen team video" role="img" aria-label="Placeholder: fullscreen embedded team video"></div>
+      </section>
+
+      <section class="deliver-section service-deliver" data-reveal aria-labelledby="team-deliver-title">
+        <div class="deliver-heading">
+          <div class="section-tag deliver-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What's included</span>
+          </div>
+          <h2 id="team-deliver-title">
+            One embedded product design team covers the work a scaling roadmap actually
+            generates — from discovery to dev-ready handoff, every sprint.
+          </h2>
+        </div>
+
+        <div class="deliver-list">
+          <article class="deliver-row">
+            <span class="deliver-index">01</span>
+            <h3>Feature &amp; flow design</h3>
+            <p>New features, screens, and end-to-end flows designed inside your existing product and constraints.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Hire a team">Hire a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">02</span>
+            <h3>UX/UI production at pace</h3>
+            <p>The recurring stream of states, edge cases, and iterations that keeps engineering unblocked every sprint.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Hire a team">Hire a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">03</span>
+            <h3>Research &amp; validation support</h3>
+            <p>AI-assisted synthesis of interviews, analytics, and feedback — turned into decisions, not backlogs.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Hire a team">Hire a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">04</span>
+            <h3>Design system upkeep</h3>
+            <p>Components, tokens, and documentation maintained as the product grows — not patched after it drifts.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Hire a team">Hire a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">05</span>
+            <h3>Dev-ready handoff</h3>
+            <p>Complete flows, covered states, and mapped components — reviewed with your engineers before delivery.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Hire a team">Hire a team</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-grow" data-reveal aria-labelledby="team-steps-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>How embedding works</span>
+          </div>
+          <h2 id="team-steps-title">From scoping call to shipping cadence</h2>
+          <p>
+            Embedding follows our <a href="process.html">decision-led design process</a>:
+            the team plugs into your rituals, works visibly, and designs ahead of engineering.
+          </p>
+        </div>
+        <ol class="about-step-list">
+          <li>
+            <span>01</span>
+            <div>
+              <strong>Scope &amp; match</strong>
+              <p>We map your roadmap, stack, and rituals, then shape the team — typically a lead product designer plus the specialists your backlog needs.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <strong>Plug in</strong>
+              <p>The team joins your Slack, Figma, and Linear or Jira — and your planning. First tickets move within days, not after a month of onboarding.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <strong>Ship every cycle</strong>
+              <p>Design lands ahead of engineering each sprint. Work stays visible in one shared space, and decisions get made in short loops, not weekly syncs.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <strong>Scale up or down</strong>
+              <p>Capacity flexes with the roadmap — add a specialist for a heavy quarter, scale down after launch. No recruiting cycle to undo, no severance math.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="service-compare" data-reveal aria-labelledby="team-compare-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>The alternatives</span>
+          </div>
+          <h2 id="team-compare-title">Embedded design team vs in-house hiring vs freelancers</h2>
+          <p>
+            Three ways to add design capacity. The difference is how fast you get senior
+            output — and who carries the overhead.
+          </p>
+        </div>
+        <div class="service-table-wrap">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th scope="col">Criteria</th>
+                <th scope="col">Embedded team by Ailume</th>
+                <th scope="col">In-house hire</th>
+                <th scope="col">Freelancers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Time to first output</th>
+                <td class="is-lead is-up">Days</td>
+                <td class="is-down">3–6 months incl. recruiting</td>
+                <td class="is-down">1–2 weeks</td>
+              </tr>
+              <tr>
+                <th scope="row">Seniority</th>
+                <td class="is-lead is-up">Senior, led team</td>
+                <td class="is-down">Depends on market and budget</td>
+                <td class="is-down">Varies per person</td>
+              </tr>
+              <tr>
+                <th scope="row">Output consistency</th>
+                <td class="is-lead is-up">One design language, system-driven</td>
+                <td class="is-down">High once ramped up</td>
+                <td class="is-down">Fragmented</td>
+              </tr>
+              <tr>
+                <th scope="row">Flexibility</th>
+                <td class="is-lead is-up">Scale up or down monthly</td>
+                <td class="is-down">Fixed headcount</td>
+                <td class="is-down">High, but unmanaged</td>
+              </tr>
+              <tr>
+                <th scope="row">Management overhead</th>
+                <td class="is-lead is-up">Carried by our design lead</td>
+                <td class="is-down">Yours</td>
+                <td class="is-down">Yours</td>
+              </tr>
+              <tr>
+                <th scope="row">Cost structure</th>
+                <td class="is-lead is-up">One predictable monthly fee</td>
+                <td class="is-down">Salary + benefits + tools + recruiting</td>
+                <td class="is-down">Hourly, unpredictable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="cases-section service-cases" data-reveal aria-labelledby="team-cases-title">
+        <div class="section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Selected work</span>
+          </div>
+          <h2 id="team-cases-title">What embedded teams ship</h2>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/flowapps/" aria-label="FlowApps project management case study">
+              <img src="assets/case-cover-2.png" alt="FlowApps project management SaaS designed by an embedded design team" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/flowapps/">Project management that's powerful for managers, simple for the team.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/asi/" aria-label="ASI AI tutoring case study">
+              <img src="assets/case-cover-4.png" alt="ASI AI tutoring app interface and design system" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/asi/">An AI tutor students trust, on a system built to scale.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/trafio/" aria-label="Traflo mobile banking case study">
+              <img src="assets/case-cover-1.png" alt="Traflo mobile banking app interface" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/trafio/">Mobile banking that explains your money, not just stores it.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-solve" data-reveal aria-labelledby="team-who-title">
+        <div class="about-section-heading centered">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Who it's for</span>
+          </div>
+          <h2 id="team-who-title">When an embedded team is the right model</h2>
+          <p>If design demand is ongoing — not a one-off project —<br />embedding beats both hiring and outsourcing</p>
+        </div>
+        <div class="about-solve-grid">
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-0.svg?v=process-assets-20260629" alt="" /></span>
+            <p>The roadmap moved faster than design capacity and engineering keeps waiting</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-1.svg?v=process-assets-20260629" alt="" /></span>
+            <p>You have one designer — or none — and a multi-team product</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-2.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Hiring senior designers is taking quarters, not weeks</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-3.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Design demand spikes around launches, then drops between them</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-4.svg?v=process-assets-20260629" alt="" /></span>
+            <p>An agency retainer feels too far from your day-to-day delivery</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-5.svg?v=process-assets-20260629" alt="" /></span>
+            <p>You want senior output without permanently growing headcount</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-section" data-reveal aria-labelledby="team-proof-title">
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Proof</span>
+        </div>
+        <h2 id="team-proof-title">The math behind the model</h2>
+        <div class="metrics-grid">
+          <article>
+            <p>Brief to first concepts</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span></span>
+            <strong>8 days</strong>
+          </article>
+          <article>
+            <p>Design-system coverage</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span></span>
+            <strong>90%</strong>
+          </article>
+          <article>
+            <p>Cost per iteration</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span><span></span></span>
+            <strong>-30%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="service-related" data-reveal aria-labelledby="team-related-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Other engagements</span>
+          </div>
+          <h2 id="team-related-title">Not sure ongoing capacity is the bottleneck?</h2>
+        </div>
+        <div class="service-related-grid">
+          <a class="service-related-card" href="design-sprint.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Design Sprint</h3>
+              <p>Need direction before capacity? Validate a focused product decision in a fixed-scope design sprint first.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Book a sprint">Book a sprint</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="design-system.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Design System &amp; Scale</h3>
+              <p>If inconsistency is the real problem, a design system fixes the foundation the whole team ships on.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Scale my system">Scale my system</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="process.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Method</p>
+              <h3>Our process</h3>
+              <p>See how the team works day to day — the decision-led workflow, the AI we use, and where designers decide.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="See the process">See the process</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-faq-section" data-reveal aria-labelledby="team-faq-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>FAQ</span>
+          </div>
+          <h2 id="team-faq-title">What clients ask us most</h2>
+        </div>
+        <div class="page-faq about-faq">
+          <details open>
+            <summary>How fast can an embedded design team start?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Days, not quarters. We scope your roadmap and stack in one call, match the team, and the first tickets are usually in motion within the first week — while a comparable in-house hire is still in the second interview round.</p></div>
+          </details>
+          <details>
+            <summary>Who actually works on our product?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Named senior product designers, led by a design lead — the same people every sprint, not a rotating bench. AI tools multiply their output, but every decision and every screen is owned by a designer you know by name.</p></div>
+          </details>
+          <details>
+            <summary>What tools and rituals do you join?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Yours. Figma, Slack, Linear, Jira, Notion — plus your planning, standups, and reviews where it makes sense. Embedding means we adapt to your process; you don't adopt ours.</p></div>
+          </details>
+          <details>
+            <summary>How is this different from an agency retainer?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>A retainer sends tickets over a wall and gets designs back. An embedded design team sits inside your planning: it hears the context, joins the trade-off discussions, and designs ahead of engineering — so decisions happen in hours, not in weekly syncs.</p></div>
+          </details>
+          <details>
+            <summary>Can we scale the team up or down?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Yes, month to month. Add a specialist for a heavy quarter, scale down after a launch. No recruiting cycle to undo, no severance math — capacity follows the roadmap.</p></div>
+          </details>
+          <details>
+            <summary>Does the embedded team replace our in-house designers?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>No — it extends them. We often pair with an in-house design lead who owns direction, while the embedded team adds senior production capacity and keeps the <a href="design-system.html">design system</a> consistent across everything that ships.</p></div>
+          </details>
+          <details>
+            <summary>How much does an embedded design team cost?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>One predictable monthly fee, shaped by the team's size and seniority. With AI leverage, a compact senior team typically delivers the output of a much larger traditional one — here's <a href="blog/ai-augmented-product-design-cost/">the math behind AI-augmented product design cost</a>.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="process-final-cta" data-reveal>
+        <div class="process-final-cta-inner">
+          <h2>Get your design team</h2>
+          <p>
+            Tell us what your roadmap needs to ship this quarter. We'll shape the team,
+            show you who's on it, and have design moving inside your sprint cadence in days.
+          </p>
+          <a class="hero-secondary cta-light process-final-cta-button" href="#project-form" data-project-open>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Hire a team">Hire a team</span>
+            </span>
+            <span class="mini-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" checked /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+      </div>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
+    <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealItems = document.querySelectorAll("[data-reveal]");
+
+      revealItems.forEach((element, index) => {
+        element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 80}ms`);
+      });
+
+      const faqItems = document.querySelectorAll(".page-faq details");
+
+      function closeFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || !details.open || details.dataset.animating === "true") return;
+
+        details.dataset.animating = "true";
+        panel.style.height = `${panel.scrollHeight}px`;
+
+        requestAnimationFrame(() => {
+          panel.style.height = "0px";
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.open = false;
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      function openFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || details.open || details.dataset.animating === "true") return;
+
+        faqItems.forEach((item) => {
+          if (item !== details) closeFaq(item);
+        });
+
+        details.open = true;
+        details.dataset.animating = "true";
+        panel.style.height = "0px";
+
+        requestAnimationFrame(() => {
+          panel.style.height = `${panel.scrollHeight}px`;
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      faqItems.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const panel = details.querySelector(".page-faq-answer");
+        if (!summary || !panel) return;
+
+        details.open = false;
+        details.dataset.animating = "false";
+        panel.style.height = "0px";
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (details.open) {
+            closeFaq(details);
+            return;
+          }
+
+          openFaq(details);
+        });
+      });
+
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (finePointer && !reduceMotion) {
+        document.querySelectorAll(".case-media").forEach((media) => {
+          let frame = 0;
+          const position = { currentX: 50, currentY: 50, targetX: 50, targetY: 50 };
+
+          function setTarget(event) {
+            const rect = media.getBoundingClientRect();
+            position.targetX = ((event.clientX - rect.left) / rect.width) * 100;
+            position.targetY = ((event.clientY - rect.top) / rect.height) * 100;
+          }
+
+          function render() {
+            position.currentX += (position.targetX - position.currentX) * 0.18;
+            position.currentY += (position.targetY - position.currentY) * 0.18;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+
+            if (
+              Math.abs(position.targetX - position.currentX) > 0.02 ||
+              Math.abs(position.targetY - position.currentY) > 0.02
+            ) {
+              frame = requestAnimationFrame(render);
+              return;
+            }
+
+            frame = 0;
+          }
+
+          function start(event) {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            setTarget(event);
+            position.currentX = position.targetX;
+            position.currentY = position.targetY;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+            media.classList.add("is-case-hover");
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function move(event) {
+            setTarget(event);
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function stop() {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            media.classList.remove("is-case-hover");
+          }
+
+          media.addEventListener("pointerenter", start);
+          media.addEventListener("pointermove", move);
+          media.addEventListener("pointerleave", stop);
+        });
+      }
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((element) => element.classList.add("is-visible"));
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+        );
+
+        revealItems.forEach((element) => revealObserver.observe(element));
+      }
+    </script>
+  </body>
+</html>

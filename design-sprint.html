@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en" class="hero-intro-ready">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const key = "ailume-theme";
+        const root = document.documentElement;
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(key);
+        } catch (error) {}
+
+        const systemPrefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : systemPrefersDark
+              ? "dark"
+              : "light";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+    <title>AI-Augmented Design Sprint | Brief to Prototype — Ailume</title>
+    <meta
+      name="description"
+      content="Book a design sprint with Ailume: senior designers use AI-augmented workflows to take one product decision from brief to a tested prototype in weeks, not months."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://ailume.agency/design-sprint" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ailume" />
+    <meta property="og:title" content="AI-Augmented Design Sprint | Brief to Prototype — Ailume" />
+    <meta
+      property="og:description"
+      content="Book a design sprint with Ailume: senior designers use AI-augmented workflows to take one product decision from brief to a tested prototype in weeks, not months."
+    />
+    <meta property="og:url" content="https://ailume.agency/design-sprint" />
+    <meta property="og:image" content="https://ailume.agency/assets/hero-image.png" />
+    <meta property="og:image:alt" content="Ailume design sprint overview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AilumeAgency" />
+    <meta name="twitter:title" content="AI-Augmented Design Sprint | Brief to Prototype — Ailume" />
+    <meta
+      name="twitter:description"
+      content="Book a design sprint with Ailume: senior designers use AI-augmented workflows to take one product decision from brief to a tested prototype in weeks, not months."
+    />
+    <meta name="twitter:image" content="https://ailume.agency/assets/hero-image.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/SuisseIntl-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css?v=service-pages-1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ailume.agency/#organization",
+            "name": "Ailume",
+            "url": "https://ailume.agency/",
+            "description": "AI-augmented product design agency for scaling B2B teams.",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Halo Lab",
+              "url": "https://www.halo-lab.com/"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ailume.agency/design-sprint#service",
+            "name": "Design Sprint",
+            "serviceType": "Product design sprint",
+            "description": "A fixed-scope design sprint that takes one product decision from brief to a tested, clickable prototype in two to four weeks, using AI-augmented workflows led by senior designers.",
+            "provider": {
+              "@id": "https://ailume.agency/#organization"
+            },
+            "areaServed": "Worldwide",
+            "url": "https://ailume.agency/design-sprint"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ailume.agency/design-sprint#webpage",
+            "url": "https://ailume.agency/design-sprint",
+            "name": "AI-Augmented Design Sprint | Brief to Prototype — Ailume",
+            "description": "Book a design sprint with Ailume: senior designers use AI-augmented workflows to take one product decision from brief to a tested prototype in weeks, not months.",
+            "about": {
+              "@id": "https://ailume.agency/design-sprint#service"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ailume.agency/design-sprint#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ailume.agency/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Design Sprint",
+                "item": "https://ailume.agency/design-sprint"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ailume.agency/design-sprint#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long does a design sprint take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Two to four weeks — ten to twenty working days from kickoff to a tested prototype, depending on scope. Framing and research synthesis open the sprint, exploration and prototyping take the middle, validation and the decision close it. Every sprint ends with a documented decision."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is this different from the Google Ventures five-day sprint?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Same intent — validate before you build — updated mechanics. The classic format assumed production is slow, so it stayed low-fidelity. AI-augmented workflows let us explore more directions in parallel and reach realistic, high-fidelity prototypes within the sprint, without stretching the timeline."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a design sprint cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A sprint is fixed scope and fixed price, quoted after a short scoping call. Because AI removes most production drag, an AI-augmented sprint typically lands around 30% below a comparable traditional agency engagement for the same output."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do you need from our team during a sprint?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Three things: a decision owner who can confirm direction, access to product context such as research, analytics, and roadmap, and fast, specific feedback at the checkpoints. Total involvement is a few hours across the sprint, not a blocked calendar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens after the design sprint?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You leave with a dev-ready starting point, so your team can build immediately. If you need ongoing capacity, the same designers can continue as an embedded design team, or turn the validated direction into a design system as the product scales."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do we own everything the sprint produces?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The Figma files, the clickable prototype, the research synthesis, and the decision document are yours in full — whether you continue with us or build with your own team."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can a design sprint work on an existing live product?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — it's one of the most common use cases. We sprint on underperforming flows, risky redesigns, and new features inside live products, working within your existing design system and constraints."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script src="analytics.js?v=1" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+
+        <a class="logo" href="index.html" aria-label="Ailume home"><img src="assets/ailume-logo.svg" alt="Ailume" width="120" height="20" /></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Home">Home</span></span>
+          </a>
+          <a class="nav-link" href="process.html">
+            <span class="line-reveal"><span class="line-inner" data-text="Process">Process</span></span>
+          </a>
+          <a class="nav-link" href="about.html">
+            <span class="line-reveal"><span class="line-inner" data-text="About">About</span></span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.11111" stroke="currentColor" stroke-width="1.77778" />
+              <path
+                d="M8.00011 3.55557C8.58376 3.55557 9.1617 3.67053 9.70092 3.89388C10.2401 4.11724 10.7301 4.44461 11.1428 4.85732C11.5555 5.27002 11.8829 5.75997 12.1062 6.2992C12.3296 6.83842 12.4446 7.41636 12.4446 8.00001C12.4446 8.58367 12.3296 9.1616 12.1062 9.70083C11.8829 10.2401 11.5555 10.73 11.1428 11.1427C10.7301 11.5554 10.2401 11.8828 9.70092 12.1061C9.1617 12.3295 8.58376 12.4445 8.00011 12.4445L8.00011 8.00001L8.00011 3.55557Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          <a class="header-cta" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Start a project">Start a project</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+
+          <label class="menu-button" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="process.html">Process</a>
+        <a class="mobile-link" href="about.html">About</a>
+        <a class="mobile-cta" href="#project-form" data-project-open>
+          <span>Start a project</span>
+          <span class="cta-icon" aria-hidden="true">
+            <img src="assets/arrow-up-right.svg" alt="" />
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-main about-process-main service-page">
+      <section class="about-process-hero hero-intro">
+        <div class="about-process-hero-copy">
+          <h1 class="hero-intro-item">A design sprint that ends in a tested prototype</h1>
+          <p class="hero-intro-item">
+            A fixed-scope design sprint for scaling B2B teams. Senior designers and
+            AI-augmented workflows take one product question from brief to a clickable,
+            validated prototype — in weeks, not months.
+          </p>
+          <a class="hero-cta hero-intro-item" href="#project-form" data-project-open>
+            <span class="button-text line-reveal">
+              <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+            </span>
+            <span class="cta-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+        <div class="about-process-visual hero-intro-item" aria-label="Design sprint prototype preview placeholder">
+          <div class="media-placeholder" data-label="Sprint prototype preview" role="img" aria-label="Placeholder: design sprint clickable prototype preview"></div>
+        </div>
+      </section>
+
+      <section class="logos-section process-logos" aria-label="Client logos" data-reveal>
+        <div class="logos-caption">
+          <span>Built for teams outpacing their design capacity</span>
+        </div>
+        <div class="logos-row">
+          <span class="client-logo"><img src="assets/logos/logo-1.svg" alt="Oppo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-2.svg" alt="Wealthtrace" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-3.svg" alt="FlowsApp" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-4.svg" alt="Sync" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-5.svg" alt="ASI" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-6.svg" alt="UnbugAi" loading="lazy" decoding="async" /></span>
+          <span class="client-logo"><img src="assets/logos/logo-7.svg" alt="Traflo" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-1.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-2.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-3.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-4.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-5.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-6.svg" alt="" loading="lazy" decoding="async" /></span>
+          <span class="client-logo client-logo-duplicate" aria-hidden="true"><img src="assets/logos/logo-7.svg" alt="" loading="lazy" decoding="async" /></span>
+        </div>
+      </section>
+
+      <section class="about-definition process-definition" data-reveal>
+        <div class="process-definition-copy">
+          <h2 class="section-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What is a design sprint?</span>
+          </h2>
+          <p>
+            A design sprint is a short, fixed-scope engagement that moves one product decision
+            from brief to a clickable, testable prototype — so you commit engineering effort
+            to a direction that already survived contact with users.
+          </p>
+          <p>In our AI-augmented sprint, AI widens exploration and speeds up synthesis. Senior designers make every call.</p>
+        </div>
+        <div class="process-definition-visual" aria-label="Design sprint workflow placeholder">
+          <div class="media-placeholder" data-label="Sprint workflow visual" role="img" aria-label="Placeholder: design sprint workflow illustration"></div>
+        </div>
+      </section>
+
+      <section class="service-video" hidden data-reveal aria-label="Design sprint showreel">
+        <div class="media-placeholder service-video-placeholder" data-label="Fullscreen sprint video" role="img" aria-label="Placeholder: fullscreen design sprint video"></div>
+      </section>
+
+      <section class="deliver-section service-deliver" data-reveal aria-labelledby="sprint-deliver-title">
+        <div class="deliver-heading">
+          <div class="section-tag deliver-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>What you get</span>
+          </div>
+          <h2 id="sprint-deliver-title">
+            Every product design sprint ships four things: a synthesized brief, explored
+            directions, a clickable prototype, and a decision your team can act on.
+          </h2>
+        </div>
+
+        <div class="deliver-list">
+          <article class="deliver-row">
+            <span class="deliver-index">01</span>
+            <h3>Research synthesis</h3>
+            <p>Interviews, analytics, support tickets, and competitor scans digested into a sharp problem framing and sprint brief.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">02</span>
+            <h3>Explored directions</h3>
+            <p>Three to five distinct design directions — flows, structure, and concept — instead of the first idea that fits.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">03</span>
+            <h3>Clickable prototype</h3>
+            <p>The strongest direction built into a realistic, high-fidelity prototype your users and stakeholders can actually click.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+
+          <article class="deliver-row">
+            <span class="deliver-index">04</span>
+            <h3>Validation &amp; decision</h3>
+            <p>Feedback from real users, a documented decision, and a dev-ready starting point for the build.</p>
+            <button class="deliver-link" type="button" data-project-open>
+              <span class="line-reveal">
+                <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+              </span>
+              <span class="mini-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-grow" data-reveal aria-labelledby="sprint-steps-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Day by day</span>
+          </div>
+          <h2 id="sprint-steps-title">How the design sprint runs</h2>
+          <p>
+            A fixed rhythm, visible work, and a decision owner on your side — following our
+            <a href="process.html">decision-led design process</a>. From kickoff to a tested
+            prototype in two to four weeks, depending on scope.
+          </p>
+        </div>
+        <ol class="about-step-list">
+          <li>
+            <span>01</span>
+            <div>
+              <strong>Frame</strong>
+              <p>We align on the decision that matters, digest your research and product context with AI-assisted synthesis, and lock the sprint brief.</p>
+            </div>
+            <span class="step-days">2–4 days</span>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <strong>Explore</strong>
+              <p>Senior designers use generative tools to widen the field, then reject weak directions and sharpen the strongest ones.</p>
+            </div>
+            <span class="step-days">2–4 days</span>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <strong>Prototype</strong>
+              <p>The leading direction becomes a clickable, high-fidelity prototype with key states and realistic interface content.</p>
+            </div>
+            <span class="step-days">4–6 days</span>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <strong>Validate &amp; decide</strong>
+              <p>We test with users and stakeholders, capture what we learned, and hand you a documented decision with clear next steps.</p>
+            </div>
+            <span class="step-days">2–6 days</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="service-compare" data-reveal aria-labelledby="sprint-compare-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>The new math</span>
+          </div>
+          <h2 id="sprint-compare-title">AI-augmented vs traditional design sprint</h2>
+          <p>
+            The classic five-day sprint formula assumed production is slow, so it stayed
+            low-fidelity. AI removes that constraint — and changes the math.
+          </p>
+        </div>
+        <div class="service-table-wrap">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th scope="col">Criteria</th>
+                <th scope="col">Ailume AI-augmented sprint</th>
+                <th scope="col">Traditional design sprint</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Directions explored</th>
+                <td class="is-lead is-up">3–5 in parallel</td>
+                <td class="is-down">1–2</td>
+              </tr>
+              <tr>
+                <th scope="row">Brief to first concepts</th>
+                <td class="is-lead is-up">Week 1</td>
+                <td class="is-down">Week 2+</td>
+              </tr>
+              <tr>
+                <th scope="row">Prototype fidelity</th>
+                <td class="is-lead is-up">High-fidelity, realistic content</td>
+                <td class="is-down">Low-fi wireframes</td>
+              </tr>
+              <tr>
+                <th scope="row">Research synthesis</th>
+                <td class="is-lead is-up">Hours with AI, reviewed by designers</td>
+                <td class="is-down">Days of manual synthesis</td>
+              </tr>
+              <tr>
+                <th scope="row">Cost per iteration</th>
+                <td class="is-lead is-up">~30% lower</td>
+                <td class="is-down">Baseline</td>
+              </tr>
+              <tr>
+                <th scope="row">Who makes the decisions</th>
+                <td class="is-lead is-up">Senior designers — always</td>
+                <td class="is-down">Senior designers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="cases-section service-cases" data-reveal aria-labelledby="sprint-cases-title">
+        <div class="section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Selected work</span>
+          </div>
+          <h2 id="sprint-cases-title">Products that started as a sprint</h2>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/trafio/" aria-label="Traflo mobile banking case study">
+              <img src="assets/case-cover-1.png" alt="Traflo mobile banking app designed in a product design sprint" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/trafio/">Mobile banking that explains your money, not just stores it.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/flowapps/" aria-label="FlowApps project management case study">
+              <img src="assets/case-cover-2.png" alt="FlowApps project management SaaS interface" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/flowapps/">Project management that's powerful for managers, simple for the team.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+          <article class="case-card case-card--small">
+            <a class="case-media" href="cases/clawerly/" aria-label="Clawerly language learning case study">
+              <img src="assets/case-cover-3.png" alt="Clawerly language learning platform interface" loading="lazy" decoding="async" />
+            </a>
+            <h3>
+              <a class="case-title-link" href="cases/clawerly/">A language app that keeps learners coming back.<span class="case-title-arrow" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span></a>
+            </h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-solve" data-reveal aria-labelledby="sprint-when-title">
+        <div class="about-section-heading centered">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Use cases</span>
+          </div>
+          <h2 id="sprint-when-title">When to book a design sprint</h2>
+          <p>A sprint fits any moment where the roadmap needs direction<br />before it needs production</p>
+        </div>
+        <div class="about-solve-grid">
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-0.svg?v=process-assets-20260629" alt="" /></span>
+            <p>A new product or feature needs a shape before engineering can scope it</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-1.svg?v=process-assets-20260629" alt="" /></span>
+            <p>A core flow underperforms and nobody agrees on why</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-2.svg?v=process-assets-20260629" alt="" /></span>
+            <p>A redesign feels risky without proof that the new direction works</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-3.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Stakeholders are split between directions and the debate is stalling delivery</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-4.svg?v=process-assets-20260629" alt="" /></span>
+            <p>You need something clickable for user tests, sales, or a board meeting</p>
+          </article>
+          <article>
+            <span class="about-card-icon" aria-hidden="true"><img src="assets/figma/process/process-icon-5.svg?v=process-assets-20260629" alt="" /></span>
+            <p>Validation keeps happening after the build instead of before it</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-section" data-reveal aria-labelledby="sprint-proof-title">
+        <div class="section-tag compact-tag">
+          <span class="tag-cube" aria-hidden="true"></span>
+          <span>Proof</span>
+        </div>
+        <h2 id="sprint-proof-title">The math behind the sprint</h2>
+        <div class="metrics-grid">
+          <article>
+            <p>Brief to first concepts</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span></span>
+            <strong>8 days</strong>
+          </article>
+          <article>
+            <p>Directions explored per sprint</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span></span>
+            <strong>3–5</strong>
+          </article>
+          <article>
+            <p>Cost per iteration</p>
+            <span class="metric-arrows" aria-hidden="true"><span></span><span></span><span></span></span>
+            <strong>-30%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="service-related" data-reveal aria-labelledby="sprint-related-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>Keep moving</span>
+          </div>
+          <h2 id="sprint-related-title">Where teams go after the sprint</h2>
+        </div>
+        <div class="service-related-grid">
+          <a class="service-related-card" href="embedded-design-team.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Embedded Design Team</h3>
+              <p>Need ongoing capacity after the sprint? The same senior designers continue as an embedded design team inside your roadmap.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Hire a team">Hire a team</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="design-system.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Service</p>
+              <h3>Design System &amp; Scale</h3>
+              <p>Turn validated work into components, tokens, patterns, and documentation that keep every next release consistent.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="Scale my system">Scale my system</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+          <a class="service-related-card" href="process.html">
+            <div class="service-related-copy">
+              <p class="service-related-kicker">Method</p>
+              <h3>Our process</h3>
+              <p>See the decision-led, AI-accelerated method behind every sprint — what AI does, and where designers decide.</p>
+            </div>
+            <span class="service-related-action">
+              <span class="line-reveal"><span class="line-inner" data-text="See the process">See the process</span></span>
+              <span class="mini-icon" aria-hidden="true"><img src="assets/arrow-up-right.svg" alt="" /></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-faq-section" data-reveal aria-labelledby="sprint-faq-title">
+        <div class="about-section-heading">
+          <div class="section-tag compact-tag">
+            <span class="tag-cube" aria-hidden="true"></span>
+            <span>FAQ</span>
+          </div>
+          <h2 id="sprint-faq-title">What clients ask us most</h2>
+        </div>
+        <div class="page-faq about-faq">
+          <details open>
+            <summary>How long does a design sprint take?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Two to four weeks — ten to twenty working days from kickoff to a tested prototype, depending on scope. Framing and research synthesis open the sprint, exploration and prototyping take the middle, validation and the decision close it. Every sprint ends with a documented decision.</p></div>
+          </details>
+          <details>
+            <summary>How is this different from the Google Ventures five-day sprint?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Same intent — validate before you build — updated mechanics. The classic format assumed production is slow, so it stayed low-fidelity. AI-augmented workflows let us explore more directions in parallel and reach realistic, high-fidelity prototypes within the sprint, without stretching the timeline.</p></div>
+          </details>
+          <details>
+            <summary>How much does a design sprint cost?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>A sprint is fixed scope and fixed price, quoted after a short scoping call. Because AI removes most production drag, an AI-augmented sprint typically lands around 30% below a comparable traditional agency engagement — here's <a href="blog/ai-augmented-product-design-cost/">the math behind AI-augmented product design cost</a>.</p></div>
+          </details>
+          <details>
+            <summary>What do you need from our team during a sprint?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Three things: a decision owner who can confirm direction, access to product context such as research, analytics, and roadmap, and fast, specific feedback at the checkpoints. Total involvement is a few hours across the sprint, not a blocked calendar.</p></div>
+          </details>
+          <details>
+            <summary>What happens after the design sprint?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>You leave with a dev-ready starting point, so your team can build immediately. If you need ongoing capacity, the same designers can continue as an <a href="embedded-design-team.html">embedded design team</a> — or turn the validated direction into a <a href="design-system.html">design system</a> as the product scales.</p></div>
+          </details>
+          <details>
+            <summary>Do we own everything the sprint produces?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Yes. The Figma files, the clickable prototype, the research synthesis, and the decision document are yours in full — whether you continue with us or build with your own team.</p></div>
+          </details>
+          <details>
+            <summary>Can a design sprint work on an existing live product?<span class="page-faq-icon" aria-hidden="true"></span></summary>
+            <div class="page-faq-answer"><p>Yes — it's one of the most common use cases. We sprint on underperforming flows, risky redesigns, and new features inside live products, working within your existing design system and constraints.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="process-final-cta" data-reveal>
+        <div class="process-final-cta-inner">
+          <h2>Book a design sprint</h2>
+          <p>
+            Bring us the decision your roadmap is stuck on. We'll scope the sprint in one short
+            call — and tell you honestly if a sprint is the wrong tool for it.
+          </p>
+          <a class="hero-secondary cta-light process-final-cta-button" href="#project-form" data-project-open>
+            <span class="line-reveal">
+              <span class="line-inner" data-text="Book a sprint">Book a sprint</span>
+            </span>
+            <span class="mini-icon" aria-hidden="true">
+              <img src="assets/arrow-up-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="project-drawer" id="project-form" aria-hidden="true" data-project-drawer>
+      <aside class="project-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+        <div class="project-drawer-head">
+          <div>
+            <h2 id="project-drawer-title">Let’s connect</h2>
+            <p>Tell us what you're building and where design is slowing you down. We'll scope it with you and get moving fast.</p>
+          </div>
+          <button class="project-drawer-close" type="button" aria-label="Close project form" data-project-close>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="project-drawer-body">
+          <form class="project-form" action="https://formsubmit.co/ajax/hello@ailume.agency" method="post" data-project-form>
+            <div class="project-field-grid">
+              <label class="project-field">
+                <span>Email</span>
+                <input class="project-input" type="email" name="email" placeholder="E-mail" required />
+              </label>
+              <label class="project-field">
+                <span>Full name</span>
+                <input class="project-input" type="text" name="name" placeholder="Full name" required />
+              </label>
+            </div>
+
+            <label class="project-field">
+              <span>Message</span>
+              <textarea class="project-input" name="message" placeholder="Tell us about your product.&#10;What’s your goal, budget and timeline?" required></textarea>
+            </label>
+
+            <fieldset class="project-fieldset">
+              <legend>How can we help you?</legend>
+              <div class="project-chip-row">
+                <label class="project-chip"><input type="checkbox" name="need" value="Design sprint" checked /><span>Design sprint</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Embedded team" /><span>Embedded team</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Design system" /><span>Design system</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="UX/UI audit" /><span>UX/UI audit</span></label>
+                <label class="project-chip"><input type="checkbox" name="need" value="Prototype" /><span>Prototype</span></label>
+              </div>
+            </fieldset>
+
+            <button class="project-submit" type="submit">
+              <span class="button-text line-reveal">
+                <span class="line-inner" data-text="Send a message">Send a message</span>
+              </span>
+              <span class="cta-icon" aria-hidden="true">
+                <img src="assets/arrow-up-right.svg" alt="" />
+              </span>
+            </button>
+            <p class="project-drawer-note">
+              By clicking send you accept our <a href="privacy-policy.html">Privacy policy</a>.<br />
+              Prefer email? <a href="mailto:hello@ailume.agency">hello@ailume.agency</a>
+            </p>
+          </form>
+
+          <div class="project-success" hidden data-project-success>
+            <div class="section-tag compact-tag">
+              <span class="tag-cube" aria-hidden="true"></span>
+              <span>Request sent</span>
+            </div>
+            <h3>Thanks. We'll get back with a useful next step.</h3>
+            <p>We reply with a scope direction, not a vague calendar loop.</p>
+            <button class="project-submit" type="button" data-project-close>Back to site</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>2026 © Ailume. All rights reserved</span>
+      </div>
+      <div class="footer-side">
+        <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="footer-halo" href="https://www.halo-lab.com/" target="_blank" rel="noopener noreferrer">
+          <span>Part of</span>
+          <img src="assets/halolab.svg" alt="Halo Lab" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="project-drawer.js?v=project-drawer-8" defer></script>
+    <script src="theme-toggle.js?v=1" defer></script>
+    <script>
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("hero-intro-run");
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealItems = document.querySelectorAll("[data-reveal]");
+
+      revealItems.forEach((element, index) => {
+        element.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 80}ms`);
+      });
+
+      const faqItems = document.querySelectorAll(".page-faq details");
+
+      function closeFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || !details.open || details.dataset.animating === "true") return;
+
+        details.dataset.animating = "true";
+        panel.style.height = `${panel.scrollHeight}px`;
+
+        requestAnimationFrame(() => {
+          panel.style.height = "0px";
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.open = false;
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      function openFaq(details) {
+        const panel = details.querySelector(".page-faq-answer");
+        if (!panel || details.open || details.dataset.animating === "true") return;
+
+        faqItems.forEach((item) => {
+          if (item !== details) closeFaq(item);
+        });
+
+        details.open = true;
+        details.dataset.animating = "true";
+        panel.style.height = "0px";
+
+        requestAnimationFrame(() => {
+          panel.style.height = `${panel.scrollHeight}px`;
+        });
+
+        panel.addEventListener(
+          "transitionend",
+          () => {
+            details.dataset.animating = "false";
+          },
+          { once: true }
+        );
+      }
+
+      faqItems.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const panel = details.querySelector(".page-faq-answer");
+        if (!summary || !panel) return;
+
+        details.open = false;
+        details.dataset.animating = "false";
+        panel.style.height = "0px";
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (details.open) {
+            closeFaq(details);
+            return;
+          }
+
+          openFaq(details);
+        });
+      });
+
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (finePointer && !reduceMotion) {
+        document.querySelectorAll(".case-media").forEach((media) => {
+          let frame = 0;
+          const position = { currentX: 50, currentY: 50, targetX: 50, targetY: 50 };
+
+          function setTarget(event) {
+            const rect = media.getBoundingClientRect();
+            position.targetX = ((event.clientX - rect.left) / rect.width) * 100;
+            position.targetY = ((event.clientY - rect.top) / rect.height) * 100;
+          }
+
+          function render() {
+            position.currentX += (position.targetX - position.currentX) * 0.18;
+            position.currentY += (position.targetY - position.currentY) * 0.18;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+
+            if (
+              Math.abs(position.targetX - position.currentX) > 0.02 ||
+              Math.abs(position.targetY - position.currentY) > 0.02
+            ) {
+              frame = requestAnimationFrame(render);
+              return;
+            }
+
+            frame = 0;
+          }
+
+          function start(event) {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            setTarget(event);
+            position.currentX = position.targetX;
+            position.currentY = position.targetY;
+            media.style.setProperty("--case-x", `${position.currentX}%`);
+            media.style.setProperty("--case-y", `${position.currentY}%`);
+            media.classList.add("is-case-hover");
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function move(event) {
+            setTarget(event);
+
+            if (!frame) {
+              frame = requestAnimationFrame(render);
+            }
+          }
+
+          function stop() {
+            if (frame) {
+              cancelAnimationFrame(frame);
+              frame = 0;
+            }
+
+            media.classList.remove("is-case-hover");
+          }
+
+          media.addEventListener("pointerenter", start);
+          media.addEventListener("pointermove", move);
+          media.addEventListener("pointerleave", stop);
+        });
+      }
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((element) => element.classList.add("is-visible"));
+      } else {
+        document.documentElement.classList.add("reveal-ready");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+        );
+
+        revealItems.forEach((element) => revealObserver.observe(element));
+      }
+    </script>
+  </body>
+</html>
